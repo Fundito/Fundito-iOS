@@ -21,6 +21,7 @@
 		2D3C9E7923AF670100339F9D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D3C9E7823AF670100339F9D /* Localizable.strings */; };
 		2D3C9E7B23AF67A600339F9D /* Str.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E7A23AF67A600339F9D /* Str.swift */; };
 		2D3C9E7D23AF67B500339F9D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E7C23AF67B500339F9D /* String.swift */; };
+		2D3C9E7F23AF680600339F9D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E7E23AF680600339F9D /* UIViewController.swift */; };
 		34722BFC0C63ED6C46530684 /* Pods_Fundito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B01B082E99B67F1F8EF7C /* Pods_Fundito.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		2D3C9E7823AF670100339F9D /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		2D3C9E7A23AF67A600339F9D /* Str.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Str.swift; sourceTree = "<group>"; };
 		2D3C9E7C23AF67B500339F9D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		2D3C9E7E23AF680600339F9D /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		AF6B01B082E99B67F1F8EF7C /* Pods_Fundito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fundito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8BC83A124863AE2CEBDFE9 /* Pods-Fundito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fundito.debug.xcconfig"; path = "Target Support Files/Pods-Fundito/Pods-Fundito.debug.xcconfig"; sourceTree = "<group>"; };
 		DD250BF35ACC6CC6F6851B03 /* Pods-Fundito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fundito.release.xcconfig"; path = "Target Support Files/Pods-Fundito/Pods-Fundito.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				2D3C9E6F23AF640200339F9D /* JSONDecoder.swift */,
 				2D3C9E7123AF655800339F9D /* DateFormatter.swift */,
 				2D3C9E7C23AF67B500339F9D /* String.swift */,
+				2D3C9E7E23AF680600339F9D /* UIViewController.swift */,
 			);
 			path = EXKit;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				2D3C9E7223AF655800339F9D /* DateFormatter.swift in Sources */,
 				2D3C9E4E23AF58B700339F9D /* MainVC.swift in Sources */,
 				2D3C9E7D23AF67B500339F9D /* String.swift in Sources */,
+				2D3C9E7F23AF680600339F9D /* UIViewController.swift in Sources */,
 				2D3C9E6D23AF5F3400339F9D /* NotiUtil.swift in Sources */,
 				2D3C9E6A23AF5E0700339F9D /* AppModel.swift in Sources */,
 				2D3C9E4A23AF58B700339F9D /* AppDelegate.swift in Sources */,
