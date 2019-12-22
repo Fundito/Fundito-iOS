@@ -6,15 +6,15 @@
 //  Copyright © 2019 Fundito. All rights reserved.
 //
 
-import UIKit
 
-class ViewController: UIViewController {
+
+import UIKit
+import PromiseKit
+
+class MainVC : UIViewController{
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
 	}
-
-
 }
 
