@@ -15,8 +15,9 @@ class NotiUtil{
 	
 	static func register(_ observer : Any, _ name : String, _ callback : @escaping Callback){
 		eventQueue.append((observer, name, callback))
-		NotificationCenter.default.addObserver(observer, selector: #selector(received(_:)), name: NSNotification.Name.init(name), object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(received(_:)), name: NSNotification.Name.init(name), object: nil)
 	}
+	
 	static func unregister(_ observer : Any){
 		eventQueue.removeAll{ o in
 			return (observer as? NSObject) === (o.0 as? NSObject)
