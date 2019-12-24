@@ -16,6 +16,8 @@
 
 #import <objc/runtime.h>
 
+#import "MaterialApplication.h"
+
 #import "MDCTypography.h"
 #import "private/MDCTypographyUtilities.h"
 
@@ -30,6 +32,11 @@ static char MDCFontScaleObjectKey;
 
   NSNumber *fontSizeNumber;
   if (sizeCategory) {
+    // Pick the correct font size from the pre-attached scaling curve that
+    // fits the specific size category. The scaling curve is attached based on
+    // the type of font, so a button font has a different scaling curve than
+    // a headline font, and the two will therefore see different font size numbers
+    // for the same size category.
     fontSizeNumber = self.mdc_scalingCurve[sizeCategory];
   }
 
@@ -51,6 +58,16 @@ static char MDCFontScaleObjectKey;
   return scaledFont;
 }
 
+- (UIFont *)mdc_scaledFontForTraitEnvironment:(id<UITraitEnvironment>)traitEnvironment {
+  UIContentSizeCategory sizeCategory = UIContentSizeCategoryLarge;
+  if (@available(iOS 10.0, *)) {
+    sizeCategory = traitEnvironment.traitCollection.preferredContentSizeCategory;
+  } else if ([UIApplication mdc_safeSharedApplication]) {
+    sizeCategory = [UIApplication mdc_safeSharedApplication].preferredContentSizeCategory;
+  }
+  return [self mdc_scaledFontForSizeCategory:sizeCategory];
+}
+
 - (UIFont *)mdc_scaledFontForCurrentSizeCategory {
   UIContentSizeCategory currentSizeCategory = GetCurrentSizeCategory();
 
@@ -68,7 +85,7 @@ static char MDCFontScaleObjectKey;
 
 - (void)mdc_setScalingCurve:(NSDictionary<UIContentSizeCategory, NSNumber *> *)scalingCurve {
   objc_setAssociatedObject(self, &MDCFontScaleObjectKey, scalingCurve,
-                           OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+                           OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 @end

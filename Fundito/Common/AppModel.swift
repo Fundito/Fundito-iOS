@@ -20,7 +20,7 @@ final class AppModel{
 	*/
 	static let shared = AppModel()
 	
-	private let ud = UserDefaults.standard //
+	private let ud = UserDefaults.standard
 	
 	var authToken : String{
 		get{
@@ -29,5 +29,7 @@ final class AppModel{
 			ud.set(newValue, forKey: "authToken")
 		}
 	}
+	
+	
 	
 }
