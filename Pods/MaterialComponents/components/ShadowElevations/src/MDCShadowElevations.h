@@ -34,9 +34,6 @@ typedef CGFloat MDCShadowElevation MDC_SHADOW_ELEVATION_TYPED_EXTENSIBLE_ENUM;
 static const MDCShadowElevation MDCShadowElevationAppBar = (CGFloat)4.0;
 
 /** The shadow elevation of the Bottom App Bar. */
-static const MDCShadowElevation MDCShadowElevationBottomAppBar = (CGFloat)8.0;
-
-/** The shadow elevation of the Bottom App Bar. */
 static const MDCShadowElevation MDCShadowElevationBottomNavigationBar = (CGFloat)8.0;
 
 /** The shadow elevation of a card in its picked up state. */
@@ -56,9 +53,6 @@ static const MDCShadowElevation MDCShadowElevationFABResting = (CGFloat)6.0;
 
 /** The shadow elevation of a menu. */
 static const MDCShadowElevation MDCShadowElevationMenu = (CGFloat)8.0;
-
-/** The shadow elevation of a modal bottom sheet. */
-static const MDCShadowElevation MDCShadowElevationModalActionSheet = (CGFloat)8.0;
 
 /** The shadow elevation of a modal bottom sheet. */
 static const MDCShadowElevation MDCShadowElevationModalBottomSheet = (CGFloat)16.0;

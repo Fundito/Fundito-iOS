@@ -28,24 +28,26 @@ static NSString *const kRippleLayerOpacityString = @"opacity";
 static NSString *const kRippleLayerPositionString = @"position";
 static NSString *const kRippleLayerScaleString = @"transform.scale";
 
-static CGFloat GetDefaultRippleRadius(CGRect rect) {
-  return (CGFloat)(MDCHypot(CGRectGetMidX(rect), CGRectGetMidY(rect)) + kExpandRippleBeyondSurface);
+@implementation MDCRippleLayer {
+  CGFloat _rippleRadius;
 }
-
-@implementation MDCRippleLayer
 
 - (void)setNeedsLayout {
   [super setNeedsLayout];
-
+  [self setRadiiWithRect:self.bounds];
   [self setPathFromRadii];
   self.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
 }
 
+- (void)setRadiiWithRect:(CGRect)rect {
+  _rippleRadius =
+      (CGFloat)(MDCHypot(CGRectGetMidX(rect), CGRectGetMidY(rect)) + kExpandRippleBeyondSurface);
+}
+
 - (void)setPathFromRadii {
-  CGFloat radius =
-      self.maximumRadius > 0 ? self.maximumRadius : GetDefaultRippleRadius(self.bounds);
-  CGRect ovalRect = CGRectMake(CGRectGetMidX(self.bounds) - radius,
-                               CGRectGetMidY(self.bounds) - radius, radius * 2, radius * 2);
+  CGRect ovalRect =
+      CGRectMake(CGRectGetMidX(self.bounds) - _rippleRadius,
+                 CGRectGetMidY(self.bounds) - _rippleRadius, _rippleRadius * 2, _rippleRadius * 2);
   UIBezierPath *circlePath = [UIBezierPath bezierPathWithOvalInRect:ovalRect];
   self.path = circlePath.CGPath;
 }
@@ -58,9 +60,6 @@ static CGFloat GetDefaultRippleRadius(CGRect rect) {
   self.opacity = 1;
   self.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
   if (!animated) {
-    if (completion) {
-      completion();
-    }
     [self.rippleLayerDelegate rippleLayerTouchDownAnimationDidEnd:self];
   } else {
     _startAnimationActive = YES;

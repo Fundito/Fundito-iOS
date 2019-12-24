@@ -35,8 +35,8 @@
 
 - (void)swizzledDealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    UITextView *textView = objc_getAssociatedObject(self, @selector(placeholderTextView));
-    if (textView) {
+    UILabel *label = objc_getAssociatedObject(self, @selector(placeholderLabel));
+    if (label) {
         for (NSString *key in self.class.observingKeys) {
             @try {
                 [self removeObserver:self forKeyPath:key];
@@ -54,22 +54,12 @@
 #pragma mark `defaultPlaceholderColor`
 
 + (UIColor *)defaultPlaceholderColor {
-    if (@available(iOS 13, *)) {
-      SEL selector = NSSelectorFromString(@"placeholderTextColor");
-      if ([UIColor respondsToSelector:selector]) {
-        return [UIColor performSelector:selector];
-      }
-    }
     static UIColor *color = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         UITextField *textField = [[UITextField alloc] init];
         textField.placeholder = @" ";
-        NSDictionary *attributes = [textField.attributedPlaceholder attributesAtIndex:0 effectiveRange:nil];
-        color = attributes[NSForegroundColorAttributeName];
-        if (!color) {
-          color = [UIColor colorWithRed:0 green:0 blue:0.0980392 alpha:0.22];
-        }
+        color = [textField valueForKeyPath:@"_placeholderLabel.textColor"];
     });
     return color;
 }
@@ -84,35 +74,32 @@
              @"frame",
              @"text",
              @"textAlignment",
-             @"textContainerInset",
-             @"textContainer.lineFragmentPadding",
-             @"textContainer.exclusionPaths"];
+             @"textContainerInset"];
 }
 
 
 #pragma mark - Properties
-#pragma mark `placeholderTextView`
+#pragma mark `placeholderLabel`
 
-- (UITextView *)placeholderTextView {
-    UITextView *textView = objc_getAssociatedObject(self, @selector(placeholderTextView));
-    if (!textView) {
+- (UILabel *)placeholderLabel {
+    UILabel *label = objc_getAssociatedObject(self, @selector(placeholderLabel));
+    if (!label) {
         NSAttributedString *originalText = self.attributedText;
         self.text = @" "; // lazily set font of `UITextView`.
         self.attributedText = originalText;
 
-        textView = [[UITextView alloc] init];
-        textView.backgroundColor = [UIColor clearColor];
-        textView.textColor = [self.class defaultPlaceholderColor];
-        textView.userInteractionEnabled = NO;
-        textView.isAccessibilityElement = NO;
-        objc_setAssociatedObject(self, @selector(placeholderTextView), textView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        label = [[UILabel alloc] init];
+        label.textColor = [self.class defaultPlaceholderColor];
+        label.numberOfLines = 0;
+        label.userInteractionEnabled = NO;
+        objc_setAssociatedObject(self, @selector(placeholderLabel), label, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
         self.needsUpdateFont = YES;
-        [self updatePlaceholderTextView];
+        [self updatePlaceholderLabel];
         self.needsUpdateFont = NO;
 
         [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(updatePlaceholderTextView)
+                                                 selector:@selector(updatePlaceholderLabel)
                                                      name:UITextViewTextDidChangeNotification
                                                    object:self];
 
@@ -120,38 +107,38 @@
             [self addObserver:self forKeyPath:key options:NSKeyValueObservingOptionNew context:nil];
         }
     }
-    return textView;
+    return label;
 }
 
 
 #pragma mark `placeholder`
 
 - (NSString *)placeholder {
-    return self.placeholderTextView.text;
+    return self.placeholderLabel.text;
 }
 
 - (void)setPlaceholder:(NSString *)placeholder {
-    self.placeholderTextView.text = placeholder;
-    [self updatePlaceholderTextView];
+    self.placeholderLabel.text = placeholder;
+    [self updatePlaceholderLabel];
 }
 
 - (NSAttributedString *)attributedPlaceholder {
-    return self.placeholderTextView.attributedText;
+    return self.placeholderLabel.attributedText;
 }
 
 - (void)setAttributedPlaceholder:(NSAttributedString *)attributedPlaceholder {
-    self.placeholderTextView.attributedText = attributedPlaceholder;
-    [self updatePlaceholderTextView];
+    self.placeholderLabel.attributedText = attributedPlaceholder;
+    [self updatePlaceholderLabel];
 }
 
 #pragma mark `placeholderColor`
 
 - (UIColor *)placeholderColor {
-    return self.placeholderTextView.textColor;
+    return self.placeholderLabel.textColor;
 }
 
 - (void)setPlaceholderColor:(UIColor *)placeholderColor {
-    self.placeholderTextView.textColor = placeholderColor;
+    self.placeholderLabel.textColor = placeholderColor;
 }
 
 
@@ -175,30 +162,48 @@
     if ([keyPath isEqualToString:@"font"]) {
         self.needsUpdateFont = (change[NSKeyValueChangeNewKey] != nil);
     }
-    [self updatePlaceholderTextView];
+    [self updatePlaceholderLabel];
 }
 
 
 #pragma mark - Update
 
-- (void)updatePlaceholderTextView {
+- (void)updatePlaceholderLabel {
     if (self.text.length) {
-        [self.placeholderTextView removeFromSuperview];
+        [self.placeholderLabel removeFromSuperview];
     } else {
-        [self insertSubview:self.placeholderTextView atIndex:0];
+        [self insertSubview:self.placeholderLabel atIndex:0];
     }
 
     if (self.needsUpdateFont) {
-        self.placeholderTextView.font = self.font;
+        self.placeholderLabel.font = self.font;
         self.needsUpdateFont = NO;
     }
-    if (self.placeholderTextView.attributedText.length == 0) {
-      self.placeholderTextView.textAlignment = self.textAlignment;
+    self.placeholderLabel.textAlignment = self.textAlignment;
+
+    // `NSTextContainer` is available since iOS 7
+    CGFloat lineFragmentPadding;
+    UIEdgeInsets textContainerInset;
+
+#pragma deploymate push "ignored-api-availability"
+    // iOS 7+
+    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+        lineFragmentPadding = self.textContainer.lineFragmentPadding;
+        textContainerInset = self.textContainerInset;
     }
-    self.placeholderTextView.textContainer.exclusionPaths = self.textContainer.exclusionPaths;
-    self.placeholderTextView.textContainerInset = self.textContainerInset;
-    self.placeholderTextView.textContainer.lineFragmentPadding = self.textContainer.lineFragmentPadding;
-    self.placeholderTextView.frame = self.bounds;
+#pragma deploymate pop
+
+    // iOS 6
+    else {
+        lineFragmentPadding = 5;
+        textContainerInset = UIEdgeInsetsMake(8, 0, 8, 0);
+    }
+
+    CGFloat x = lineFragmentPadding + textContainerInset.left;
+    CGFloat y = textContainerInset.top;
+    CGFloat width = CGRectGetWidth(self.bounds) - x - lineFragmentPadding - textContainerInset.right;
+    CGFloat height = [self.placeholderLabel sizeThatFits:CGSizeMake(width, 0)].height;
+    self.placeholderLabel.frame = CGRectMake(x, y, width, height);
 }
 
 @end

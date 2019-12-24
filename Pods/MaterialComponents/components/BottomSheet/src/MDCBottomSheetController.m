@@ -16,7 +16,6 @@
 
 #import "MDCBottomSheetPresentationController.h"
 #import "MDCBottomSheetTransitionController.h"
-#import "MaterialMath.h"
 #import "UIViewController+MaterialBottomSheet.h"
 
 @interface MDCBottomSheetController () <MDCBottomSheetPresentationControllerDelegate>
@@ -28,13 +27,10 @@
   NSMutableDictionary<NSNumber *, id<MDCShapeGenerating>> *_shapeGenerators;
 }
 
-@synthesize mdc_overrideBaseElevation = _mdc_overrideBaseElevation;
-@synthesize mdc_elevationDidChangeBlock = _mdc_elevationDidChangeBlock;
 @dynamic view;
 
 - (void)loadView {
   self.view = [[MDCShapedView alloc] initWithFrame:CGRectZero];
-  self.view.elevation = self.elevation;
 }
 
 - (nonnull instancetype)initWithContentViewController:
@@ -43,13 +39,10 @@
     _contentViewController = contentViewController;
     _transitionController = [[MDCBottomSheetTransitionController alloc] init];
     _transitionController.dismissOnBackgroundTap = YES;
-    _transitionController.dismissOnDraggingDownSheet = YES;
     super.transitioningDelegate = _transitionController;
     super.modalPresentationStyle = UIModalPresentationCustom;
     _shapeGenerators = [NSMutableDictionary dictionary];
     _state = MDCSheetStatePreferred;
-    _elevation = MDCShadowElevationModalBottomSheet;
-    _mdc_overrideBaseElevation = -1;
   }
   return self;
 }
@@ -58,14 +51,12 @@
   [super viewDidLoad];
 
   self.view.preservesSuperviewLayoutMargins = YES;
-  if (self.contentViewController) {
-    self.contentViewController.view.autoresizingMask =
-        UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.contentViewController.view.frame = self.view.bounds;
-    [self addChildViewController:self.contentViewController];
-    [self.view addSubview:self.contentViewController.view];
-    [self.contentViewController didMoveToParentViewController:self];
-  }
+  self.contentViewController.view.autoresizingMask =
+      UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+  self.contentViewController.view.frame = self.view.bounds;
+  [self addChildViewController:self.contentViewController];
+  [self.view addSubview:self.contentViewController.view];
+  [self.contentViewController didMoveToParentViewController:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -78,8 +69,6 @@
 
   self.mdc_bottomSheetPresentationController.dismissOnBackgroundTap =
       _transitionController.dismissOnBackgroundTap;
-  self.mdc_bottomSheetPresentationController.dismissOnDraggingDownSheet =
-      _transitionController.dismissOnDraggingDownSheet;
 
   [self.contentViewController.view layoutIfNeeded];
 }
@@ -100,17 +89,12 @@
   if (!self.dismissOnBackgroundTap) {
     return NO;
   }
-  __weak MDCBottomSheetController *weakSelf = self;
-  [self dismissViewControllerAnimated:YES
-                           completion:^{
-                             __strong MDCBottomSheetController *strongSelf = weakSelf;
-                             if ([strongSelf.delegate
-                                     respondsToSelector:@selector
-                                     (bottomSheetControllerDidDismissBottomSheet:)]) {
-                               [strongSelf.delegate
-                                   bottomSheetControllerDidDismissBottomSheet:strongSelf];
-                             }
-                           }];
+  __weak __typeof(self) weakSelf = self;
+  [self
+      dismissViewControllerAnimated:YES
+                         completion:^{
+                           [weakSelf.delegate bottomSheetControllerDidDismissBottomSheet:weakSelf];
+                         }];
   return YES;
 }
 
@@ -147,16 +131,6 @@
 - (void)setDismissOnBackgroundTap:(BOOL)dismissOnBackgroundTap {
   _transitionController.dismissOnBackgroundTap = dismissOnBackgroundTap;
   self.mdc_bottomSheetPresentationController.dismissOnBackgroundTap = dismissOnBackgroundTap;
-}
-
-- (BOOL)dismissOnDraggingDownSheet {
-  return _transitionController.dismissOnDraggingDownSheet;
-}
-
-- (void)setDismissOnDraggingDownSheet:(BOOL)dismissOnDraggingDownSheet {
-  _transitionController.dismissOnDraggingDownSheet = dismissOnDraggingDownSheet;
-  self.mdc_bottomSheetPresentationController.dismissOnDraggingDownSheet =
-      dismissOnDraggingDownSheet;
 }
 
 - (void)bottomSheetWillChangeState:(MDCBottomSheetPresentationController *)bottomSheet
@@ -204,20 +178,6 @@
       self.contentViewController.view.layer.mask = nil;
     }
   }
-}
-
-- (void)setElevation:(MDCShadowElevation)elevation {
-  if (MDCCGFloatEqual(elevation, _elevation)) {
-    return;
-  }
-
-  _elevation = elevation;
-  self.view.elevation = elevation;
-  [self.view mdc_elevationDidChange];
-}
-
-- (CGFloat)mdc_currentElevation {
-  return self.elevation;
 }
 
 /* Disable setter. Always use internal transition controller */
@@ -271,14 +231,6 @@
 
 - (UIAccessibilityTraits)scrimAccessibilityTraits {
   return _transitionController.scrimAccessibilityTraits;
-}
-
-- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
-  [super traitCollectionDidChange:previousTraitCollection];
-
-  if (self.traitCollectionDidChangeBlock) {
-    self.traitCollectionDidChangeBlock(self, previousTraitCollection);
-  }
 }
 
 #pragma clang diagnostic push
