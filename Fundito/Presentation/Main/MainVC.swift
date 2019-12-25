@@ -10,12 +10,29 @@
 
 import UIKit
 import PromiseKit
+import FBSDKLoginKit
+import FBSDKCoreKit
 
 class MainVC : UIViewController{
 
 	override func viewDidLoad() {
-		super.viewDidLoad()
-        //test
-	}
+        super.viewDidLoad()
+        let loginButton = FBLoginButton()
+        loginButton.permissions = ["email"]
+        loginButton.center = view.center
+        view.addSubview(loginButton)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getAccessToken()
+    }
+
+    func getAccessToken() {
+        guard let token = AccessToken.current else { return }
+        print ("#### AccessToken ####")
+        print(token)
+        print ("#### AccessToken ####")
+    }
 }
 
