@@ -34,12 +34,12 @@ class MainVC : UIViewController{
         print(token)
         print ("#### AccessToken ####")
     }
-    
+
     func getUserDetails(){
         guard let tokenString = AccessToken.current?.tokenString else{
             return
         }
-    
+
         if(AccessToken.current != nil){
             GraphRequest(graphPath: "me",parameters: ["fields": "id, name, email"],
                          tokenString: tokenString, version: nil,
@@ -54,7 +54,7 @@ class MainVC : UIViewController{
 }
 
 extension MainVC : LoginButtonDelegate{
-    
+
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
         /**
         만약 페이스북 로그인이 실패했다면,
@@ -62,7 +62,7 @@ extension MainVC : LoginButtonDelegate{
         guard error == nil else {
             return
         }
-        
+
         Profile.loadCurrentProfile{[unowned self] profile, error in
             guard error == nil else {
 //                CommonDialog.show(error!.localizedDescription)
@@ -77,9 +77,12 @@ extension MainVC : LoginButtonDelegate{
             }
         }
     }
-    
+
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
 //        CommonDialog.show("Log Out")
         print("Log out")
     }
 }
+
+//FBSDKSettings.setAutoLogAppEventsEnabled(true)
+//FBSDKSettings.setAdvertiserIDCollectionEnabled(true);

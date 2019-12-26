@@ -25,13 +25,13 @@ class MyFundingStatusVC: UIViewController {
         if sender.direction == .up {
             print("up")
             let vc = storyboard?.instantiateViewController(withIdentifier: "MyFundingStatusVC2") as! MyFundingStatusVC2
-            
+            print(vc)
             UIView.animate(withDuration: 0.2, animations: {
                 UIView.setAnimationCurve(.linear)
-                
                 self.navigationController?.pushViewController(vc, animated: false)
+                })
 //                UIView.setAnimationTransition( UIView.AnimationTransition.curlDown , for: (self.navigationController?.view)!, cache: false)
-            })
+            
             
 //            self.navigationController?.pushViewController(vc, animated: true)
             

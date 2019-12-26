@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D3C9E4A23AF58B700339F9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E4923AF58B700339F9D /* AppDelegate.swift */; };
 		2D3C9E4E23AF58B700339F9D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E4D23AF58B700339F9D /* MainVC.swift */; };
-		2D3C9E5123AF58B700339F9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D3C9E4F23AF58B700339F9D /* Main.storyboard */; };
+		2D3C9E5123AF58B700339F9D /* MyFundingStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D3C9E4F23AF58B700339F9D /* MyFundingStatus.storyboard */; };
 		2D3C9E5323AF58B800339F9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D3C9E5223AF58B800339F9D /* Assets.xcassets */; };
 		2D3C9E5623AF58B800339F9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D3C9E5423AF58B800339F9D /* LaunchScreen.storyboard */; };
 		2D3C9E6A23AF5E0700339F9D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E6923AF5E0700339F9D /* AppModel.swift */; };
@@ -28,6 +28,7 @@
 		33D3C4EE23B4DFBC00E8AA3F /* MyFundingStatusVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4ED23B4DFBC00E8AA3F /* MyFundingStatusVC3.swift */; };
 		33D3C4F023B4E3F100E8AA3F /* CustomMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4EF23B4E3F100E8AA3F /* CustomMenuBar.swift */; };
 		33D3C4F223B4E47200E8AA3F /* CustomMenuBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4F123B4E47200E8AA3F /* CustomMenuBarCell.swift */; };
+		33D3C4F423B4F27400E8AA3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D3C4F323B4F27400E8AA3F /* Main.storyboard */; };
 		34722BFC0C63ED6C46530684 /* Pods_Fundito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B01B082E99B67F1F8EF7C /* Pods_Fundito.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +36,7 @@
 		2D3C9E4623AF58B700339F9D /* Fundito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fundito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3C9E4923AF58B700339F9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D3C9E4D23AF58B700339F9D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		2D3C9E5023AF58B700339F9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2D3C9E5023AF58B700339F9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyFundingStatus.storyboard; sourceTree = "<group>"; };
 		2D3C9E5223AF58B800339F9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D3C9E5523AF58B800339F9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D3C9E5723AF58B800339F9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		33D3C4ED23B4DFBC00E8AA3F /* MyFundingStatusVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyFundingStatusVC3.swift; path = Fundito/Presentation/MyFundingStatusVC3.swift; sourceTree = SOURCE_ROOT; };
 		33D3C4EF23B4E3F100E8AA3F /* CustomMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuBar.swift; sourceTree = "<group>"; };
 		33D3C4F123B4E47200E8AA3F /* CustomMenuBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuBarCell.swift; sourceTree = "<group>"; };
+		33D3C4F323B4F27400E8AA3F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AF6B01B082E99B67F1F8EF7C /* Pods_Fundito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fundito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8BC83A124863AE2CEBDFE9 /* Pods-Fundito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fundito.debug.xcconfig"; path = "Target Support Files/Pods-Fundito/Pods-Fundito.debug.xcconfig"; sourceTree = "<group>"; };
 		DD250BF35ACC6CC6F6851B03 /* Pods-Fundito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fundito.release.xcconfig"; path = "Target Support Files/Pods-Fundito/Pods-Fundito.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				2D3C9E4D23AF58B700339F9D /* MainVC.swift */,
-				2D3C9E4F23AF58B700339F9D /* Main.storyboard */,
+				33D3C4F323B4F27400E8AA3F /* Main.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -219,6 +221,7 @@
 				33D3C4ED23B4DFBC00E8AA3F /* MyFundingStatusVC3.swift */,
 				33D3C4EF23B4E3F100E8AA3F /* CustomMenuBar.swift */,
 				33D3C4F123B4E47200E8AA3F /* CustomMenuBarCell.swift */,
+				2D3C9E4F23AF58B700339F9D /* MyFundingStatus.storyboard */,
 			);
 			path = MyFundingStatus;
 			sourceTree = "<group>";
@@ -294,9 +297,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D3C9E5623AF58B800339F9D /* LaunchScreen.storyboard in Resources */,
+				33D3C4F423B4F27400E8AA3F /* Main.storyboard in Resources */,
 				2D3C9E7923AF670100339F9D /* Localizable.strings in Resources */,
 				2D3C9E5323AF58B800339F9D /* Assets.xcassets in Resources */,
-				2D3C9E5123AF58B700339F9D /* Main.storyboard in Resources */,
+				2D3C9E5123AF58B700339F9D /* MyFundingStatus.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,12 +393,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2D3C9E4F23AF58B700339F9D /* Main.storyboard */ = {
+		2D3C9E4F23AF58B700339F9D /* MyFundingStatus.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2D3C9E5023AF58B700339F9D /* Base */,
 			);
-			name = Main.storyboard;
+			name = MyFundingStatus.storyboard;
 			sourceTree = "<group>";
 		};
 		2D3C9E5423AF58B800339F9D /* LaunchScreen.storyboard */ = {
