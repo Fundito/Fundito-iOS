@@ -22,6 +22,12 @@
 		2D3C9E7B23AF67A600339F9D /* Str.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E7A23AF67A600339F9D /* Str.swift */; };
 		2D3C9E7D23AF67B500339F9D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E7C23AF67B500339F9D /* String.swift */; };
 		2D3C9E7F23AF680600339F9D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E7E23AF680600339F9D /* UIViewController.swift */; };
+		33D3C4C823B3EFEE00E8AA3F /* MyFundingStatusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4C723B3EFEE00E8AA3F /* MyFundingStatusVC.swift */; };
+		33D3C4CA23B3F68600E8AA3F /* MyFundingStatusVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4C923B3F68600E8AA3F /* MyFundingStatusVC2.swift */; };
+		33D3C4CC23B4179B00E8AA3F /* MyFundingStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4CB23B4179B00E8AA3F /* MyFundingStatusTableViewCell.swift */; };
+		33D3C4EE23B4DFBC00E8AA3F /* MyFundingStatusVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4ED23B4DFBC00E8AA3F /* MyFundingStatusVC3.swift */; };
+		33D3C4F023B4E3F100E8AA3F /* CustomMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4EF23B4E3F100E8AA3F /* CustomMenuBar.swift */; };
+		33D3C4F223B4E47200E8AA3F /* CustomMenuBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4F123B4E47200E8AA3F /* CustomMenuBarCell.swift */; };
 		34722BFC0C63ED6C46530684 /* Pods_Fundito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B01B082E99B67F1F8EF7C /* Pods_Fundito.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +49,12 @@
 		2D3C9E7A23AF67A600339F9D /* Str.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Str.swift; sourceTree = "<group>"; };
 		2D3C9E7C23AF67B500339F9D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2D3C9E7E23AF680600339F9D /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		33D3C4C723B3EFEE00E8AA3F /* MyFundingStatusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundingStatusVC.swift; sourceTree = "<group>"; };
+		33D3C4C923B3F68600E8AA3F /* MyFundingStatusVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundingStatusVC2.swift; sourceTree = "<group>"; };
+		33D3C4CB23B4179B00E8AA3F /* MyFundingStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundingStatusTableViewCell.swift; sourceTree = "<group>"; };
+		33D3C4ED23B4DFBC00E8AA3F /* MyFundingStatusVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyFundingStatusVC3.swift; path = Fundito/Presentation/MyFundingStatusVC3.swift; sourceTree = SOURCE_ROOT; };
+		33D3C4EF23B4E3F100E8AA3F /* CustomMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuBar.swift; sourceTree = "<group>"; };
+		33D3C4F123B4E47200E8AA3F /* CustomMenuBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuBarCell.swift; sourceTree = "<group>"; };
 		AF6B01B082E99B67F1F8EF7C /* Pods_Fundito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fundito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8BC83A124863AE2CEBDFE9 /* Pods-Fundito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fundito.debug.xcconfig"; path = "Target Support Files/Pods-Fundito/Pods-Fundito.debug.xcconfig"; sourceTree = "<group>"; };
 		DD250BF35ACC6CC6F6851B03 /* Pods-Fundito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fundito.release.xcconfig"; path = "Target Support Files/Pods-Fundito/Pods-Fundito.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +143,7 @@
 		2D3C9E6023AF5A3C00339F9D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				33D3C4C623B3EF9600E8AA3F /* MyFundingStatus */,
 				2D3C9E6223AF5A5400339F9D /* Splash */,
 				2D3C9E6123AF5A5100339F9D /* Main */,
 			);
@@ -195,6 +208,19 @@
 				2D3C9E7E23AF680600339F9D /* UIViewController.swift */,
 			);
 			path = EXKit;
+			sourceTree = "<group>";
+		};
+		33D3C4C623B3EF9600E8AA3F /* MyFundingStatus */ = {
+			isa = PBXGroup;
+			children = (
+				33D3C4C723B3EFEE00E8AA3F /* MyFundingStatusVC.swift */,
+				33D3C4C923B3F68600E8AA3F /* MyFundingStatusVC2.swift */,
+				33D3C4CB23B4179B00E8AA3F /* MyFundingStatusTableViewCell.swift */,
+				33D3C4ED23B4DFBC00E8AA3F /* MyFundingStatusVC3.swift */,
+				33D3C4EF23B4E3F100E8AA3F /* CustomMenuBar.swift */,
+				33D3C4F123B4E47200E8AA3F /* CustomMenuBarCell.swift */,
+			);
+			path = MyFundingStatus;
 			sourceTree = "<group>";
 		};
 		E6311087AF94E6B19559DB57 /* Pods */ = {
@@ -342,14 +368,20 @@
 			files = (
 				2D3C9E7223AF655800339F9D /* DateFormatter.swift in Sources */,
 				2D3C9E4E23AF58B700339F9D /* MainVC.swift in Sources */,
+				33D3C4EE23B4DFBC00E8AA3F /* MyFundingStatusVC3.swift in Sources */,
+				33D3C4F023B4E3F100E8AA3F /* CustomMenuBar.swift in Sources */,
+				33D3C4CA23B3F68600E8AA3F /* MyFundingStatusVC2.swift in Sources */,
 				2D3C9E7D23AF67B500339F9D /* String.swift in Sources */,
 				2D3C9E7F23AF680600339F9D /* UIViewController.swift in Sources */,
 				2D3C9E6D23AF5F3400339F9D /* NotiUtil.swift in Sources */,
 				2D3C9E6A23AF5E0700339F9D /* AppModel.swift in Sources */,
+				33D3C4CC23B4179B00E8AA3F /* MyFundingStatusTableViewCell.swift in Sources */,
 				2D3C9E4A23AF58B700339F9D /* AppDelegate.swift in Sources */,
 				2D3C9E7623AF663900339F9D /* AppService.swift in Sources */,
+				33D3C4C823B3EFEE00E8AA3F /* MyFundingStatusVC.swift in Sources */,
 				2D3C9E7023AF640200339F9D /* JSONDecoder.swift in Sources */,
 				2D3C9E7423AF663300339F9D /* NetworkService.swift in Sources */,
+				33D3C4F223B4E47200E8AA3F /* CustomMenuBarCell.swift in Sources */,
 				2D3C9E7B23AF67A600339F9D /* Str.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
