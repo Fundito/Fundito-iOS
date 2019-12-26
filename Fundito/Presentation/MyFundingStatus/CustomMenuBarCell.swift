@@ -25,10 +25,10 @@ class CustomMenuBarCell: UICollectionViewCell {
             self.label.textColor = isSelected ? .black : .lightGray
         }
     }
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.addSubview(label)
-        label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-    }
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        self.addSubview(label)
+//        label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+//        label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+//    }
 }
