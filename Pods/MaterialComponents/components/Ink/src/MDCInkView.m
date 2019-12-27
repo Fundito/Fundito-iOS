@@ -81,10 +81,8 @@
 - (void)layoutSubviews {
   [super layoutSubviews];
 
-  if (self.inkStyle == MDCInkStyleUnbounded) {
-    self.layer.mask = nil;
-  } else if (self.superview.layer.shadowPath) {
-    // If the superview has a shadowPath make sure ink does not spread outside of the shadowPath.
+  // If the superview has a shadowPath make sure ink does not spread outside of the shadowPath.
+  if (self.superview.layer.shadowPath) {
     self.maskLayer.path = self.superview.layer.shadowPath;
     self.layer.mask = _maskLayer;
   }
