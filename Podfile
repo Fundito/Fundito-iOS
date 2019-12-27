@@ -24,4 +24,5 @@ target 'Fundito' do
 	pod 'MaterialComponents/BottomSheet'
 	pod 'MaterialComponents/BottomSheet+ShapeThemer'
 	pod 'MaterialComponents/Buttons'
+	pod 'FBSDKLoginKit'
 end
