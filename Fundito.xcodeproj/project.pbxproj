@@ -24,6 +24,10 @@
 		2D3C9E7B23AF67A600339F9D /* Str.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E7A23AF67A600339F9D /* Str.swift */; };
 		2D3C9E7D23AF67B500339F9D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E7C23AF67B500339F9D /* String.swift */; };
 		2D3C9E7F23AF680600339F9D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E7E23AF680600339F9D /* UIViewController.swift */; };
+		2D7C801E23B3CE5000C64668 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C801D23B3CE5000C64668 /* User.swift */; };
+		2D7C802123B3CFB800C64668 /* InvestmentDialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C802023B3CFB800C64668 /* InvestmentDialView.swift */; };
+		2DA1B36123B6169A00A26447 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B36023B6169A00A26447 /* Color.swift */; };
+		2DA1B36323B616A000A26447 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B36223B616A000A26447 /* Font.swift */; };
 		34722BFC0C63ED6C46530684 /* Pods_Fundito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B01B082E99B67F1F8EF7C /* Pods_Fundito.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +63,10 @@
 		2D3C9E7A23AF67A600339F9D /* Str.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Str.swift; sourceTree = "<group>"; };
 		2D3C9E7C23AF67B500339F9D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2D3C9E7E23AF680600339F9D /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		2D7C801D23B3CE5000C64668 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2D7C802023B3CFB800C64668 /* InvestmentDialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentDialView.swift; sourceTree = "<group>"; };
+		2DA1B36023B6169A00A26447 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		2DA1B36223B616A000A26447 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		AF6B01B082E99B67F1F8EF7C /* Pods_Fundito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fundito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8BC83A124863AE2CEBDFE9 /* Pods-Fundito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fundito.debug.xcconfig"; path = "Target Support Files/Pods-Fundito/Pods-Fundito.debug.xcconfig"; sourceTree = "<group>"; };
 		DD250BF35ACC6CC6F6851B03 /* Pods-Fundito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fundito.release.xcconfig"; path = "Target Support Files/Pods-Fundito/Pods-Fundito.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +148,8 @@
 				2D3C9E7A23AF67A600339F9D /* Str.swift */,
 				2D3C9E5223AF58B800339F9D /* Assets.xcassets */,
 				2D3C9E7823AF670100339F9D /* Localizable.strings */,
+				2DA1B36023B6169A00A26447 /* Color.swift */,
+				2DA1B36223B616A000A26447 /* Font.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -191,6 +201,7 @@
 		2D3C9E6423AF5D3F00339F9D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2D7C801D23B3CE5000C64668 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +225,7 @@
 		2D3C9E6823AF5E0000339F9D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2D7C801F23B3CF7000C64668 /* View */,
 				2D3C9E6923AF5E0700339F9D /* AppModel.swift */,
 				2D3C9E6C23AF5F3400339F9D /* NotiUtil.swift */,
 			);
@@ -230,6 +242,14 @@
 				2D3A281523B1DDDD008FBD6C /* NumberParsingExtension.swift */,
 			);
 			path = EXKit;
+			sourceTree = "<group>";
+		};
+		2D7C801F23B3CF7000C64668 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D7C802023B3CFB800C64668 /* InvestmentDialView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E6311087AF94E6B19559DB57 /* Pods */ = {
@@ -413,15 +433,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D7C801E23B3CE5000C64668 /* User.swift in Sources */,
 				2D3C9E7223AF655800339F9D /* DateFormatter.swift in Sources */,
 				2D3C9E4E23AF58B700339F9D /* MainVC.swift in Sources */,
 				2D3C9E7D23AF67B500339F9D /* String.swift in Sources */,
 				2D3C9E7F23AF680600339F9D /* UIViewController.swift in Sources */,
 				2D3C9E6D23AF5F3400339F9D /* NotiUtil.swift in Sources */,
 				2D3A281623B1DDDD008FBD6C /* NumberParsingExtension.swift in Sources */,
+				2D7C802123B3CFB800C64668 /* InvestmentDialView.swift in Sources */,
+				2DA1B36123B6169A00A26447 /* Color.swift in Sources */,
 				2D3C9E6A23AF5E0700339F9D /* AppModel.swift in Sources */,
 				2D3C9E4A23AF58B700339F9D /* AppDelegate.swift in Sources */,
 				2D3C9E7623AF663900339F9D /* AppService.swift in Sources */,
+				2DA1B36323B616A000A26447 /* Font.swift in Sources */,
 				2D3C9E7023AF640200339F9D /* JSONDecoder.swift in Sources */,
 				2D3C9E7423AF663300339F9D /* NetworkService.swift in Sources */,
 				2D3C9E7B23AF67A600339F9D /* Str.swift in Sources */,
