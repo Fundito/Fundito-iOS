@@ -5,13 +5,14 @@
 //  Created by 문명주 on 22/12/2019.
 //  Copyright © 2019 Fundito. All rights reserved.
 //
+
 import UIKit
 import PromiseKit
 import FBSDKLoginKit
 import FBSDKCoreKit
 
 class MainVC : UIViewController{
-	
+
 	override func viewDidLoad() {
         super.viewDidLoad()
         let loginButton = FBLoginButton()
@@ -85,4 +86,3 @@ extension MainVC : LoginButtonDelegate{
 
 //FBSDKSettings.setAutoLogAppEventsEnabled(true)
 //FBSDKSettings.setAdvertiserIDCollectionEnabled(true);
->>>>>>> master

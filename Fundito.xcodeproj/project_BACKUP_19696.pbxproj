@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D3A281623B1DDDD008FBD6C /* NumberParsingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3A281523B1DDDD008FBD6C /* NumberParsingExtension.swift */; };
+		2D3A281E23B1E15E008FBD6C /* FunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3A281D23B1E15E008FBD6C /* FunctionTests.swift */; };
 		2D3C9E4A23AF58B700339F9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E4923AF58B700339F9D /* AppDelegate.swift */; };
 		2D3C9E4E23AF58B700339F9D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E4D23AF58B700339F9D /* MainVC.swift */; };
 		2D3C9E5123AF58B700339F9D /* MyFundingStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D3C9E4F23AF58B700339F9D /* MyFundingStatus.storyboard */; };
@@ -35,7 +37,21 @@
 		34722BFC0C63ED6C46530684 /* Pods_Fundito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B01B082E99B67F1F8EF7C /* Pods_Fundito.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2D3A282023B1E15E008FBD6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D3C9E3E23AF58B700339F9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D3C9E4523AF58B700339F9D;
+			remoteInfo = Fundito;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		2D3A281523B1DDDD008FBD6C /* NumberParsingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberParsingExtension.swift; sourceTree = "<group>"; };
+		2D3A281B23B1E15E008FBD6C /* FunditoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunditoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D3A281D23B1E15E008FBD6C /* FunctionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionTests.swift; sourceTree = "<group>"; };
+		2D3A281F23B1E15E008FBD6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D3C9E4623AF58B700339F9D /* Fundito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fundito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3C9E4923AF58B700339F9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D3C9E4D23AF58B700339F9D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -69,6 +85,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2D3A281823B1E15E008FBD6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2D3C9E4323AF58B700339F9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,10 +111,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2D3A281C23B1E15E008FBD6C /* FunditoTests */ = {
+			isa = PBXGroup;
+			children = (
+				2D3A281D23B1E15E008FBD6C /* FunctionTests.swift */,
+				2D3A281F23B1E15E008FBD6C /* Info.plist */,
+			);
+			path = FunditoTests;
+			sourceTree = "<group>";
+		};
 		2D3C9E3D23AF58B700339F9D = {
 			isa = PBXGroup;
 			children = (
 				2D3C9E4823AF58B700339F9D /* Fundito */,
+				2D3A281C23B1E15E008FBD6C /* FunditoTests */,
 				2D3C9E4723AF58B700339F9D /* Products */,
 				E6311087AF94E6B19559DB57 /* Pods */,
 				1D4DB5C209B321FA6C057DD6 /* Frameworks */,
@@ -102,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				2D3C9E4623AF58B700339F9D /* Fundito.app */,
+				2D3A281B23B1E15E008FBD6C /* FunditoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,7 +249,11 @@
 				2D3C9E7123AF655800339F9D /* DateFormatter.swift */,
 				2D3C9E7C23AF67B500339F9D /* String.swift */,
 				2D3C9E7E23AF680600339F9D /* UIViewController.swift */,
+<<<<<<< HEAD
+				2D3A281523B1DDDD008FBD6C /* NumberParsingExtension.swift */,
+=======
 				3335C07A23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift */,
+>>>>>>> master
 			);
 			path = EXKit;
 			sourceTree = "<group>";
@@ -247,6 +285,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2D3A281A23B1E15E008FBD6C /* FunditoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D3A282223B1E15E008FBD6C /* Build configuration list for PBXNativeTarget "FunditoTests" */;
+			buildPhases = (
+				2D3A281723B1E15E008FBD6C /* Sources */,
+				2D3A281823B1E15E008FBD6C /* Frameworks */,
+				2D3A281923B1E15E008FBD6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D3A282123B1E15E008FBD6C /* PBXTargetDependency */,
+			);
+			name = FunditoTests;
+			productName = FunditoTests;
+			productReference = 2D3A281B23B1E15E008FBD6C /* FunditoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2D3C9E4523AF58B700339F9D /* Fundito */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D3C9E5A23AF58B800339F9D /* Build configuration list for PBXNativeTarget "Fundito" */;
@@ -277,6 +333,10 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Fundito;
 				TargetAttributes = {
+					2D3A281A23B1E15E008FBD6C = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 2D3C9E4523AF58B700339F9D;
+					};
 					2D3C9E4523AF58B700339F9D = {
 						CreatedOnToolsVersion = 11.3;
 					};
@@ -296,11 +356,19 @@
 			projectRoot = "";
 			targets = (
 				2D3C9E4523AF58B700339F9D /* Fundito */,
+				2D3A281A23B1E15E008FBD6C /* FunditoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2D3A281923B1E15E008FBD6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2D3C9E4423AF58B700339F9D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -375,6 +443,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2D3A281723B1E15E008FBD6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D3A281E23B1E15E008FBD6C /* FunctionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2D3C9E4223AF58B700339F9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -386,6 +462,7 @@
 				2D3C9E7D23AF67B500339F9D /* String.swift in Sources */,
 				2D3C9E7F23AF680600339F9D /* UIViewController.swift in Sources */,
 				2D3C9E6D23AF5F3400339F9D /* NotiUtil.swift in Sources */,
+				2D3A281623B1DDDD008FBD6C /* NumberParsingExtension.swift in Sources */,
 				2D3C9E6A23AF5E0700339F9D /* AppModel.swift in Sources */,
 				33D3C4CC23B4179B00E8AA3F /* MyFundingStatusTableViewCell.swift in Sources */,
 				3335C07D23B53AA20065FE62 /* PageCell.swift in Sources */,
@@ -403,6 +480,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D3A282123B1E15E008FBD6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D3C9E4523AF58B700339F9D /* Fundito */;
+			targetProxy = 2D3A282023B1E15E008FBD6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2D3C9E4F23AF58B700339F9D /* MyFundingStatus.storyboard */ = {
@@ -424,6 +509,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2D3A282323B1E15E008FBD6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FunditoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fundito.FunditoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fundito.app/Fundito";
+			};
+			name = Debug;
+		};
+		2D3A282423B1E15E008FBD6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FunditoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fundito.FunditoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fundito.app/Fundito";
+			};
+			name = Release;
+		};
 		2D3C9E5823AF58B800339F9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -719,6 +842,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2D3A282223B1E15E008FBD6C /* Build configuration list for PBXNativeTarget "FunditoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D3A282323B1E15E008FBD6C /* Debug */,
+				2D3A282423B1E15E008FBD6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D3C9E4123AF58B700339F9D /* Build configuration list for PBXProject "Fundito" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
