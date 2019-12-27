@@ -39,7 +39,12 @@
 		3335C07B23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07A23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift */; };
 		3335C07D23B53AA20065FE62 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07C23B53AA20065FE62 /* PageCell.swift */; };
 		3335C07F23B5A9770065FE62 /* MyFundingStatusVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */; };
-		33D21C9723B5FC0E00158454 /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D21C9623B5FC0E00158454 /* UIFont+Additions.swift */; };
+		33D21CA923B625D000158454 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D21CA623B625D000158454 /* Color.swift */; };
+		33D21CAF23B6260E00158454 /* Spoqa Han Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33D21CAB23B6260E00158454 /* Spoqa Han Sans Regular.ttf */; };
+		33D21CB023B6260E00158454 /* Spoqa Han Sans Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33D21CAC23B6260E00158454 /* Spoqa Han Sans Bold.ttf */; };
+		33D21CB123B6260E00158454 /* Spoqa Han Sans Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33D21CAD23B6260E00158454 /* Spoqa Han Sans Light.ttf */; };
+		33D21CB223B6260E00158454 /* Spoqa Han Sans Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33D21CAE23B6260E00158454 /* Spoqa Han Sans Thin.ttf */; };
+		33D21CB423B62B3F00158454 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D21CB323B62B3F00158454 /* Font.swift */; };
 		33D3C4C823B3EFEE00E8AA3F /* MyFundingStatusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4C723B3EFEE00E8AA3F /* MyFundingStatusVC.swift */; };
 		33D3C4CA23B3F68600E8AA3F /* MyFundingStatusVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4C923B3F68600E8AA3F /* MyFundingStatusVC2.swift */; };
 		33D3C4CC23B4179B00E8AA3F /* MyFundingStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4CB23B4179B00E8AA3F /* MyFundingStatusTableViewCell.swift */; };
@@ -84,7 +89,12 @@
 		3335C07A23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + reusableIdentifier.swift"; sourceTree = "<group>"; };
 		3335C07C23B53AA20065FE62 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFundingStatusVC3.swift; sourceTree = "<group>"; };
-		33D21C9623B5FC0E00158454 /* UIFont+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Additions.swift"; sourceTree = "<group>"; };
+		33D21CA623B625D000158454 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		33D21CAB23B6260E00158454 /* Spoqa Han Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa Han Sans Regular.ttf"; sourceTree = "<group>"; };
+		33D21CAC23B6260E00158454 /* Spoqa Han Sans Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa Han Sans Bold.ttf"; sourceTree = "<group>"; };
+		33D21CAD23B6260E00158454 /* Spoqa Han Sans Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa Han Sans Light.ttf"; sourceTree = "<group>"; };
+		33D21CAE23B6260E00158454 /* Spoqa Han Sans Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa Han Sans Thin.ttf"; sourceTree = "<group>"; };
+		33D21CB323B62B3F00158454 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		33D3C4C723B3EFEE00E8AA3F /* MyFundingStatusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundingStatusVC.swift; sourceTree = "<group>"; };
 		33D3C4C923B3F68600E8AA3F /* MyFundingStatusVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundingStatusVC2.swift; sourceTree = "<group>"; };
 		33D3C4CB23B4179B00E8AA3F /* MyFundingStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundingStatusTableViewCell.swift; sourceTree = "<group>"; };
@@ -151,6 +161,9 @@
 		2D3C9E5D23AF5A3500339F9D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				33D21CB323B62B3F00158454 /* Font.swift */,
+				33D21CAA23B6260E00158454 /* Font */,
+				33D21CA623B625D000158454 /* Color.swift */,
 				2D3C9E7A23AF67A600339F9D /* Str.swift */,
 				2D3C9E5223AF58B800339F9D /* Assets.xcassets */,
 				2D3C9E7823AF670100339F9D /* Localizable.strings */,
@@ -247,7 +260,6 @@
 		2D3C9E6E23AF5F3500339F9D /* EXKit */ = {
 			isa = PBXGroup;
 			children = (
-				33D21C9623B5FC0E00158454 /* UIFont+Additions.swift */,
 				2D3C9E6F23AF640200339F9D /* JSONDecoder.swift */,
 				2D3C9E7123AF655800339F9D /* DateFormatter.swift */,
 				2D3C9E7C23AF67B500339F9D /* String.swift */,
@@ -332,6 +344,17 @@
 				2DA1B38423B6234900A26447 /* MoreVC.swift */,
 			);
 			path = More;
+			sourceTree = "<group>";
+		};
+		33D21CAA23B6260E00158454 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				33D21CAB23B6260E00158454 /* Spoqa Han Sans Regular.ttf */,
+				33D21CAC23B6260E00158454 /* Spoqa Han Sans Bold.ttf */,
+				33D21CAD23B6260E00158454 /* Spoqa Han Sans Light.ttf */,
+				33D21CAE23B6260E00158454 /* Spoqa Han Sans Thin.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		33D3C4C623B3EF9600E8AA3F /* MyFundingStatus */ = {
@@ -420,10 +443,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D3C9E5623AF58B800339F9D /* LaunchScreen.storyboard in Resources */,
+				33D21CB223B6260E00158454 /* Spoqa Han Sans Thin.ttf in Resources */,
 				33D3C4F423B4F27400E8AA3F /* Main.storyboard in Resources */,
+				33D21CAF23B6260E00158454 /* Spoqa Han Sans Regular.ttf in Resources */,
 				2D3C9E7923AF670100339F9D /* Localizable.strings in Resources */,
+				33D21CB123B6260E00158454 /* Spoqa Han Sans Light.ttf in Resources */,
 				2D3C9E5323AF58B800339F9D /* Assets.xcassets in Resources */,
 				2D3C9E5123AF58B700339F9D /* MyFundingStatus.storyboard in Resources */,
+				33D21CB023B6260E00158454 /* Spoqa Han Sans Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +536,7 @@
 				2DA1B37C23B622DC00A26447 /* FundingInputVC.swift in Sources */,
 				2D3C9E6A23AF5E0700339F9D /* AppModel.swift in Sources */,
 				33D3C4CC23B4179B00E8AA3F /* MyFundingStatusTableViewCell.swift in Sources */,
+				33D21CA923B625D000158454 /* Color.swift in Sources */,
 				3335C07D23B53AA20065FE62 /* PageCell.swift in Sources */,
 				2D3C9E4A23AF58B700339F9D /* AppDelegate.swift in Sources */,
 				3335C07F23B5A9770065FE62 /* MyFundingStatusVC3.swift in Sources */,
@@ -520,10 +548,10 @@
 				2DA1B37223B6220C00A26447 /* StoreRegisterVC.swift in Sources */,
 				2DA1B36C23B6218800A26447 /* ChargeVC.swift in Sources */,
 				2DA1B38B23B6236100A26447 /* FeedFriendListVC.swift in Sources */,
-				33D21C9723B5FC0E00158454 /* UIFont+Additions.swift in Sources */,
 				3335C07B23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift in Sources */,
 				2DA1B38923B6235900A26447 /* FeedFriendDetailVC.swift in Sources */,
 				2DA1B37A23B622CB00A26447 /* FundingVC.swift in Sources */,
+				33D21CB423B62B3F00158454 /* Font.swift in Sources */,
 				2DA1B37E23B622EE00A26447 /* FundingProgressVC.swift in Sources */,
 				33D3C4F223B4E47200E8AA3F /* CustomMenuBarCell.swift in Sources */,
 				2D3C9E7B23AF67A600339F9D /* Str.swift in Sources */,

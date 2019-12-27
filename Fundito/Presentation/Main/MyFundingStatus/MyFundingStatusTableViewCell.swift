@@ -14,8 +14,17 @@ class MyFundingStatusTableViewCell: UITableViewCell {
     @IBOutlet weak var storeName: UILabel!
     @IBOutlet weak var fundingMoney: UILabel!
     @IBOutlet weak var returnMoney: UILabel!
-    @IBOutlet weak var MoneyPer: UILabel!
     @IBOutlet weak var time: UILabel!
+    
+    func setFundingMoney() {
+        let attributedString = NSMutableAttributedString(string: "회수금액 8,500원 (170%)", attributes: [
+          .font: UIFont(name: "SpoqaHanSans-Regular", size: 16.0)!,
+          .foregroundColor: UIColor.blueberry
+        ])
+        attributedString.addAttribute(.foregroundColor, value: UIColor(white: 0.0, alpha: 1.0), range: NSRange(location: 0, length: 4))
+         returnMoney.attributedText = attributedString
+    }
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

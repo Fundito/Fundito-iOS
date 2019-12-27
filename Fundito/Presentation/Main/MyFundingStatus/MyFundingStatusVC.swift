@@ -10,17 +10,47 @@ import UIKit
 
 class MyFundingStatusVC: UIViewController {
 
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var moneyLabel: UILabel!
+    @IBOutlet weak var percentLabel: UILabel!
+    
     @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let view = lineView(frame: self.view.frame)
-        view.backgroundColor = .clear
-        self.view.addSubview(view)
+//        let view = lineView(frame: self.view.frame)
+//        view.backgroundColor = .clear
+//        self.view.addSubview(view)
         swipeRecognizer.direction = .up
+        
+        let attributedStr = NSMutableAttributedString(string: questionLabel.text!)
+        attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String as String) , value: UIFont.textStyle5, range: NSRange(location: 0,length: 10))
+        
+        let attributedStr2 = NSMutableAttributedString(string: "+13,500 원", attributes: [
+          .font: UIFont(name: "SpoqaHanSans-Bold", size: 51.0)!,
+          .foregroundColor: UIColor(white: 0.0, alpha: 1.0)
+        ])
+        attributedStr2.addAttribute(.font, value: UIFont(name: "SpoqaHanSans-Regular", size: 51.0)!, range: NSRange(location: 0, length: 1))
+        attributedStr2.addAttribute(.font, value: UIFont(name: "SpoqaHanSans-Regular", size: 51.0)!, range: NSRange(location: 8, length: 1))
+        
+        let attributedStr3 = NSMutableAttributedString(string: "원금대비 170% 상승!", attributes: [
+          .font: UIFont(name: "SpoqaHanSans-Regular", size: 24.0)!,
+          .foregroundColor: UIColor(white: 0.0, alpha: 1.0)
+        ])
+        attributedStr3.addAttributes([
+          .font: UIFont(name: "SpoqaHanSans-Bold", size: 24.0)!,
+          .foregroundColor: UIColor(red: 77.0 / 255.0, green: 75.0 / 255.0, blue: 177.0 / 255.0, alpha: 1.0)
+        ], range: NSRange(location: 5, length: 4))
+        attributedStr3.addAttribute(.foregroundColor, value: UIColor.coral, range: NSRange(location: 9, length: 4))
+        
+        questionLabel.attributedText = attributedStr
+        moneyLabel.attributedText = attributedStr2
+        percentLabel.attributedText = attributedStr3
+        
+        navigationController?.isNavigationBarHidden = true
+
     }
     
-
     @IBAction func swipeView(_ sender: UISwipeGestureRecognizer) {
         if sender.direction == .up {
             print("up")
