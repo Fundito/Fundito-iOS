@@ -16,13 +16,21 @@ class MyFundingStatusVC: UIViewController {
     
     @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let view = lineView(frame: self.view.frame)
-//        view.backgroundColor = .clear
-//        self.view.addSubview(view)
         swipeRecognizer.direction = .up
-        
+        setLableText()
+        navigationController?.isNavigationBarHidden = true
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    func setLableText() {
         let attributedStr = NSMutableAttributedString(string: questionLabel.text!)
         attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String as String) , value: UIFont.textStyle5, range: NSRange(location: 0,length: 10))
         
@@ -47,8 +55,6 @@ class MyFundingStatusVC: UIViewController {
         moneyLabel.attributedText = attributedStr2
         percentLabel.attributedText = attributedStr3
         
-        navigationController?.isNavigationBarHidden = true
-
     }
     
     @IBAction func swipeView(_ sender: UISwipeGestureRecognizer) {
@@ -87,11 +93,7 @@ class MyFundingStatusVC: UIViewController {
     // Set Custom Back Button
     func setBackBtn(){
         let backBTN = UIBarButtonItem(title: "back", style: .plain, target: self, action: #selector(self.pop))
-        // 백버튼 이미지 파일 이름에 맞게 변경해주세요.
-//        let backBTN = UIBarButtonItem(image: UIImage(named: "backBtn"),
-//                                      style: .plain,
-//                                      target: self,
-//                                      action: #selector(self.pop))
+        
         navigationItem.leftBarButtonItem = backBTN
         navigationController?.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
     }
