@@ -23,10 +23,12 @@
 		2D3C9E7D23AF67B500339F9D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E7C23AF67B500339F9D /* String.swift */; };
 		2D3C9E7F23AF680600339F9D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E7E23AF680600339F9D /* UIViewController.swift */; };
 		3335C07B23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07A23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift */; };
+		3335C07D23B53AA20065FE62 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07C23B53AA20065FE62 /* PageCell.swift */; };
+		3335C07F23B5A9770065FE62 /* MyFundingStatusVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */; };
+		33D21C9723B5FC0E00158454 /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D21C9623B5FC0E00158454 /* UIFont+Additions.swift */; };
 		33D3C4C823B3EFEE00E8AA3F /* MyFundingStatusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4C723B3EFEE00E8AA3F /* MyFundingStatusVC.swift */; };
 		33D3C4CA23B3F68600E8AA3F /* MyFundingStatusVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4C923B3F68600E8AA3F /* MyFundingStatusVC2.swift */; };
 		33D3C4CC23B4179B00E8AA3F /* MyFundingStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4CB23B4179B00E8AA3F /* MyFundingStatusTableViewCell.swift */; };
-		33D3C4EE23B4DFBC00E8AA3F /* MyFundingStatusVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4ED23B4DFBC00E8AA3F /* MyFundingStatusVC3.swift */; };
 		33D3C4F023B4E3F100E8AA3F /* CustomMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4EF23B4E3F100E8AA3F /* CustomMenuBar.swift */; };
 		33D3C4F223B4E47200E8AA3F /* CustomMenuBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4F123B4E47200E8AA3F /* CustomMenuBarCell.swift */; };
 		33D3C4F423B4F27400E8AA3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D3C4F323B4F27400E8AA3F /* Main.storyboard */; };
@@ -52,10 +54,12 @@
 		2D3C9E7C23AF67B500339F9D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2D3C9E7E23AF680600339F9D /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		3335C07A23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + reusableIdentifier.swift"; sourceTree = "<group>"; };
+		3335C07C23B53AA20065FE62 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFundingStatusVC3.swift; sourceTree = "<group>"; };
+		33D21C9623B5FC0E00158454 /* UIFont+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Additions.swift"; sourceTree = "<group>"; };
 		33D3C4C723B3EFEE00E8AA3F /* MyFundingStatusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundingStatusVC.swift; sourceTree = "<group>"; };
 		33D3C4C923B3F68600E8AA3F /* MyFundingStatusVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundingStatusVC2.swift; sourceTree = "<group>"; };
 		33D3C4CB23B4179B00E8AA3F /* MyFundingStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundingStatusTableViewCell.swift; sourceTree = "<group>"; };
-		33D3C4ED23B4DFBC00E8AA3F /* MyFundingStatusVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyFundingStatusVC3.swift; path = Fundito/Presentation/MyFundingStatusVC3.swift; sourceTree = SOURCE_ROOT; };
 		33D3C4EF23B4E3F100E8AA3F /* CustomMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuBar.swift; sourceTree = "<group>"; };
 		33D3C4F123B4E47200E8AA3F /* CustomMenuBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuBarCell.swift; sourceTree = "<group>"; };
 		33D3C4F323B4F27400E8AA3F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 		2D3C9E6E23AF5F3500339F9D /* EXKit */ = {
 			isa = PBXGroup;
 			children = (
+				33D21C9623B5FC0E00158454 /* UIFont+Additions.swift */,
 				2D3C9E6F23AF640200339F9D /* JSONDecoder.swift */,
 				2D3C9E7123AF655800339F9D /* DateFormatter.swift */,
 				2D3C9E7C23AF67B500339F9D /* String.swift */,
@@ -220,10 +225,11 @@
 			children = (
 				33D3C4C723B3EFEE00E8AA3F /* MyFundingStatusVC.swift */,
 				33D3C4C923B3F68600E8AA3F /* MyFundingStatusVC2.swift */,
+				3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */,
 				33D3C4CB23B4179B00E8AA3F /* MyFundingStatusTableViewCell.swift */,
-				33D3C4ED23B4DFBC00E8AA3F /* MyFundingStatusVC3.swift */,
 				33D3C4EF23B4E3F100E8AA3F /* CustomMenuBar.swift */,
 				33D3C4F123B4E47200E8AA3F /* CustomMenuBarCell.swift */,
+				3335C07C23B53AA20065FE62 /* PageCell.swift */,
 				2D3C9E4F23AF58B700339F9D /* MyFundingStatus.storyboard */,
 			);
 			path = MyFundingStatus;
@@ -375,7 +381,6 @@
 			files = (
 				2D3C9E7223AF655800339F9D /* DateFormatter.swift in Sources */,
 				2D3C9E4E23AF58B700339F9D /* MainVC.swift in Sources */,
-				33D3C4EE23B4DFBC00E8AA3F /* MyFundingStatusVC3.swift in Sources */,
 				33D3C4F023B4E3F100E8AA3F /* CustomMenuBar.swift in Sources */,
 				33D3C4CA23B3F68600E8AA3F /* MyFundingStatusVC2.swift in Sources */,
 				2D3C9E7D23AF67B500339F9D /* String.swift in Sources */,
@@ -383,11 +388,14 @@
 				2D3C9E6D23AF5F3400339F9D /* NotiUtil.swift in Sources */,
 				2D3C9E6A23AF5E0700339F9D /* AppModel.swift in Sources */,
 				33D3C4CC23B4179B00E8AA3F /* MyFundingStatusTableViewCell.swift in Sources */,
+				3335C07D23B53AA20065FE62 /* PageCell.swift in Sources */,
 				2D3C9E4A23AF58B700339F9D /* AppDelegate.swift in Sources */,
+				3335C07F23B5A9770065FE62 /* MyFundingStatusVC3.swift in Sources */,
 				2D3C9E7623AF663900339F9D /* AppService.swift in Sources */,
 				33D3C4C823B3EFEE00E8AA3F /* MyFundingStatusVC.swift in Sources */,
 				2D3C9E7023AF640200339F9D /* JSONDecoder.swift in Sources */,
 				2D3C9E7423AF663300339F9D /* NetworkService.swift in Sources */,
+				33D21C9723B5FC0E00158454 /* UIFont+Additions.swift in Sources */,
 				3335C07B23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift in Sources */,
 				33D3C4F223B4E47200E8AA3F /* CustomMenuBarCell.swift in Sources */,
 				2D3C9E7B23AF67A600339F9D /* Str.swift in Sources */,
@@ -536,6 +544,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZG9NK3M8S6;
 				INFOPLIST_FILE = Fundito/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -624,6 +633,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZG9NK3M8S6;
 				INFOPLIST_FILE = Fundito/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

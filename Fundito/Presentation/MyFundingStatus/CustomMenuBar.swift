@@ -25,6 +25,7 @@ class CustomMenuBar: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // UITabBarItem 역할을 할 collectionView. 수평으로 설정.
     var customTabBarCollectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .horizontal
@@ -34,10 +35,19 @@ class CustomMenuBar: UIView {
         return collectionView
     }()
     
+    // 현재 클릭 중인 탭바아이템을 알려줄 뷰
     var indicatorView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .black
+        view.backgroundColor = .gray
+        return view
+    }()
+    
+    // 위 두 개 뷰를 담을 컨테이너 역할의 뷰
+    var customTabBar: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
@@ -46,11 +56,12 @@ class CustomMenuBar: UIView {
     var indicatorViewWidthConstraint: NSLayoutConstraint!
 
     //MARK: Setup Views
+    // collectionView 의 몇 몇 설정, extension에서 cell 이어주기
     func setupCollectioView(){
         customTabBarCollectionView.delegate = self
         customTabBarCollectionView.dataSource = self
         customTabBarCollectionView.showsHorizontalScrollIndicator = false
-        customTabBarCollectionView.register(UINib(nibName: CustomMenuBarCell.reusableIdentifier, bundle: nil), forCellWithReuseIdentifier: CustomMenuBarCell.reusableIdentifier)
+//        customTabBarCollectionView.register(UINib(nibName: CustomMenuBarCell.reusableIdentifier, bundle: nil), forCellWithReuseIdentifier: CustomMenuBarCell.reusableIdentifier)
         customTabBarCollectionView.isScrollEnabled = false
 
         let indexPath = IndexPath(item: 0, section: 0)
