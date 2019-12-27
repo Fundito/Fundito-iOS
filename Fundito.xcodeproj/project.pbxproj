@@ -22,6 +22,20 @@
 		2D3C9E7B23AF67A600339F9D /* Str.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E7A23AF67A600339F9D /* Str.swift */; };
 		2D3C9E7D23AF67B500339F9D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E7C23AF67B500339F9D /* String.swift */; };
 		2D3C9E7F23AF680600339F9D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E7E23AF680600339F9D /* UIViewController.swift */; };
+		2DA1B36C23B6218800A26447 /* ChargeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B36B23B6218800A26447 /* ChargeVC.swift */; };
+		2DA1B37023B621ED00A26447 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B36F23B621ED00A26447 /* LoginVC.swift */; };
+		2DA1B37223B6220C00A26447 /* StoreRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B37123B6220C00A26447 /* StoreRegisterVC.swift */; };
+		2DA1B37423B6222B00A26447 /* StoreDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B37323B6222B00A26447 /* StoreDetailVC.swift */; };
+		2DA1B37623B6224200A26447 /* StoreCheerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B37523B6224200A26447 /* StoreCheerVC.swift */; };
+		2DA1B37823B622A400A26447 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B37723B622A400A26447 /* SearchVC.swift */; };
+		2DA1B37A23B622CB00A26447 /* FundingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B37923B622CB00A26447 /* FundingVC.swift */; };
+		2DA1B37C23B622DC00A26447 /* FundingInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B37B23B622DC00A26447 /* FundingInputVC.swift */; };
+		2DA1B37E23B622EE00A26447 /* FundingProgressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B37D23B622EE00A26447 /* FundingProgressVC.swift */; };
+		2DA1B38023B6230000A26447 /* FundingCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B37F23B6230000A26447 /* FundingCompleteVC.swift */; };
+		2DA1B38523B6234900A26447 /* MoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B38423B6234900A26447 /* MoreVC.swift */; };
+		2DA1B38723B6234D00A26447 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B38623B6234D00A26447 /* HomeVC.swift */; };
+		2DA1B38923B6235900A26447 /* FeedFriendDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B38823B6235900A26447 /* FeedFriendDetailVC.swift */; };
+		2DA1B38B23B6236100A26447 /* FeedFriendListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B38A23B6236100A26447 /* FeedFriendListVC.swift */; };
 		3335C07B23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07A23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift */; };
 		3335C07D23B53AA20065FE62 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07C23B53AA20065FE62 /* PageCell.swift */; };
 		3335C07F23B5A9770065FE62 /* MyFundingStatusVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */; };
@@ -53,6 +67,20 @@
 		2D3C9E7A23AF67A600339F9D /* Str.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Str.swift; sourceTree = "<group>"; };
 		2D3C9E7C23AF67B500339F9D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2D3C9E7E23AF680600339F9D /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		2DA1B36B23B6218800A26447 /* ChargeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeVC.swift; sourceTree = "<group>"; };
+		2DA1B36F23B621ED00A26447 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		2DA1B37123B6220C00A26447 /* StoreRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRegisterVC.swift; sourceTree = "<group>"; };
+		2DA1B37323B6222B00A26447 /* StoreDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailVC.swift; sourceTree = "<group>"; };
+		2DA1B37523B6224200A26447 /* StoreCheerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCheerVC.swift; sourceTree = "<group>"; };
+		2DA1B37723B622A400A26447 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		2DA1B37923B622CB00A26447 /* FundingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundingVC.swift; sourceTree = "<group>"; };
+		2DA1B37B23B622DC00A26447 /* FundingInputVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundingInputVC.swift; sourceTree = "<group>"; };
+		2DA1B37D23B622EE00A26447 /* FundingProgressVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundingProgressVC.swift; sourceTree = "<group>"; };
+		2DA1B37F23B6230000A26447 /* FundingCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundingCompleteVC.swift; sourceTree = "<group>"; };
+		2DA1B38423B6234900A26447 /* MoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVC.swift; sourceTree = "<group>"; };
+		2DA1B38623B6234D00A26447 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		2DA1B38823B6235900A26447 /* FeedFriendDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFriendDetailVC.swift; sourceTree = "<group>"; };
+		2DA1B38A23B6236100A26447 /* FeedFriendListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFriendListVC.swift; sourceTree = "<group>"; };
 		3335C07A23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + reusableIdentifier.swift"; sourceTree = "<group>"; };
 		3335C07C23B53AA20065FE62 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFundingStatusVC3.swift; sourceTree = "<group>"; };
@@ -151,8 +179,13 @@
 		2D3C9E6023AF5A3C00339F9D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				33D3C4C623B3EF9600E8AA3F /* MyFundingStatus */,
 				2D3C9E6223AF5A5400339F9D /* Splash */,
+				2DA1B36623B6216D00A26447 /* Login */,
+				2DA1B36423B6216400A26447 /* Charge */,
+				2DA1B36923B6217700A26447 /* StoreRegister */,
+				2DA1B36823B6217200A26447 /* Store */,
+				2DA1B36723B6217000A26447 /* Search */,
+				2DA1B36523B6216A00A26447 /* Funding */,
 				2D3C9E6123AF5A5100339F9D /* Main */,
 			);
 			path = Presentation;
@@ -161,6 +194,10 @@
 		2D3C9E6123AF5A5100339F9D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2DA1B38223B6233A00A26447 /* Home */,
+				2DA1B38123B6233600A26447 /* Feed */,
+				33D3C4C623B3EF9600E8AA3F /* MyFundingStatus */,
+				2DA1B38323B6233C00A26447 /* More */,
 				2D3C9E4D23AF58B700339F9D /* MainVC.swift */,
 				33D3C4F323B4F27400E8AA3F /* Main.storyboard */,
 			);
@@ -218,6 +255,83 @@
 				3335C07A23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift */,
 			);
 			path = EXKit;
+			sourceTree = "<group>";
+		};
+		2DA1B36423B6216400A26447 /* Charge */ = {
+			isa = PBXGroup;
+			children = (
+				2DA1B36B23B6218800A26447 /* ChargeVC.swift */,
+			);
+			path = Charge;
+			sourceTree = "<group>";
+		};
+		2DA1B36523B6216A00A26447 /* Funding */ = {
+			isa = PBXGroup;
+			children = (
+				2DA1B37923B622CB00A26447 /* FundingVC.swift */,
+				2DA1B37B23B622DC00A26447 /* FundingInputVC.swift */,
+				2DA1B37D23B622EE00A26447 /* FundingProgressVC.swift */,
+				2DA1B37F23B6230000A26447 /* FundingCompleteVC.swift */,
+			);
+			path = Funding;
+			sourceTree = "<group>";
+		};
+		2DA1B36623B6216D00A26447 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2DA1B36F23B621ED00A26447 /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2DA1B36723B6217000A26447 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2DA1B37723B622A400A26447 /* SearchVC.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		2DA1B36823B6217200A26447 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				2DA1B37323B6222B00A26447 /* StoreDetailVC.swift */,
+				2DA1B37523B6224200A26447 /* StoreCheerVC.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		2DA1B36923B6217700A26447 /* StoreRegister */ = {
+			isa = PBXGroup;
+			children = (
+				2DA1B37123B6220C00A26447 /* StoreRegisterVC.swift */,
+			);
+			path = StoreRegister;
+			sourceTree = "<group>";
+		};
+		2DA1B38123B6233600A26447 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				2DA1B38823B6235900A26447 /* FeedFriendDetailVC.swift */,
+				2DA1B38A23B6236100A26447 /* FeedFriendListVC.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		2DA1B38223B6233A00A26447 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2DA1B38623B6234D00A26447 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2DA1B38323B6233C00A26447 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				2DA1B38423B6234900A26447 /* MoreVC.swift */,
+			);
+			path = More;
 			sourceTree = "<group>";
 		};
 		33D3C4C623B3EF9600E8AA3F /* MyFundingStatus */ = {
@@ -379,13 +493,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA1B37023B621ED00A26447 /* LoginVC.swift in Sources */,
 				2D3C9E7223AF655800339F9D /* DateFormatter.swift in Sources */,
+				2DA1B37623B6224200A26447 /* StoreCheerVC.swift in Sources */,
 				2D3C9E4E23AF58B700339F9D /* MainVC.swift in Sources */,
 				33D3C4F023B4E3F100E8AA3F /* CustomMenuBar.swift in Sources */,
 				33D3C4CA23B3F68600E8AA3F /* MyFundingStatusVC2.swift in Sources */,
 				2D3C9E7D23AF67B500339F9D /* String.swift in Sources */,
+				2DA1B37423B6222B00A26447 /* StoreDetailVC.swift in Sources */,
 				2D3C9E7F23AF680600339F9D /* UIViewController.swift in Sources */,
+				2DA1B38723B6234D00A26447 /* HomeVC.swift in Sources */,
+				2DA1B38523B6234900A26447 /* MoreVC.swift in Sources */,
 				2D3C9E6D23AF5F3400339F9D /* NotiUtil.swift in Sources */,
+				2DA1B37823B622A400A26447 /* SearchVC.swift in Sources */,
+				2DA1B37C23B622DC00A26447 /* FundingInputVC.swift in Sources */,
 				2D3C9E6A23AF5E0700339F9D /* AppModel.swift in Sources */,
 				33D3C4CC23B4179B00E8AA3F /* MyFundingStatusTableViewCell.swift in Sources */,
 				3335C07D23B53AA20065FE62 /* PageCell.swift in Sources */,
@@ -393,10 +514,17 @@
 				3335C07F23B5A9770065FE62 /* MyFundingStatusVC3.swift in Sources */,
 				2D3C9E7623AF663900339F9D /* AppService.swift in Sources */,
 				33D3C4C823B3EFEE00E8AA3F /* MyFundingStatusVC.swift in Sources */,
+				2DA1B38023B6230000A26447 /* FundingCompleteVC.swift in Sources */,
 				2D3C9E7023AF640200339F9D /* JSONDecoder.swift in Sources */,
 				2D3C9E7423AF663300339F9D /* NetworkService.swift in Sources */,
+				2DA1B37223B6220C00A26447 /* StoreRegisterVC.swift in Sources */,
+				2DA1B36C23B6218800A26447 /* ChargeVC.swift in Sources */,
+				2DA1B38B23B6236100A26447 /* FeedFriendListVC.swift in Sources */,
 				33D21C9723B5FC0E00158454 /* UIFont+Additions.swift in Sources */,
 				3335C07B23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift in Sources */,
+				2DA1B38923B6235900A26447 /* FeedFriendDetailVC.swift in Sources */,
+				2DA1B37A23B622CB00A26447 /* FundingVC.swift in Sources */,
+				2DA1B37E23B622EE00A26447 /* FundingProgressVC.swift in Sources */,
 				33D3C4F223B4E47200E8AA3F /* CustomMenuBarCell.swift in Sources */,
 				2D3C9E7B23AF67A600339F9D /* Str.swift in Sources */,
 			);
