@@ -16,22 +16,29 @@ class MyFundingStatusTableViewCell: UITableViewCell {
     @IBOutlet weak var returnMoney: UILabel!
     @IBOutlet weak var time: UILabel!
     
-    func setFundingMoney() {
+    func setLableText() {
+        date.attributedText = NSMutableAttributedString(string: date.text ?? "", attributes: [
+          .font: UIFont(name: "SpoqaHanSans-Regular", size: 12.0)!,
+          .foregroundColor: UIColor(red: 112.0 / 255.0, green: 112.0 / 255.0, blue: 112.0 / 255.0, alpha: 1.0)
+        ])
+        storeName.attributedText = NSMutableAttributedString(string: storeName.text ?? "", attributes: [
+          .font: UIFont(name: "SpoqaHanSans-Regular", size: 16.0)!,
+          .foregroundColor: UIColor(red: 112.0 / 255.0, green: 112.0 / 255.0, blue: 112.0 / 255.0, alpha: 1.0)
+        ])
+        fundingMoney.attributedText = NSMutableAttributedString(string: fundingMoney.text ?? "", attributes: [
+          .font: UIFont(name: "SpoqaHanSans-Regular", size: 16.0)!,
+          .foregroundColor: UIColor(red: 0.0 / 255.0, green: 0.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
+        ])
         let attributedString = NSMutableAttributedString(string: "회수금액 8,500원 (170%)", attributes: [
           .font: UIFont(name: "SpoqaHanSans-Regular", size: 16.0)!,
           .foregroundColor: UIColor.blueberry
         ])
         attributedString.addAttribute(.foregroundColor, value: UIColor(white: 0.0, alpha: 1.0), range: NSRange(location: 0, length: 4))
-         returnMoney.attributedText = attributedString
-    }
-
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-//        self.contentView.frame.inset(by: UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8))
-//        self.contentView.layer.borderWidth = 0.0
-//        self.contentView.layer.borderColor = UIColor.gray.cgColor
-        // Initialization code
+        returnMoney.attributedText = attributedString
+        time.attributedText = NSMutableAttributedString(string: time.text ?? "", attributes: [
+          .font: UIFont(name: "SpoqaHanSans-Regular", size: 12.0)!,
+          .foregroundColor: UIColor(red: 112.0 / 255.0, green: 112.0 / 255.0, blue: 112.0 / 255.0, alpha: 1.0)
+        ])
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

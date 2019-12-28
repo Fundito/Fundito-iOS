@@ -53,6 +53,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="underBackgroundReceipt" translatesAutoresizingMaskIntoConstraints="NO" id="PDJ-ha-lXu">
                                 <rect key="frame" x="0.0" y="673" width="375" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -88,7 +89,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundReceipt" translatesAutoresizingMaskIntoConstraints="NO" id="yxR-R6-3dm">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="withlineBackgroundReceipt" translatesAutoresizingMaskIntoConstraints="NO" id="yxR-R6-3dm">
                                 <rect key="frame" x="0.0" y="85" width="375" height="637"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -100,7 +101,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="120.000 원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzf-hz-clS">
-                                <rect key="frame" x="16" y="147" width="154" height="45"/>
+                                <rect key="frame" x="16" y="147" width="155" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -199,7 +200,7 @@
                                 <state key="normal" title="충전하기" image="rechargeIcon"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="최근 투자 내역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Za4-z0-dDk">
-                                <rect key="frame" x="16" y="414" width="92" height="24"/>
+                                <rect key="frame" x="16" y="414" width="100" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -221,13 +222,14 @@
                     <connections>
                         <outlet property="backgroundReciptImage" destination="yxR-R6-3dm" id="mCU-aI-kqE"/>
                         <outlet property="expectedMaxRetrunMoney" destination="IR2-4O-Ztr" id="Nct-IE-wgS"/>
-                        <outlet property="expectedMaxRetrunMoneyLabel" destination="Np4-6o-b9H" id="v74-18-GYK"/>
+                        <outlet property="expectedMaxRetrunMoneyLabel" destination="Np4-6o-b9H" id="CJV-ZK-o4h"/>
                         <outlet property="fundingMoney" destination="q9w-mm-q7O" id="sPE-cW-ukp"/>
-                        <outlet property="fundingMoneyLabel" destination="0IG-xc-rFd" id="Pti-RH-QaG"/>
+                        <outlet property="fundingMoneyLabel" destination="0IG-xc-rFd" id="mMr-aM-q72"/>
                         <outlet property="funditoMoney" destination="Lzf-hz-clS" id="o1V-oc-ovF"/>
-                        <outlet property="funditoMoneyLabel" destination="5uu-Sz-iFb" id="od1-ex-ea6"/>
+                        <outlet property="funditoMoneyLabel" destination="5uu-Sz-iFb" id="OwY-4f-iHb"/>
                         <outlet property="myFundingStatusTable" destination="Efi-8N-4FM" id="xyK-t3-ikT"/>
                         <outlet property="pointChargingBtn" destination="9AQ-cB-b5j" id="yeu-c4-dTb"/>
+                        <outlet property="recentFundingListLabel" destination="Za4-z0-dDk" id="yEz-V8-IrW"/>
                         <outlet property="swipeRecognizer" destination="CeX-2Z-wmG" id="AjG-Zd-b6C"/>
                         <outlet property="swipeRecognizerDown" destination="LTH-pt-QFy" id="pGK-lQ-jVD"/>
                     </connections>
@@ -336,10 +338,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backgroundReceipt" width="393" height="655"/>
         <image name="fundingConditionIc" width="48" height="48"/>
         <image name="imgArrow" width="185" height="277"/>
         <image name="rechargeIcon" width="74" height="27"/>
         <image name="underBackgroundReceipt" width="393" height="123"/>
+        <image name="withlineBackgroundReceipt" width="393" height="655"/>
     </resources>
 </document>
