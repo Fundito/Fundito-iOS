@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "rechargeIcon.png",
+      "scale" : "1x",
+      "idiom" : "universal"
+    },
+    {
+      "scale" : "2x",
+      "idiom" : "universal",
+      "filename" : "rechargeIcon@2x.png"
+    },
+    {
+      "filename" : "rechargeIcon@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
