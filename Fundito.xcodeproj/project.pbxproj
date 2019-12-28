@@ -36,6 +36,7 @@
 		2DA1B38723B6234D00A26447 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B38623B6234D00A26447 /* HomeVC.swift */; };
 		2DA1B38923B6235900A26447 /* FeedFriendDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B38823B6235900A26447 /* FeedFriendDetailVC.swift */; };
 		2DA1B38B23B6236100A26447 /* FeedFriendListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B38A23B6236100A26447 /* FeedFriendListVC.swift */; };
+		2DC29ED323B786CA00671303 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC29ED223B786CA00671303 /* View.swift */; };
 		3335C07B23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07A23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift */; };
 		3335C07D23B53AA20065FE62 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07C23B53AA20065FE62 /* PageCell.swift */; };
 		3335C07F23B5A9770065FE62 /* MyFundingStatusVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */; };
@@ -81,6 +82,7 @@
 		2DA1B38623B6234D00A26447 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		2DA1B38823B6235900A26447 /* FeedFriendDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFriendDetailVC.swift; sourceTree = "<group>"; };
 		2DA1B38A23B6236100A26447 /* FeedFriendListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFriendListVC.swift; sourceTree = "<group>"; };
+		2DC29ED223B786CA00671303 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		3335C07A23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + reusableIdentifier.swift"; sourceTree = "<group>"; };
 		3335C07C23B53AA20065FE62 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFundingStatusVC3.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				2D3C9E7C23AF67B500339F9D /* String.swift */,
 				2D3C9E7E23AF680600339F9D /* UIViewController.swift */,
 				3335C07A23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift */,
+				2DC29ED223B786CA00671303 /* View.swift */,
 			);
 			path = EXKit;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				2DA1B38723B6234D00A26447 /* HomeVC.swift in Sources */,
 				2DA1B38523B6234900A26447 /* MoreVC.swift in Sources */,
 				2D3C9E6D23AF5F3400339F9D /* NotiUtil.swift in Sources */,
+				2DC29ED323B786CA00671303 /* View.swift in Sources */,
 				2DA1B37823B622A400A26447 /* SearchVC.swift in Sources */,
 				2DA1B37C23B622DC00A26447 /* FundingInputVC.swift in Sources */,
 				2D3C9E6A23AF5E0700339F9D /* AppModel.swift in Sources */,
