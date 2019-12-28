@@ -39,6 +39,7 @@
 		3335C07B23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07A23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift */; };
 		3335C07D23B53AA20065FE62 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07C23B53AA20065FE62 /* PageCell.swift */; };
 		3335C07F23B5A9770065FE62 /* MyFundingStatusVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */; };
+		33876D1123B76A540095B532 /* Funding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33876D1023B76A540095B532 /* Funding.storyboard */; };
 		33D21CA923B625D000158454 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D21CA623B625D000158454 /* Color.swift */; };
 		33D21CAF23B6260E00158454 /* Spoqa Han Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33D21CAB23B6260E00158454 /* Spoqa Han Sans Regular.ttf */; };
 		33D21CB023B6260E00158454 /* Spoqa Han Sans Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33D21CAC23B6260E00158454 /* Spoqa Han Sans Bold.ttf */; };
@@ -89,6 +90,7 @@
 		3335C07A23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + reusableIdentifier.swift"; sourceTree = "<group>"; };
 		3335C07C23B53AA20065FE62 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFundingStatusVC3.swift; sourceTree = "<group>"; };
+		33876D1023B76A540095B532 /* Funding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Funding.storyboard; sourceTree = "<group>"; };
 		33D21CA623B625D000158454 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		33D21CAB23B6260E00158454 /* Spoqa Han Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa Han Sans Regular.ttf"; sourceTree = "<group>"; };
 		33D21CAC23B6260E00158454 /* Spoqa Han Sans Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa Han Sans Bold.ttf"; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				2DA1B37B23B622DC00A26447 /* FundingInputVC.swift */,
 				2DA1B37D23B622EE00A26447 /* FundingProgressVC.swift */,
 				2DA1B37F23B6230000A26447 /* FundingCompleteVC.swift */,
+				33876D1023B76A540095B532 /* Funding.storyboard */,
 			);
 			path = Funding;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				33D21CB123B6260E00158454 /* Spoqa Han Sans Light.ttf in Resources */,
 				2D3C9E5323AF58B800339F9D /* Assets.xcassets in Resources */,
 				2D3C9E5123AF58B700339F9D /* MyFundingStatus.storyboard in Resources */,
+				33876D1123B76A540095B532 /* Funding.storyboard in Resources */,
 				33D21CB023B6260E00158454 /* Spoqa Han Sans Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

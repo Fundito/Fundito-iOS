@@ -98,6 +98,9 @@ class MyFundingStatusVC2: UIViewController {
         if sender.direction == .up {
             print("up")
             let vc = storyboard?.instantiateViewController(withIdentifier: "MyFundingStatusVC3") as! MyFundingStatusVC3
+//            vc.modalPresentationStyle = .overCurrentContext
+//            vc.modalTransitionStyle = .crossDissolve
+//            self.dismiss(animated: false, completion: nil)
             UIView.animate(withDuration: 0.2, animations: {
                 UIView.setAnimationCurve(.linear)
                 self.navigationController?.pushViewController(vc, animated: false)

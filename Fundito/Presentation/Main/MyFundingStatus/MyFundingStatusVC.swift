@@ -16,8 +16,6 @@ class MyFundingStatusVC: UIViewController {
     
     @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         swipeRecognizer.direction = .up
@@ -58,14 +56,24 @@ class MyFundingStatusVC: UIViewController {
     }
     
     @IBAction func swipeView(_ sender: UISwipeGestureRecognizer) {
+        
         if sender.direction == .up {
             print("up")
+//            push()
             let vc = storyboard?.instantiateViewController(withIdentifier: "MyFundingStatusVC2") as! MyFundingStatusVC2
             print(vc)
-            UIView.animate(withDuration: 0.2, animations: {
+//
+//            let transition = CATransition()
+//            transition.duration = 0.3
+//            transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+//            transition.type = CATransitionType.fade
+//            self.view.layer.add(transition, forKey: nil)
+
+            UIView.animate(withDuration: 0.2, delay: 1.0, animations: {
                 UIView.setAnimationCurve(.linear)
                 self.navigationController?.pushViewController(vc, animated: false)
                 })
+            
 //                UIView.setAnimationTransition( UIView.AnimationTransition.curlDown , for: (self.navigationController?.view)!, cache: false)
             
             
@@ -100,9 +108,16 @@ class MyFundingStatusVC: UIViewController {
     
     // push func
     @objc func push() {
-       let vc = storyboard?.instantiateViewController(withIdentifier: "MyFundingStatusVC2") as! MyFundingStatusVC2
+        self.modalTransitionStyle = .crossDissolve
+        self.modalPresentationStyle = .fullScreen
         
-       self.navigationController?.pushViewController(vc, animated: true)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MyFundingStatusVC2") as! MyFundingStatusVC2
+        
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+    
+        self.present(vc, animated: false, completion: nil)
+//        self.navigationController?.pushViewController(vc, animated: true)
      }
     
     // pop func

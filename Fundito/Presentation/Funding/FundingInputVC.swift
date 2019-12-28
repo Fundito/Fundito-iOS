@@ -16,8 +16,10 @@ class FundingInputVC : UIViewController{
 extension FundingInputVC{
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
 		initView()
+//        let view = lineView.draw(CGRect, start: CGPoint(x: 55.5, y: 114.5), end: CGPoint(x: 55.5, y: 378.5), lineWidth: 1.0, strokeColor: UIColor.greyish)
+        view.backgroundColor = .clear
+        self.view.addSubview(view)
 	}
 }
 // MARK: Initialization
@@ -28,3 +30,16 @@ extension FundingInputVC{
 }
 
 
+
+class lineView: UIView {
+    func draw(_ rect: CGRect, start: CGPoint, end: CGPoint, lineWidth: CGFloat, strokeColor: UIColor ) {
+        let path = UIBezierPath()
+        path.move(to: start)
+        path.addLine(to: end)
+        path.close()
+        path.lineWidth = lineWidth
+        strokeColor.setStroke()
+        path.stroke()
+
+    }
+}
