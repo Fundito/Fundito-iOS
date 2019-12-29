@@ -17,7 +17,7 @@ extension FundingInputVC{
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		initView()
-//        let view = lineView.draw(CGRect, start: CGPoint(x: 55.5, y: 114.5), end: CGPoint(x: 55.5, y: 378.5), lineWidth: 1.0, strokeColor: UIColor.greyish)
+
         view.backgroundColor = .clear
         self.view.addSubview(view)
 	}
@@ -43,3 +43,5 @@ class lineView: UIView {
 
     }
 }
+
+//        let view = lineView.draw(CGRect, start: CGPoint(x: 55.5, y: 114.5), end: CGPoint(x: 55.5, y: 378.5), lineWidth: 1.0, strokeColor: UIColor.greyish)

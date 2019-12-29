@@ -13,19 +13,21 @@ class MyFundingStatusVC: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var moneyLabel: UILabel!
     @IBOutlet weak var percentLabel: UILabel!
-    
-    @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
+    @IBOutlet weak var arrowImage: UIImageView!
+    @IBOutlet var firstPopUpView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        swipeRecognizer.direction = .up
+        self.view.sendSubviewToBack(self.arrowImage)
         setLableText()
-        navigationController?.isNavigationBarHidden = true
+        setupPopUpView()
+        setupGestureRecognizer()
+//        navigationController?.isNavigationBarHidden = true
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = true
+//        navigationController?.isNavigationBarHidden = true
     }
     
     func setLableText() {
@@ -55,86 +57,57 @@ class MyFundingStatusVC: UIViewController {
         
     }
     
-    @IBAction func swipeView(_ sender: UISwipeGestureRecognizer) {
-        
-        if sender.direction == .up {
-            print("up")
-//            push()
-            let vc = storyboard?.instantiateViewController(withIdentifier: "MyFundingStatusVC2") as! MyFundingStatusVC2
-            print(vc)
-//
-//            let transition = CATransition()
-//            transition.duration = 0.3
-//            transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-//            transition.type = CATransitionType.fade
-//            self.view.layer.add(transition, forKey: nil)
-
-            UIView.animate(withDuration: 0.2, delay: 1.0, animations: {
-                UIView.setAnimationCurve(.linear)
-                self.navigationController?.pushViewController(vc, animated: false)
-                })
-            
-//                UIView.setAnimationTransition( UIView.AnimationTransition.curlDown , for: (self.navigationController?.view)!, cache: false)
-            
-            
-//            self.navigationController?.pushViewController(vc, animated: true)
-            
-//            if let nextView = self.storyboard?.instantiateViewController(withIdentifier: "MyFundingStatusVC2"){
-//                nextView.modalTransitionStyle = .coverVertical
-//                self.present(nextView, animated: true, completion: nil)
-//            }
-        }
-        
-    }
-    
-    // for push test
-    func setBtn(){
-        let btn: UIButton = UIButton(frame: CGRect(x: 100, y: 400, width: 100, height: 50))
-        btn.backgroundColor = UIColor.green
-        btn.setTitle("Click Me", for: .normal)
-        btn.addTarget(self, action: #selector(self.push), for: .touchUpInside)
-        btn.tag = 1
-        self.view.addSubview(btn)
-    }
-    
-    
-    // Set Custom Back Button
-    func setBackBtn(){
-        let backBTN = UIBarButtonItem(title: "back", style: .plain, target: self, action: #selector(self.pop))
-        
-        navigationItem.leftBarButtonItem = backBTN
-        navigationController?.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
-    }
-    
-    // push func
-    @objc func push() {
-        self.modalTransitionStyle = .crossDissolve
-        self.modalPresentationStyle = .fullScreen
-        
-        let vc = storyboard?.instantiateViewController(withIdentifier: "MyFundingStatusVC2") as! MyFundingStatusVC2
-        
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .overCurrentContext
-    
-        self.present(vc, animated: false, completion: nil)
-//        self.navigationController?.pushViewController(vc, animated: true)
-     }
-    
-    // pop func
-    @objc func pop(){
-        self.navigationController?.popViewController(animated: true)
-    }
-
 }
 
-//class lineView: UIView {
-//    override func draw(_ rect: CGRect) {
-//        let path = UIBezierPath()
-//        path.move(to: CGPoint(x: 10, y: 400))
-//        path.addLine(to: CGPoint(x: 400, y: 400))
-//        path.close()
-//        path.lineWidth = 5.0
-//        UIColor.gray.setStroke()
-//        path.stroke()
-//    }
-//}
+extension MyFundingStatusVC {
+  
+  func setupPopUpView() {
+    let frame = CGRect(x: 0, y: 673, width: self.view.frame.width, height: 637)
+    firstPopUpView.frame = frame
+    self.view.addSubview(firstPopUpView)
+  }
+  
+  func setupGestureRecognizer() {
+    let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
+    
+    pan.delegate = self
+    self.firstPopUpView.addGestureRecognizer(pan)
+  }
+  
+  
+  /*
+   1. 현재 터치 로케이션과 팝업 뷰의 y 좌표 대응
+   2. 팬 제스쳐 가 끝났을때 팝업 뷰의 위치에서 최대 떠올랐을때와 아래로 내려갔을때로 이동하는 애니메이션
+ 
+   */
+  @objc func handlePanGesture(_ pan: UIPanGestureRecognizer) {
+    
+    let touchLocation = pan.location(in: self.view)
+    let velocity = pan.velocity(in: self.view)
+    
+    switch pan.state {
+      case .began:
+        print("began")
+      case .changed:
+        self.firstPopUpView.frame.origin.y = touchLocation.y
+      
+      case .ended:
+        UIView.animate(withDuration: 0.35, delay: 0, options: .curveEaseOut, animations: {
+          if velocity.y > 0 {
+            self.firstPopUpView.frame.origin.y = 673
+          } else if velocity.y == 0 {
+            
+            //현재 마지막 팬 제스쳐 방향을 저장해두고 그 방향대로 뷰 위치 지정
+          } else {
+            self.firstPopUpView.frame.origin.y = 85
+          }
+        })
+      default:
+        print("default")
+    }
+  }
+}
+
+extension MyFundingStatusVC: UIGestureRecognizerDelegate {
+  
+}

@@ -74,6 +74,14 @@
             </objects>
             <point key="canvasLocation" x="2484" y="94.581280788177338"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="f3j-zg-wZa">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="sBq-db-O0H" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WcA-ZT-x1r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3324" y="101"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="fiM-vA-ImB">
             <objects>
