@@ -6,6 +6,10 @@
 //  Copyright © 2019 Fundito. All rights reserved.
 //
 
+/**
+ 세번째 뷰의 커스텀 탭바에 따라 나타나는 페이지의 테이블 뷰 
+ */
+
 import UIKit
 
 class Cell: UICollectionViewCell{

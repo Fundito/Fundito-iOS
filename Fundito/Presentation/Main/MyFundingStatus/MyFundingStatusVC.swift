@@ -18,6 +18,7 @@ class MyFundingStatusVC: UIViewController {
     
     @IBOutlet var firstPopUpView: FirstPopUpView!
     @IBOutlet var secondPopUpView: SecondPopUpView!
+    @IBOutlet var storePopUpView: StorePopUpView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +34,16 @@ class MyFundingStatusVC: UIViewController {
     func setBackBtn(){
         //        let vc = storyboard?.instantiateViewController(withIdentifier: "MyFundingStatusVC") as! MyFundingStatusVC
         self.backBtn.isHidden = true
+        
     }
     
     @IBAction func actionBackBtn(_ sender: UIButton) {
         self.firstPopUpView.frame.origin.y = 693
         self.backBtn.isHidden = true
-        self.secondPopUpView.frame.origin.y = 1386
+//        self.secondPopUpView.frame.origin.y = 1386
+        self.storePopUpView.frame.origin.y = 1386
+    
+        self.reloadInputViews()
     }
     
     func setLableText() {
@@ -74,24 +79,25 @@ extension MyFundingStatusVC {
     
     func setupPopUpView() {
         let frameFirst = CGRect(x: 0, y: 693, width: self.view.frame.width, height: 637)
-        let frameSecond = CGRect(x: 0, y: 1386, width: self.view.frame.width, height: 637)
         firstPopUpView.frame = frameFirst
         firstPopUpView.viewInit()
-        secondPopUpView.frame = frameSecond
-        secondPopUpView.viewInit()
-        
         self.view.addSubview(firstPopUpView)
-        self.view.addSubview(secondPopUpView)
+        
+//        let frameSecond = CGRect(x: 0, y: 1386, width: self.view.frame.width, height: 637)
+//        secondPopUpView.frame = frameSecond
+//        secondPopUpView.viewInit()
+//        self.view.addSubview(secondPopUpView)
     }
     
     func setupGestureRecognizer() {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
-        let panSecond = UIPanGestureRecognizer(target: self, action: #selector(handlePanGestureSecond(_:)))
+//        let panSecond = UIPanGestureRecognizer(target: self, action: #selector(handlePanGestureSecond(_:)))
         pan.delegate = self
         self.firstPopUpView.addGestureRecognizer(pan)
         
-        panSecond.delegate = self
-        self.secondPopUpView.addGestureRecognizer(panSecond)
+//        panSecond.delegate = self
+//        self.secondPopUpView.addGestureRecognizer(panSecond)
+//        self.storePopUpView.addGestureRecognizer(panSecond)
         
     }
     
@@ -127,7 +133,7 @@ extension MyFundingStatusVC {
                     } else{
                         self.firstPopUpView.frame.origin.y = 693
                         self.backBtn.isHidden = true
-                        self.secondPopUpView.frame.origin.y = 1386
+//                        self.secondPopUpView.frame.origin.y = 1386
                     }
                     
                     
@@ -137,54 +143,54 @@ extension MyFundingStatusVC {
                 } else {
                     self.firstPopUpView.frame.origin.y = 90
                     self.backBtn.isHidden = false
-                    self.secondPopUpView.frame.origin.y = 693
+//                    self.secondPopUpView.frame.origin.y = 693
                 }
             })
         default:
             print("default")
         }
     }
-    
-    // 제스처 진행중
-    @objc func handlePanGestureSecond(_ pan: UIPanGestureRecognizer) {
-        let touchLocation = pan.location(in: self.view)
-        let velocity = pan.velocity(in: self.view)
-        
-        switch pan.state {
-        case .began:
-            print("beganSecond")
-        case .changed:
-            if(self.secondPopUpView.frame.origin.y == 90) {
-                if (velocity.y < 0) {}
-                else {self.secondPopUpView.frame.origin.y = touchLocation.y}
-                
-            } else{
-                self.secondPopUpView.frame.origin.y = touchLocation.y
-            }
-        case .ended:
-//            print("ended")
-            UIView.animate(withDuration: 0.35, delay: 0, options: .curveEaseOut, animations: {
-                if velocity.y > 0 {
-                    if(self.secondPopUpView.frame.origin.y == 90) {
-                        
-                    } else{
-                        self.secondPopUpView.frame.origin.y = 693
-                        self.backBtn.isHidden = true
-                    }
-                    
-                    
-                } else if velocity.y == 0 {
-                    
-                    //현재 마지막 팬 제스쳐 방향을 저장해두고 그 방향대로 뷰 위치 지정
-                } else {
-                    self.secondPopUpView.frame.origin.y = 90
-                    self.backBtn.isHidden = false
-                }
-            })
-        default:
-            print("default")
-        }
-    }
+//
+//    // 내리기만 가능
+//    @objc func handlePanGestureSecond(_ pan: UIPanGestureRecognizer) {
+//        let touchLocation = pan.location(in: self.view)
+//        let velocity = pan.velocity(in: self.view)
+//
+//        switch pan.state {
+//        case .began:
+//            print("beganSecond")
+//        case .changed:
+//            if(self.secondPopUpView.frame.origin.y == 90) {
+//                if (velocity.y < 0) {}
+//                else {self.secondPopUpView.frame.origin.y = touchLocation.y}
+//
+//            } else{
+//                self.secondPopUpView.frame.origin.y = touchLocation.y
+//            }
+//        case .ended:
+////            print("ended")
+//            UIView.animate(withDuration: 0.35, delay: 0, options: .curveEaseOut, animations: {
+//                if velocity.y > 0 {
+//                    if(self.secondPopUpView.frame.origin.y == 90) {
+//
+//                    } else{
+//                        self.secondPopUpView.frame.origin.y = 693
+//
+//                    }
+//
+//
+//                } else if velocity.y == 0 {
+//
+//                    //현재 마지막 팬 제스쳐 방향을 저장해두고 그 방향대로 뷰 위치 지정
+//                } else {
+//                    self.secondPopUpView.frame.origin.y = 90
+//                    self.backBtn.isHidden = false
+//                }
+//            })
+//        default:
+//            print("default")
+//        }
+//    }
 }
 
 extension MyFundingStatusVC: UIGestureRecognizerDelegate {
