@@ -20,7 +20,7 @@
         <!--현황-->
         <scene sceneID="ihg-U0-N8C">
             <objects>
-                <viewController id="dB9-I0-DdJ" customClass="MyFundingStatusVC" customModule="Fundito" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyFundingStatusVC" id="dB9-I0-DdJ" customClass="MyFundingStatusVC" customModule="Fundito" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="azf-5z-9wQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,6 +50,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLN-NB-iag">
+                                <rect key="frame" x="24" y="56" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="backarrowNavyIcon"/>
+                                <connections>
+                                    <action selector="actionBackBtn:" destination="dB9-I0-DdJ" eventType="touchUpInside" id="r7r-8O-6KQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
@@ -60,19 +68,22 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="arrowImage" destination="EKk-Pg-oBj" id="8PZ-ik-Bbx"/>
+                        <outlet property="backBtn" destination="MLN-NB-iag" id="dF1-zK-LD9"/>
                         <outlet property="firstPopUpView" destination="Clz-Wx-tOm" id="E3a-Pb-YXu"/>
                         <outlet property="moneyLabel" destination="QFa-Wb-NhD" id="Poy-Wp-BMo"/>
                         <outlet property="percentLabel" destination="pTf-gu-DQn" id="Mac-xk-yQ4"/>
                         <outlet property="questionLabel" destination="Zxn-Dh-gWU" id="z25-18-1yW"/>
+                        <outlet property="secondPopUpView" destination="1r9-8w-xEe" id="wGd-pe-308"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfM-Yo-ofo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="Clz-Wx-tOm">
+                <view contentMode="scaleToFill" id="Clz-Wx-tOm" customClass="FirstPopUpView" customModule="Fundito" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="637"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="receiptImg" translatesAutoresizingMaskIntoConstraints="NO" id="1EK-ke-Xhb">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="receiptImg" translatesAutoresizingMaskIntoConstraints="NO" id="1EK-ke-Xhb">
+                            <rect key="frame" x="0.0" y="-20" width="381" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="펀디토머니 잔액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKO-FJ-CrG">
                             <rect key="frame" x="16" y="40" width="80" height="18"/>
@@ -117,7 +128,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KfC-SW-ELW">
-                            <rect key="frame" x="0.0" y="361" width="375" height="276"/>
+                            <rect key="frame" x="0.0" y="361" width="375" height="293"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <prototypes>
@@ -189,161 +200,37 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <constraints>
-                        <constraint firstItem="wlb-ps-Z9G" firstAttribute="bottom" secondItem="1EK-ke-Xhb" secondAttribute="bottom" constant="604" id="Asv-aA-jN9"/>
-                        <constraint firstItem="wlb-ps-Z9G" firstAttribute="top" secondItem="1EK-ke-Xhb" secondAttribute="top" constant="44" id="MLe-XM-tTh"/>
-                        <constraint firstItem="1EK-ke-Xhb" firstAttribute="leading" secondItem="wlb-ps-Z9G" secondAttribute="leading" id="juB-ng-Xjd"/>
-                        <constraint firstItem="wlb-ps-Z9G" firstAttribute="trailing" secondItem="1EK-ke-Xhb" secondAttribute="trailing" id="pOd-Nk-9ya"/>
-                    </constraints>
                     <viewLayoutGuide key="safeArea" id="wlb-ps-Z9G"/>
+                    <connections>
+                        <outlet property="expectedMaxRetrunMoney" destination="XvN-Ry-KSp" id="E2v-l2-HOb"/>
+                        <outlet property="expectedMaxRetrunMoneyLabel" destination="hvb-EN-2p5" id="G4n-is-spD"/>
+                        <outlet property="fundingMoney" destination="7gU-lc-gI2" id="hTs-cg-bDM"/>
+                        <outlet property="fundingMoneyLabel" destination="dCP-ZC-fsc" id="2EV-Lp-PKa"/>
+                        <outlet property="funditoMoney" destination="jap-FP-CE9" id="NmW-eq-SoF"/>
+                        <outlet property="funditoMoneyLabel" destination="bKO-FJ-CrG" id="c6i-sa-mZf"/>
+                        <outlet property="myFundingStatusTable" destination="KfC-SW-ELW" id="EHt-En-ZPw"/>
+                        <outlet property="pointChargingBtn" destination="4Ck-ei-gXn" id="Wzv-ZN-GjJ"/>
+                        <outlet property="recentFundingListLabel" destination="h0G-0h-RKn" id="8FQ-ix-X8p"/>
+                        <outlet property="topReceiptImage" destination="1EK-ke-Xhb" id="4o3-Cs-iPp"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" id="1r9-8w-xEe" customClass="SecondPopUpView" customModule="Fundito" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="637"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="receiptImg" translatesAutoresizingMaskIntoConstraints="NO" id="1AT-dX-28F">
+                            <rect key="frame" x="0.0" y="-20" width="381" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <viewLayoutGuide key="safeArea" id="mpZ-2t-XPn"/>
+                    <connections>
+                        <outlet property="topReceiptImage" destination="1AT-dX-28F" id="vdQ-2c-MHT"/>
+                    </connections>
                 </view>
             </objects>
             <point key="canvasLocation" x="7448.8000000000002" y="1622.6600985221676"/>
-        </scene>
-        <!--My Funding StatusVC2-->
-        <scene sceneID="X1v-Zm-hcY">
-            <objects>
-                <swipeGestureRecognizer direction="right" id="LTH-pt-QFy">
-                    <connections>
-                        <action selector="swipeAction:" destination="1g9-9G-rP3" id="DVr-JZ-Hw3"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h8i-4n-fku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="CeX-2Z-wmG">
-                    <connections>
-                        <action selector="swipeAction:" destination="1g9-9G-rP3" id="M9K-3w-L0j"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <viewController storyboardIdentifier="MyFundingStatusVC2" id="1g9-9G-rP3" customClass="MyFundingStatusVC2" customModule="Fundito" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NrA-i3-30W">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="펀디토머니 잔액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uu-Sz-iFb">
-                                <rect key="frame" x="16" y="125" width="80" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="120.000 원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzf-hz-clS">
-                                <rect key="frame" x="16" y="147" width="155" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="투자중인 금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IG-xc-rFd">
-                                <rect key="frame" x="16" y="217" width="69" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30.000 원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9w-mm-q7O">
-                                <rect key="frame" x="16" y="243" width="133" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="예상 최대 회수금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np4-6o-b9H">
-                                <rect key="frame" x="16" y="297" width="94" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="58.500 원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IR2-4O-Ztr">
-                                <rect key="frame" x="16" y="323" width="139" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Efi-8N-4FM">
-                                <rect key="frame" x="0.0" y="446" width="375" height="327"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MyFundingStatusTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyFundingStatusTableViewCell" rowHeight="83" id="cJ2-Xp-1zv" customClass="MyFundingStatusTableViewCell" customModule="Fundito" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="83"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cJ2-Xp-1zv" id="dkP-1C-9ny">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12월 14일(오늘)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oR-dN-7lS">
-                                                    <rect key="frame" x="16" y="8" width="87" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="황호댁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nv9-gL-PgI">
-                                                    <rect key="frame" x="16" y="29" width="45" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5,000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJ8-1n-M3s">
-                                                    <rect key="frame" x="16" y="53" width="60" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="회수금액 8,500 (170%)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiB-mZ-cLe">
-                                                    <rect key="frame" x="146" y="53" width="213" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="14:25" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUl-pM-GVd">
-                                                    <rect key="frame" x="327" y="58" width="32" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="date" destination="3oR-dN-7lS" id="FNm-XN-Azh"/>
-                                            <outlet property="fundingMoney" destination="DJ8-1n-M3s" id="uiY-s5-L0M"/>
-                                            <outlet property="returnMoney" destination="BiB-mZ-cLe" id="lMo-4s-fzm"/>
-                                            <outlet property="storeName" destination="Nv9-gL-PgI" id="pKf-6q-Q2U"/>
-                                            <outlet property="time" destination="KUl-pM-GVd" id="3h2-DQ-r8R"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AQ-cB-b5j">
-                                <rect key="frame" x="285" y="158" width="74" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="충전하기" image="rechargeIcon"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="최근 투자 내역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Za4-z0-dDk">
-                                <rect key="frame" x="16" y="414" width="100" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <gestureRecognizers/>
-                        <viewLayoutGuide key="safeArea" id="HOK-v4-lGU"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="CeX-2Z-wmG" appends="YES" id="SbC-hE-MFW"/>
-                            <outletCollection property="gestureRecognizers" destination="LTH-pt-QFy" appends="YES" id="Ldd-qa-6Jb"/>
-                        </connections>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="8324" y="1625.615763546798"/>
         </scene>
         <!--My Funding StatusVC3-->
         <scene sceneID="50b-XN-nUJ">
@@ -394,7 +281,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="9178.3999999999996" y="1627.8325123152711"/>
+            <point key="canvasLocation" x="8441" y="1623"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="P9j-wk-XpQ">
@@ -415,6 +302,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backarrowNavyIcon" width="24" height="24"/>
         <image name="imgArrow" width="185" height="277"/>
         <image name="receiptImg" width="381" height="40"/>
         <image name="rechargeIcon" width="74" height="27"/>
