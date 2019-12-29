@@ -45,6 +45,7 @@
 		33876D1523B895330095B532 /* SecondPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876D1423B895330095B532 /* SecondPopUpView.swift */; };
 		33876D1723B8CE800095B532 /* StorePopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876D1623B8CE800095B532 /* StorePopUpView.swift */; };
 		33876D1923B8D21E0095B532 /* StorePopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876D1823B8D21E0095B532 /* StorePopUpTableViewCell.swift */; };
+		33876D1B23B91BAE0095B532 /* FudingPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876D1A23B91BAE0095B532 /* FudingPVC.swift */; };
 		33D21CA923B625D000158454 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D21CA623B625D000158454 /* Color.swift */; };
 		33D21CAF23B6260E00158454 /* Spoqa Han Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33D21CAB23B6260E00158454 /* Spoqa Han Sans Regular.ttf */; };
 		33D21CB023B6260E00158454 /* Spoqa Han Sans Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33D21CAC23B6260E00158454 /* Spoqa Han Sans Bold.ttf */; };
@@ -100,6 +101,7 @@
 		33876D1423B895330095B532 /* SecondPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPopUpView.swift; sourceTree = "<group>"; };
 		33876D1623B8CE800095B532 /* StorePopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePopUpView.swift; sourceTree = "<group>"; };
 		33876D1823B8D21E0095B532 /* StorePopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePopUpTableViewCell.swift; sourceTree = "<group>"; };
+		33876D1A23B91BAE0095B532 /* FudingPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FudingPVC.swift; sourceTree = "<group>"; };
 		33D21CA623B625D000158454 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		33D21CAB23B6260E00158454 /* Spoqa Han Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa Han Sans Regular.ttf"; sourceTree = "<group>"; };
 		33D21CAC23B6260E00158454 /* Spoqa Han Sans Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa Han Sans Bold.ttf"; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				2DA1B37D23B622EE00A26447 /* FundingProgressVC.swift */,
 				2DA1B37F23B6230000A26447 /* FundingCompleteVC.swift */,
 				33876D1023B76A540095B532 /* Funding.storyboard */,
+				33876D1A23B91BAE0095B532 /* FudingPVC.swift */,
 			);
 			path = Funding;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				2D3C9E4E23AF58B700339F9D /* MainVC.swift in Sources */,
 				33D3C4F023B4E3F100E8AA3F /* CustomMenuBar.swift in Sources */,
 				2D3C9E7D23AF67B500339F9D /* String.swift in Sources */,
+				33876D1B23B91BAE0095B532 /* FudingPVC.swift in Sources */,
 				2DA1B37423B6222B00A26447 /* StoreDetailVC.swift in Sources */,
 				2D3C9E7F23AF680600339F9D /* UIViewController.swift in Sources */,
 				2DA1B38723B6234D00A26447 /* HomeVC.swift in Sources */,
