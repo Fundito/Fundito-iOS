@@ -20,6 +20,7 @@ class FundingInputVC : UIViewController{
     
     @IBOutlet weak var userCardInfo: UILabel!
     @IBOutlet weak var autoChargeMoney: UILabel!
+
     
     /**
     1) 잔액 받아와서  inputExplanation 조립 ( setinputLabel 안에)
@@ -41,9 +42,14 @@ class FundingInputVC : UIViewController{
 
         if (inputExplanation.isHidden == true){
             
-            let vc = storyboard?.instantiateViewController(withIdentifier: "FundingProgressVC") as! FundingProgressVC
+            guard let vc = storyboard?.instantiateViewController(withIdentifier: "FundingProgressVC") as? FundingProgressVC else {
+                return
+            }
+            
             vc.modalTransitionStyle = .flipHorizontal
             vc.modalPresentationStyle = .currentContext
+            
+            
 //            self.definesPresentationContext = true
             
 //            self.performSegue(withIdentifier: "FundingProgressVC", sender: nil)
@@ -76,6 +82,7 @@ extension FundingInputVC{
 	override func viewDidLoad() {
 		super.viewDidLoad()
         self.initView()
+        
 	}
     
 }

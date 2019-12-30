@@ -11,6 +11,8 @@ import PromiseKit
 import FBSDKLoginKit
 import FBSDKCoreKit
 
+// NOT USE 로그인쪽으로 코드 옮길듯
+
 class MainVC : UIViewController{
 
 	override func viewDidLoad() {

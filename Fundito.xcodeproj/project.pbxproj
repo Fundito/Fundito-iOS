@@ -46,6 +46,10 @@
 		33876D1723B8CE800095B532 /* StorePopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876D1623B8CE800095B532 /* StorePopUpView.swift */; };
 		33876D1923B8D21E0095B532 /* StorePopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876D1823B8D21E0095B532 /* StorePopUpTableViewCell.swift */; };
 		33876D1B23B91BAE0095B532 /* FudingPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876D1A23B91BAE0095B532 /* FudingPVC.swift */; };
+		3397E13723BA90A300D864F2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3397E13623BA90A300D864F2 /* Home.storyboard */; };
+		3397E13923BAABB400D864F2 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3397E13823BAABB400D864F2 /* Feed.storyboard */; };
+		3397E13B23BAAD9300D864F2 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3397E13A23BAAD9300D864F2 /* More.storyboard */; };
+		3397E13D23BAB1DA00D864F2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3397E13C23BAB1DA00D864F2 /* MainTabBarController.swift */; };
 		33D21CA923B625D000158454 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D21CA623B625D000158454 /* Color.swift */; };
 		33D21CAF23B6260E00158454 /* Spoqa Han Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33D21CAB23B6260E00158454 /* Spoqa Han Sans Regular.ttf */; };
 		33D21CB023B6260E00158454 /* Spoqa Han Sans Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33D21CAC23B6260E00158454 /* Spoqa Han Sans Bold.ttf */; };
@@ -102,6 +106,10 @@
 		33876D1623B8CE800095B532 /* StorePopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePopUpView.swift; sourceTree = "<group>"; };
 		33876D1823B8D21E0095B532 /* StorePopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePopUpTableViewCell.swift; sourceTree = "<group>"; };
 		33876D1A23B91BAE0095B532 /* FudingPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FudingPVC.swift; sourceTree = "<group>"; };
+		3397E13623BA90A300D864F2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		3397E13823BAABB400D864F2 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		3397E13A23BAAD9300D864F2 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		3397E13C23BAB1DA00D864F2 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		33D21CA623B625D000158454 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		33D21CAB23B6260E00158454 /* Spoqa Han Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa Han Sans Regular.ttf"; sourceTree = "<group>"; };
 		33D21CAC23B6260E00158454 /* Spoqa Han Sans Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa Han Sans Bold.ttf"; sourceTree = "<group>"; };
@@ -225,6 +233,7 @@
 				2DA1B38323B6233C00A26447 /* More */,
 				2D3C9E4D23AF58B700339F9D /* MainVC.swift */,
 				33D3C4F323B4F27400E8AA3F /* Main.storyboard */,
+				3397E13C23BAB1DA00D864F2 /* MainTabBarController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -341,6 +350,7 @@
 			children = (
 				2DA1B38823B6235900A26447 /* FeedFriendDetailVC.swift */,
 				2DA1B38A23B6236100A26447 /* FeedFriendListVC.swift */,
+				3397E13823BAABB400D864F2 /* Feed.storyboard */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -349,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				2DA1B38623B6234D00A26447 /* HomeVC.swift */,
+				3397E13623BA90A300D864F2 /* Home.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -357,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				2DA1B38423B6234900A26447 /* MoreVC.swift */,
+				3397E13A23BAAD9300D864F2 /* More.storyboard */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -461,9 +473,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D3C9E5623AF58B800339F9D /* LaunchScreen.storyboard in Resources */,
+				3397E13723BA90A300D864F2 /* Home.storyboard in Resources */,
+				3397E13923BAABB400D864F2 /* Feed.storyboard in Resources */,
 				33D21CB223B6260E00158454 /* Spoqa Han Sans Thin.ttf in Resources */,
 				33D3C4F423B4F27400E8AA3F /* Main.storyboard in Resources */,
 				33D21CAF23B6260E00158454 /* Spoqa Han Sans Regular.ttf in Resources */,
+				3397E13B23BAAD9300D864F2 /* More.storyboard in Resources */,
 				2D3C9E7923AF670100339F9D /* Localizable.strings in Resources */,
 				33D21CB123B6260E00158454 /* Spoqa Han Sans Light.ttf in Resources */,
 				2D3C9E5323AF58B800339F9D /* Assets.xcassets in Resources */,
@@ -570,6 +585,7 @@
 				2D3C9E7423AF663300339F9D /* NetworkService.swift in Sources */,
 				2DA1B37223B6220C00A26447 /* StoreRegisterVC.swift in Sources */,
 				2DA1B36C23B6218800A26447 /* ChargeVC.swift in Sources */,
+				3397E13D23BAB1DA00D864F2 /* MainTabBarController.swift in Sources */,
 				33876D1523B895330095B532 /* SecondPopUpView.swift in Sources */,
 				2DA1B38B23B6236100A26447 /* FeedFriendListVC.swift in Sources */,
 				3335C07B23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift in Sources */,

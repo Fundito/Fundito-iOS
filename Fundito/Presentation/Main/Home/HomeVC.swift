@@ -6,4 +6,26 @@
 //  Copyright © 2019 Fundito. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class HomeVC: UIViewController {
+    
+    
+}
+
+
+// MARK: Lifecycle
+extension HomeVC{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        initView()
+    }
+}
+// MARK: Initialization
+extension HomeVC{
+    private func initView(){
+        
+    }
+}
+

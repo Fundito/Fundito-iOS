@@ -6,4 +6,8 @@
 //  Copyright © 2019 Fundito. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class MoreVC: UIViewController{
+    
+}
