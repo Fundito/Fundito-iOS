@@ -6,15 +6,14 @@ SOPT 25기 펀디토 iOS 저장소
 ## 서비스 work flow
 
 
-## 실행 화면 스크린 캡처 (cmd + shift + 4, spacebar)
+## 실행 화면 스크린 캡처
 
 ### 펀딩
-![FundingInputVC](./image/FundingInputVC.png){: width="187.5" height="406")
-<center><img src="/image/FundingInputVC.png" width="300" height="300"></center>
+<center><img src="/image/FundingInputVC.png" width="187.5" height="406"></center>
 
 ### 현황
-![MyFundingStatusVC](./image/MyFundingStatusVC.png){: width="187.5" height="406"}
-![FirstPopUpView](./image/FirstPopUpView.png){: width="187.5" height="406"}
+<center><img src="/image/MyFundingStatusVC.png" width="187.5" height="406"></center>
+<center><img src="/image/FirstPopUpView.png" width="187.5" height="406"></center>
 
 
 ## 개발 환경 
