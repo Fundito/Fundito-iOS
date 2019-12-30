@@ -9,12 +9,12 @@ SOPT 25기 펀디토 iOS 저장소
 ## 실행 화면 스크린 캡처
 
 ### 펀딩
-<img src="http://url.to/image/FundingInputVC.png" align="left" height="187.5" width="406.0" >
+![FundingInputVC](./image/FundingInputVC.png){: width="187.5" height="406.0"}
 
 ### 현황
 <p align="center">
-  <img src="./image/MyFundingStatusVC.png" width="50%" height="50%">
-  <img src="./image/FirstPopUpView.png" width="187.5" height="203.0">
+  <img src="./image/MyFundingStatusVC.png" width="187.5" height="406">
+  <img src="./image/FirstPopUpView.png" width="187.5" height="300.0">
 </p>
 
 
