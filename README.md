@@ -30,4 +30,36 @@ SOPT 25기 펀디토 iOS 저장소
 
 1. 문제 1
 > 밑에서 올라오는 중첩된 뷰 구현 필요
-* 해결 방법 1. 
+* 해결 방법 
+> 1. VC에 UIView 추가
+> 2. VC Class에 Outlet 으로 추가, extension으로 view를 설정해줄 함수(setupPopUpView) 정의
+<pre>
+@IBOutlet var firstPopUpView: FirstPopUpView!
+// view의 크기와 위치를 설정
+func setupPopUpView() {
+        let frameFirst = CGRect(x: 0, y: 693, width: self.view.frame.width, height: 637)
+        firstPopUpView.frame = frameFirst
+        firstPopUpView.viewInit() // view의 클래스를 생성하여 필요한 초기 설정을 하는 함수
+}
+</pre>
+> 3. 함수를 정의하여 view에 panGestureRecognizer를 추가하여 사용자가 끌어올릴 수 있도록 함
+<pre>
+func setupGestureRecognizer() {
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
+        pan.delegate = self
+        self.firstPopUpView.addGestureRecognizer(pan)
+    }
+</pre>
+> 4. handlePanGesture 함수를 정의하여 사용자의 손가락 움직임에 따른 분기 처리
+<pre>
+@objc func handlePanGesture(_ pan: UIPanGestureRecognizer) {
+  let touchLocation = pan.location(in: self.view)
+  let velocity = pan.velocity(in: self.view)
+  
+  switch pan.state {
+  ...
+  }
+}
+</pre>
+
+
