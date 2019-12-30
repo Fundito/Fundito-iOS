@@ -4,7 +4,7 @@ SOPT 25기 펀디토 iOS 저장소
 > 
 
 ## 서비스 work flow
-<img src="./image/workFlow.png">
+<img src="./image/workflow.png">
 
 ## 실행 화면 스크린 캡처
 
