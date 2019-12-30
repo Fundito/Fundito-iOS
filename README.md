@@ -10,13 +10,13 @@ SOPT 25기 펀디토 iOS 저장소
 
 ### 펀딩
 <center><img src="/image/FundingInputVC.png" width="187.5" height="406.0"></center>
-![FundingInputVC](/image/FundingInputVC.png){: width="187.5" height="406.0"}
+![FundingInputVC](./image/FundingInputVC.png){: width="187.5" height="406.0"}
 
 ### 현황
 <center><img src="/image/MyFundingStatusVC.png" width="187.5" height="406.0"></center>
 <center><img src="/image/FirstPopUpView.png" width="187.5" height="406.0"></center>
-![MyFundingStatusVC](/image/MyFundingStatusVC.png){: width="187.5" height="406.0"}
-![FirstPopUpView](/image/FirstPopUpView.png){: width="187.5" height="406.0"}
+![MyFundingStatusVC](./image/MyFundingStatusVC.png){: width="187.5" height="406.0"}
+![FirstPopUpView](./image/FirstPopUpView.png){: width="187.5" height="406.0"}
 
 
 ## 개발 환경 
