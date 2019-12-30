@@ -13,7 +13,7 @@ SOPT 25기 펀디토 iOS 저장소
 
 ### 현황
 <p align="center">
-  <img src="./image/MyFundingStatusVC.png" width="187.5" height="406.0">
+  <img src="./image/MyFundingStatusVC.png" width="50%" height="50%">
   <img src="./image/FirstPopUpView.png" width="187.5" height="203.0">
 </p>
 
