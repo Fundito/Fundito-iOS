@@ -81,7 +81,11 @@
                         <viewLayoutGuide key="safeArea" id="ilB-Zz-gvf"/>
                     </view>
                     <navigationItem key="navigationItem" title="투자금액" id="nm6-ds-DRO">
-                        <barButtonItem key="leftBarButtonItem" image="backarrowNavyIcon" id="Zqj-Wo-aiT"/>
+                        <barButtonItem key="leftBarButtonItem" image="backarrowNavyIcon" id="Zqj-Wo-aiT">
+                            <connections>
+                                <action selector="backBtnAction:" destination="bvX-EV-Z0j" id="V1c-Cf-aYN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="autoChargeMoney" destination="OlA-E3-Lw8" id="5pn-E6-cO8"/>
@@ -110,7 +114,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktC-Y3-YML">
                                 <rect key="frame" x="16" y="712" width="343" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="입력완료"/>
+                                <state key="normal" title="결제/투자하기"/>
+                                <connections>
+                                    <action selector="payBtnAction:" destination="hVO-2e-e5q" eventType="touchUpInside" id="aHv-F2-luX"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="progressbarIngImg" translatesAutoresizingMaskIntoConstraints="NO" id="OCP-q4-ywu">
                                 <rect key="frame" x="0.0" y="104" width="375" height="56"/>
@@ -147,6 +154,9 @@
                                 <rect key="frame" x="24" y="56" width="24" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="backarrowNavyIcon"/>
+                                <connections>
+                                    <action selector="backBtnAction:" destination="hVO-2e-e5q" eventType="touchUpInside" id="S4U-Qw-VzW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="나의 투자현황" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYA-UP-zbL">
                                 <rect key="frame" x="132" y="55" width="112" height="25"/>
@@ -170,7 +180,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="170% 이율" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YX4-WB-4XC">
-                                <rect key="frame" x="141" y="335" width="76" height="24"/>
+                                <rect key="frame" x="141" y="335" width="80" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -184,6 +194,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pSV-YJ-k2p"/>
                     </view>
+                    <connections>
+                        <outlet property="backBtn" destination="Tht-me-Vgh" id="Q9B-qA-C2c"/>
+                        <outlet property="fundingMoney" destination="v8K-XV-4lf" id="nVx-8u-uAa"/>
+                        <outlet property="funditoMoney" destination="vGT-2W-Czg" id="OS4-qI-9Cf"/>
+                        <outlet property="interestMoney" destination="mVx-ea-hHs" id="hfP-yT-Sg8"/>
+                        <outlet property="interestRate" destination="YX4-WB-4XC" id="eel-Lm-nZr"/>
+                        <outlet property="line" destination="bDn-kv-Hac" id="HVk-dh-fBj"/>
+                        <outlet property="payBtn" destination="ktC-Y3-YML" id="eyA-ob-Lud"/>
+                        <outlet property="plusImage" destination="RjG-e1-vKW" id="tYc-vH-niH"/>
+                        <outlet property="processBar" destination="OCP-q4-ywu" id="YcJ-sf-6Mu"/>
+                        <outlet property="resultMoney" destination="6Wv-Sf-gE5" id="O7r-J7-A4N"/>
+                        <outlet property="viewName" destination="JYA-UP-zbL" id="thj-rS-Ohf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94m-Nv-Xuz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,9 +219,116 @@
                     <view key="view" contentMode="scaleToFill" id="l9F-pB-pp2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsM-Ly-JQF">
+                                <rect key="frame" x="16" y="712" width="343" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="완료"/>
+                                <connections>
+                                    <action selector="completeBtnAction:" destination="3Fh-WP-d55" eventType="touchUpInside" id="cEV-mK-uwv"/>
+                                    <action selector="payBtnAction:" destination="hVO-2e-e5q" eventType="touchUpInside" id="U4s-VE-xS7"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="progressbarEngImg" translatesAutoresizingMaskIntoConstraints="NO" id="Bco-IZ-nby">
+                                <rect key="frame" x="0.0" y="104" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5000 원" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEl-Rj-J91">
+                                <rect key="frame" x="298" y="552" width="60" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0vl-6K-NK1">
+                                <rect key="frame" x="21" y="530" width="334" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="회수 예정 금액" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G52-qK-81q">
+                                <rect key="frame" x="20" y="592" width="105" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(+3500 원)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdJ-3M-nHc">
+                                <rect key="frame" x="210" y="592" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfS-n7-PTD">
+                                <rect key="frame" x="24" y="56" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="backarrowNavyIcon"/>
+                                <connections>
+                                    <action selector="backBtnAction:" destination="3Fh-WP-d55" eventType="touchUpInside" id="ZhT-xI-aR6"/>
+                                    <action selector="backBtnAction:" destination="hVO-2e-e5q" eventType="touchUpInside" id="rsu-cg-vAN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="목표도달까지 17% 남음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bb-KY-f4b">
+                                <rect key="frame" x="97" y="55" width="180" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5,000원 투자완료." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rxu-8n-xJ1">
+                                <rect key="frame" x="20" y="484" width="154" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="총 투자액" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixe-X9-fE9">
+                                <rect key="frame" x="20" y="552" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="황호댁" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYf-Zb-D6Z">
+                                <rect key="frame" x="20" y="443" width="60" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8500 원" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUB-KX-hQY">
+                                <rect key="frame" x="298" y="592" width="60" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="EuT-Pm-fqg"/>
                     </view>
+                    <connections>
+                        <outlet property="allFundingMoney" destination="EEl-Rj-J91" id="XKK-Fy-HTk"/>
+                        <outlet property="allFundingMoneyLabel" destination="ixe-X9-fE9" id="rOc-3m-G2R"/>
+                        <outlet property="backBtn" destination="pfS-n7-PTD" id="xc2-vR-Dzs"/>
+                        <outlet property="completeBtn" destination="wsM-Ly-JQF" id="5DZ-64-LG1"/>
+                        <outlet property="expectedReturnMoneyLabel" destination="G52-qK-81q" id="nPf-wt-fFO"/>
+                        <outlet property="fundingMoney" destination="Rxu-8n-xJ1" id="roZ-rD-Owg"/>
+                        <outlet property="interestMoney" destination="TdJ-3M-nHc" id="2f3-Zs-4Kd"/>
+                        <outlet property="line" destination="0vl-6K-NK1" id="WJv-Is-e21"/>
+                        <outlet property="processBar" destination="Bco-IZ-nby" id="TBV-fa-Ns5"/>
+                        <outlet property="resultMoney" destination="eUB-KX-hQY" id="lYm-gz-KcS"/>
+                        <outlet property="storeName" destination="gYf-Zb-D6Z" id="0XW-qY-R8g"/>
+                        <outlet property="viewName" destination="3Bb-KY-f4b" id="eIi-vk-Ycn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSa-P3-wBA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -227,6 +357,7 @@
         <image name="backarrowNavyIcon" width="24" height="24"/>
         <image name="fundingProgressbarInputImg" width="375" height="56"/>
         <image name="plusImg" width="24" height="24"/>
+        <image name="progressbarEngImg" width="375" height="56"/>
         <image name="progressbarIngImg" width="375" height="56"/>
     </resources>
 </document>

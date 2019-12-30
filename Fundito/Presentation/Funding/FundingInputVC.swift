@@ -27,6 +27,12 @@ class FundingInputVC : UIViewController{
     3) 입력되는 값에 따라 (밑에 자의 움직임에 따라) inputMoney.text가 변경되어야 함
      */
     
+    
+    @IBAction func backBtnAction(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: false)
+    }
+    
+    
     /**
      버튼 클릭 시
     4) 입력한 돈이 잔액보다 많으면 inputExplanation 을 hidden, 다른 레이블 두 개를 보이게
@@ -74,11 +80,6 @@ extension FundingInputVC{
     
 }
 
-// MARK: Action
-extension FundingInputVC{
-    
-}
-
 // MARK: Initialization
 extension FundingInputVC{
 	private func initView(){
@@ -86,7 +87,7 @@ extension FundingInputVC{
         setBackBtn()
         setLabel()
         setLine(inputUnderLine)
-        setinputCompleteBtn(inputCompleteBtn)
+        setCompleteBtn(inputCompleteBtn)
 	}
     
     func setNavigation() {
@@ -150,7 +151,7 @@ extension FundingInputVC{
         line.backgroundColor = .pinkishGrey
     }
     
-    func setinputCompleteBtn(_ btn: UIButton) {
+    func setCompleteBtn(_ btn: UIButton) {
         btn.layer.cornerRadius = 8
         btn.layer.backgroundColor = UIColor.darkNavy.cgColor
         btn.layer.shadowRadius = 6
