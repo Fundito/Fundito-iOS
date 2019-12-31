@@ -125,7 +125,7 @@ extension FirstPopUpView {
         storePopUpView.frame = frameStore
         storePopUpView.viewInit()
         self.addSubview(storePopUpView)
-        print("frameinit")
+//        print("frameinit")
     }
     
     func setupGestureRecognizer() {
@@ -136,7 +136,7 @@ extension FirstPopUpView {
         let panStore = UIPanGestureRecognizer(target: self, action: #selector(handlePanGestureStore(_:)))
         panStore.delegate = self
         self.storePopUpView.addGestureRecognizer(panStore)
-        print("Gestureinit")
+//        print("Gestureinit")
     }
     
     @objc func handlePanGestureSecond(_ pan: UIPanGestureRecognizer) {

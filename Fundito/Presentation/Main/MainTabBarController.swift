@@ -14,12 +14,12 @@ class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.delegate = self
         setTabBar()
     }
     
 }
-
-// 버튼 클릭시 이미지 변경 구현 필요
+// 시작할 때 Home을 클릭 상태로 인식하도록 해야함
 
 extension MainTabBarController: UITabBarControllerDelegate{
     
@@ -28,15 +28,36 @@ extension MainTabBarController: UITabBarControllerDelegate{
         mainTabBar.shadowColorExtension = UIColor.init(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.13)
         mainTabBar.shadowOpacity = 10.0
         mainTabBar.backgroundColor = .white
+        mainTabBar.tintColor = .darkNavy
+        mainTabBar.unselectedItemTintColor = .darkNavy
+  
     }
     
     func tabBarController(_: UITabBarController, shouldSelect: UIViewController) -> Bool{
-        print("tab selected ????")
         return true
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("tab selected")
+        
+//        let tabIndex = tabBarController.selectedIndex
+        
+//        let selectedTitle = tabBar.selectedItem?.title
+//        var image = selectedTitle ?? ""
+//        image += "TabIconActive"
+//        print(image)
+//
+//        print(tabBar.selectedItem?.title ?? "nil")
+//        print(tabBarController.selectedIndex)
+        
+//        switch (tabIndex) {
+//        case 0: tabBar.selectedItem?.selectedImage = UIImage(named: "homeTabIconActive")
+//        case 1: tabBar.selectedItem?.selectedImage = UIImage(named: "feedTabIconActive")
+//        case 2: tabBar.selectedItem?.selectedImage = UIImage(named: "myfundTabIconActive")
+//        case 3: tabBar.selectedItem?.selectedImage = UIImage(named: "moreTabIconActive")
+//        default:
+//            print("default")
+//        }
+    
     }
 }
 
