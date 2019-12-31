@@ -27,7 +27,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="tCQ-a7-NeH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="피드" image="feedTabIconInactive" id="Asi-gd-CtU"/>
+                    <tabBarItem key="tabBarItem" title="피드" image="feedTabIconInactive" selectedImage="feedTabIconActive" id="Asi-gd-CtU"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9WB-hb-uUo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -36,6 +36,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="feedTabIconActive" width="24" height="24"/>
         <image name="feedTabIconInactive" width="24" height="24"/>
     </resources>
 </document>

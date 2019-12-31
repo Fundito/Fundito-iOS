@@ -18,14 +18,17 @@ class HomeVC: UIViewController {
 extension HomeVC{
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         initView()
     }
 }
 // MARK: Initialization
 extension HomeVC{
     private func initView(){
-        
+        setupView()
+    }
+    
+    func setupView(){
+//        self.view.backgroundColor = UIColor(patternImage: (UIImage(named: "homeBgrImg") ?? nil)!)
     }
 }
 

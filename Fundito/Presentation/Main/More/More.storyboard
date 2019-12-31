@@ -27,7 +27,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Mcn-Sb-tFa"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="더보기" image="moreTabIconInactive" id="3Lb-yC-KHt"/>
+                    <tabBarItem key="tabBarItem" title="더보기" image="moreTabIconInactive" selectedImage="moreTabIconActive" id="3Lb-yC-KHt"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVB-HX-jaR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -36,6 +36,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="moreTabIconActive" width="24" height="24"/>
         <image name="moreTabIconInactive" width="24" height="24"/>
     </resources>
 </document>

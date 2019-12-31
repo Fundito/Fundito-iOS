@@ -40,6 +40,7 @@ class FundingCompleteVC : UIViewController{
     }
     
     @IBAction func completeBtnAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "unwindToThis", sender: nil)
         /**
         2) 여기서 지금까지 present 해왔던 걸 다 없애고 다른 뷰로 이동해야 되지 않나 싶다 ?!?! 근데 어떻게 하는지 모르겠다
          */

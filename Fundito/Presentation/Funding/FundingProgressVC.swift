@@ -32,7 +32,8 @@ class FundingProgressVC : UIViewController{
     
     
     @IBAction func payBtnAction(_ sender: UIButton) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "FundingCompleteVC") as! FundingCompleteVC
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "FundingCompleteVC") as! FundingCompleteVC
+        let vc = storyboard?.instantiateViewController(withIdentifier: "FundingProgressPasswordVC") as! FundingProgressPasswordVC
         vc.modalPresentationStyle = .currentContext
         vc.modalTransitionStyle = .flipHorizontal
         self.present(vc, animated: false, completion: nil)
@@ -121,6 +122,3 @@ extension FundingProgressVC{
     
     
 }
-
-
-

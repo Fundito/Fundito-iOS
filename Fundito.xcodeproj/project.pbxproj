@@ -50,6 +50,8 @@
 		3397E13923BAABB400D864F2 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3397E13823BAABB400D864F2 /* Feed.storyboard */; };
 		3397E13B23BAAD9300D864F2 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3397E13A23BAAD9300D864F2 /* More.storyboard */; };
 		3397E13D23BAB1DA00D864F2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3397E13C23BAB1DA00D864F2 /* MainTabBarController.swift */; };
+		3397E13F23BB62B300D864F2 /* FundingProgressPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3397E13E23BB62B300D864F2 /* FundingProgressPasswordVC.swift */; };
+		3397E14323BB678C00D864F2 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3397E14223BB678C00D864F2 /* PasswordTextField.swift */; };
 		33D21CA923B625D000158454 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D21CA623B625D000158454 /* Color.swift */; };
 		33D21CAF23B6260E00158454 /* Spoqa Han Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33D21CAB23B6260E00158454 /* Spoqa Han Sans Regular.ttf */; };
 		33D21CB023B6260E00158454 /* Spoqa Han Sans Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33D21CAC23B6260E00158454 /* Spoqa Han Sans Bold.ttf */; };
@@ -110,6 +112,8 @@
 		3397E13823BAABB400D864F2 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		3397E13A23BAAD9300D864F2 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		3397E13C23BAB1DA00D864F2 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		3397E13E23BB62B300D864F2 /* FundingProgressPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundingProgressPasswordVC.swift; sourceTree = "<group>"; };
+		3397E14223BB678C00D864F2 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		33D21CA623B625D000158454 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		33D21CAB23B6260E00158454 /* Spoqa Han Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa Han Sans Regular.ttf"; sourceTree = "<group>"; };
 		33D21CAC23B6260E00158454 /* Spoqa Han Sans Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa Han Sans Bold.ttf"; sourceTree = "<group>"; };
@@ -305,9 +309,11 @@
 				2DA1B37923B622CB00A26447 /* FundingVC.swift */,
 				2DA1B37B23B622DC00A26447 /* FundingInputVC.swift */,
 				2DA1B37D23B622EE00A26447 /* FundingProgressVC.swift */,
+				3397E13E23BB62B300D864F2 /* FundingProgressPasswordVC.swift */,
 				2DA1B37F23B6230000A26447 /* FundingCompleteVC.swift */,
 				33876D1023B76A540095B532 /* Funding.storyboard */,
 				33876D1A23B91BAE0095B532 /* FudingPVC.swift */,
+				3397E14223BB678C00D864F2 /* PasswordTextField.swift */,
 			);
 			path = Funding;
 			sourceTree = "<group>";
@@ -572,6 +578,7 @@
 				2D3C9E6A23AF5E0700339F9D /* AppModel.swift in Sources */,
 				33D3C4CC23B4179B00E8AA3F /* FirstPopUpTableViewCell.swift in Sources */,
 				33876D1923B8D21E0095B532 /* StorePopUpTableViewCell.swift in Sources */,
+				3397E14323BB678C00D864F2 /* PasswordTextField.swift in Sources */,
 				33D21CA923B625D000158454 /* Color.swift in Sources */,
 				3335C07D23B53AA20065FE62 /* PageCell.swift in Sources */,
 				2D3C9E4A23AF58B700339F9D /* AppDelegate.swift in Sources */,
@@ -588,6 +595,7 @@
 				3397E13D23BAB1DA00D864F2 /* MainTabBarController.swift in Sources */,
 				33876D1523B895330095B532 /* SecondPopUpView.swift in Sources */,
 				2DA1B38B23B6236100A26447 /* FeedFriendListVC.swift in Sources */,
+				3397E13F23BB62B300D864F2 /* FundingProgressPasswordVC.swift in Sources */,
 				3335C07B23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift in Sources */,
 				2DA1B38923B6235900A26447 /* FeedFriendDetailVC.swift in Sources */,
 				2DA1B37A23B622CB00A26447 /* FundingVC.swift in Sources */,
