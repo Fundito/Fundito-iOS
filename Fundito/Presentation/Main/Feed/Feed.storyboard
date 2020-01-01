@@ -23,8 +23,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1a-8N-Eix" customClass="FundingProgressView" customModule="Fundito" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="422" width="331" height="13"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Q1a-8N-Eix" firstAttribute="centerX" secondItem="tCQ-a7-NeH" secondAttribute="centerX" id="0Qz-IH-MKd"/>
+                            <constraint firstItem="Q1a-8N-Eix" firstAttribute="width" secondItem="fuo-nu-6NZ" secondAttribute="width" multiplier="0.8" id="C79-Np-wSj"/>
+                            <constraint firstItem="Q1a-8N-Eix" firstAttribute="centerY" secondItem="tCQ-a7-NeH" secondAttribute="centerY" id="gd6-6a-ocC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tCQ-a7-NeH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="피드" image="feedTabIconInactive" selectedImage="feedTabIconActive" id="Asi-gd-CtU"/>

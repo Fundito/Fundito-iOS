@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D250E5823BC21AC001A01E2 /* InvestmentDialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D250E5723BC21AC001A01E2 /* InvestmentDialView.swift */; };
+		2D250E5A23BC21C8001A01E2 /* FundingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D250E5923BC21C8001A01E2 /* FundingProgressView.swift */; };
 		2D3C9E4A23AF58B700339F9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E4923AF58B700339F9D /* AppDelegate.swift */; };
 		2D3C9E4E23AF58B700339F9D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3C9E4D23AF58B700339F9D /* MainVC.swift */; };
 		2D3C9E5123AF58B700339F9D /* MyFundingStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D3C9E4F23AF58B700339F9D /* MyFundingStatus.storyboard */; };
@@ -67,6 +69,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D250E5723BC21AC001A01E2 /* InvestmentDialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestmentDialView.swift; sourceTree = "<group>"; };
+		2D250E5923BC21C8001A01E2 /* FundingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundingProgressView.swift; sourceTree = "<group>"; };
 		2D3C9E4623AF58B700339F9D /* Fundito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fundito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3C9E4923AF58B700339F9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D3C9E4D23AF58B700339F9D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -148,6 +152,15 @@
 				AF6B01B082E99B67F1F8EF7C /* Pods_Fundito.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D250E5623BC21AC001A01E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D250E5723BC21AC001A01E2 /* InvestmentDialView.swift */,
+				2D250E5923BC21C8001A01E2 /* FundingProgressView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2D3C9E3D23AF58B700339F9D = {
@@ -276,6 +289,7 @@
 		2D3C9E6823AF5E0000339F9D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2D250E5623BC21AC001A01E2 /* View */,
 				2D3C9E6923AF5E0700339F9D /* AppModel.swift */,
 				2D3C9E6C23AF5F3400339F9D /* NotiUtil.swift */,
 			);
@@ -597,6 +611,8 @@
 				2DA1B38B23B6236100A26447 /* FeedFriendListVC.swift in Sources */,
 				3397E13F23BB62B300D864F2 /* FundingProgressPasswordVC.swift in Sources */,
 				3335C07B23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift in Sources */,
+				2D250E5823BC21AC001A01E2 /* InvestmentDialView.swift in Sources */,
+				2D250E5A23BC21C8001A01E2 /* FundingProgressView.swift in Sources */,
 				2DA1B38923B6235900A26447 /* FeedFriendDetailVC.swift in Sources */,
 				2DA1B37A23B622CB00A26447 /* FundingVC.swift in Sources */,
 				33D21CB423B62B3F00158454 /* Font.swift in Sources */,
