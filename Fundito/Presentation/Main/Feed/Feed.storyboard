@@ -24,15 +24,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1a-8N-Eix" customClass="FundingProgressView" customModule="Fundito" customModuleProvider="target">
-                                <rect key="frame" x="41.5" y="422" width="331" height="13"/>
+                                <rect key="frame" x="41.5" y="419.5" width="331" height="18"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hY8-fe-5th" customClass="CustomTabView" customModule="Fundito" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="119" width="414" height="44"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Q1a-8N-Eix" firstAttribute="centerX" secondItem="tCQ-a7-NeH" secondAttribute="centerX" id="0Qz-IH-MKd"/>
+                            <constraint firstItem="hY8-fe-5th" firstAttribute="width" secondItem="fuo-nu-6NZ" secondAttribute="width" id="Alf-Q6-6ef"/>
                             <constraint firstItem="Q1a-8N-Eix" firstAttribute="width" secondItem="fuo-nu-6NZ" secondAttribute="width" multiplier="0.8" id="C79-Np-wSj"/>
+                            <constraint firstItem="hY8-fe-5th" firstAttribute="centerX" secondItem="tCQ-a7-NeH" secondAttribute="centerX" id="UA4-BO-k0Z"/>
                             <constraint firstItem="Q1a-8N-Eix" firstAttribute="centerY" secondItem="tCQ-a7-NeH" secondAttribute="centerY" id="gd6-6a-ocC"/>
+                            <constraint firstItem="hY8-fe-5th" firstAttribute="top" secondItem="tCQ-a7-NeH" secondAttribute="top" constant="75" id="pt3-a8-kYa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tCQ-a7-NeH"/>
                     </view>
