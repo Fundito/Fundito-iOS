@@ -79,10 +79,6 @@ class FundingInputVC : UIViewController{
             autoChargeMoney.isHidden = false
         }
     }
-    
-    // 나중에 store로 이동하는 걸로 바꾸기
-    @IBAction func unwindToThis(_ segue: UIStoryboardSegue) {}
-    
 }
 
 // MARK: Lifecycle
