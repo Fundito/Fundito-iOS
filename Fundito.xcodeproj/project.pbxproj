@@ -45,6 +45,9 @@
 		3335C07F23B5A9770065FE62 /* MyFundingStatusVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */; };
 		333ACFC223BE465D00B8D54E /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333ACFC123BE465D00B8D54E /* Timeline.swift */; };
 		333ACFC423BE4C1300B8D54E /* storeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333ACFC323BE4C1300B8D54E /* storeCollectionViewCell.swift */; };
+		333ACFC623BE7A1300B8D54E /* MyFundingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333ACFC523BE7A1300B8D54E /* MyFundingProgress.swift */; };
+		333ACFC823BE7CAE00B8D54E /* MyFundingDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333ACFC723BE7CAE00B8D54E /* MyFundingDone.swift */; };
+		333ACFCA23BE7D6100B8D54E /* Tab2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333ACFC923BE7D6100B8D54E /* Tab2CollectionViewCell.swift */; };
 		33876D1123B76A540095B532 /* Funding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33876D1023B76A540095B532 /* Funding.storyboard */; };
 		33876D1323B7C20E0095B532 /* FirstPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876D1223B7C20E0095B532 /* FirstPopUpView.swift */; };
 		33876D1523B895330095B532 /* SecondPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876D1423B895330095B532 /* SecondPopUpView.swift */; };
@@ -114,6 +117,9 @@
 		3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFundingStatusVC3.swift; sourceTree = "<group>"; };
 		333ACFC123BE465D00B8D54E /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		333ACFC323BE4C1300B8D54E /* storeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeCollectionViewCell.swift; sourceTree = "<group>"; };
+		333ACFC523BE7A1300B8D54E /* MyFundingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundingProgress.swift; sourceTree = "<group>"; };
+		333ACFC723BE7CAE00B8D54E /* MyFundingDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundingDone.swift; sourceTree = "<group>"; };
+		333ACFC923BE7D6100B8D54E /* Tab2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab2CollectionViewCell.swift; sourceTree = "<group>"; };
 		33876D1023B76A540095B532 /* Funding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Funding.storyboard; sourceTree = "<group>"; };
 		33876D1223B7C20E0095B532 /* FirstPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPopUpView.swift; sourceTree = "<group>"; };
 		33876D1423B895330095B532 /* SecondPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPopUpView.swift; sourceTree = "<group>"; };
@@ -278,6 +284,8 @@
 			isa = PBXGroup;
 			children = (
 				333ACFC123BE465D00B8D54E /* Timeline.swift */,
+				333ACFC523BE7A1300B8D54E /* MyFundingProgress.swift */,
+				333ACFC723BE7CAE00B8D54E /* MyFundingDone.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -426,12 +434,13 @@
 				33876D1223B7C20E0095B532 /* FirstPopUpView.swift */,
 				33D3C4CB23B4179B00E8AA3F /* FirstPopUpTableViewCell.swift */,
 				33876D1423B895330095B532 /* SecondPopUpView.swift */,
+				3335C07C23B53AA20065FE62 /* TabCollectionViewCell.swift */,
+				333ACFC923BE7D6100B8D54E /* Tab2CollectionViewCell.swift */,
 				33876D1623B8CE800095B532 /* StorePopUpView.swift */,
 				33876D1823B8D21E0095B532 /* StorePopUpTableViewCell.swift */,
 				3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */,
 				33D3C4EF23B4E3F100E8AA3F /* CustomMenuBar.swift */,
 				33D3C4F123B4E47200E8AA3F /* CustomMenuBarCell.swift */,
-				3335C07C23B53AA20065FE62 /* TabCollectionViewCell.swift */,
 				2D3C9E4F23AF58B700339F9D /* MyFundingStatus.storyboard */,
 			);
 			path = MyFundingStatus;
@@ -592,6 +601,7 @@
 			files = (
 				2DA1B37023B621ED00A26447 /* LoginVC.swift in Sources */,
 				2D3C9E7223AF655800339F9D /* DateFormatter.swift in Sources */,
+				333ACFC823BE7CAE00B8D54E /* MyFundingDone.swift in Sources */,
 				2DA1B37623B6224200A26447 /* StoreCheerVC.swift in Sources */,
 				2D3C9E4E23AF58B700339F9D /* MainVC.swift in Sources */,
 				33D3C4F023B4E3F100E8AA3F /* CustomMenuBar.swift in Sources */,
@@ -602,6 +612,7 @@
 				338EF0FF23BCBE15000CA6F1 /* TimelineCollectionViewCell.swift in Sources */,
 				2DA1B38723B6234D00A26447 /* HomeVC.swift in Sources */,
 				2DA1B38523B6234900A26447 /* MoreVC.swift in Sources */,
+				333ACFC623BE7A1300B8D54E /* MyFundingProgress.swift in Sources */,
 				2D3C9E6D23AF5F3400339F9D /* NotiUtil.swift in Sources */,
 				2DC29ED323B786CA00671303 /* View.swift in Sources */,
 				2DA1B37823B622A400A26447 /* SearchVC.swift in Sources */,
@@ -623,6 +634,7 @@
 				2D3C9E7023AF640200339F9D /* JSONDecoder.swift in Sources */,
 				2D3C9E7423AF663300339F9D /* NetworkService.swift in Sources */,
 				2DA1B37223B6220C00A26447 /* StoreRegisterVC.swift in Sources */,
+				333ACFCA23BE7D6100B8D54E /* Tab2CollectionViewCell.swift in Sources */,
 				2DA1B36C23B6218800A26447 /* ChargeVC.swift in Sources */,
 				3397E13D23BAB1DA00D864F2 /* MainTabBarController.swift in Sources */,
 				33876D1523B895330095B532 /* SecondPopUpView.swift in Sources */,

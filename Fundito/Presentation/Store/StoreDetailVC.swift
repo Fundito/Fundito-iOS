@@ -220,10 +220,23 @@ extension StoreDetailVC: UICollectionViewDelegate, UICollectionViewDataSource{
         cell.userName?.text = timeline.userName
         cell.elapsedTime?.text = timeline.elapsedTime
         
+//        cell.contentView.la
+        
+//        cell.contentView.layer.cornerRadius = 2.0
+//        cell.contentView.layer.borderWidth = 1.0
+//        cell.contentView.layer.borderColor = UIColor.clear.cgColor
+//        cell.contentView.layer.masksToBounds = true
+//
+//
+//        cell.contentView.layer.shadowColor = UIColor.black.cgColor
+//        cell.contentView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+//        cell.contentView.layer.shadowRadius = 2.0
+//        cell.contentView.layer.shadowOpacity = 0.5
+//        cell.contentView.layer.masksToBounds = false
+        
 //        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
-        cell.layer.shadowColor = UIColor(white: 0.0, alpha: 0.08).cgColor
-
-        cell.layer.shadowOpacity = 0.1
+//        cell.layer.shadowColor = UIColor(white: 0.0, alpha: 0.08).cgColor
+//        cell.layer.shadowOpacity = 0.1
         
         return cell
     }
