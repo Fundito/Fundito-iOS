@@ -23,8 +23,34 @@ class StoreDetailVC : UIViewController{
     @IBOutlet weak var returnRate: UIImageView!
     @IBOutlet weak var timelineLabel: UILabel!
     @IBOutlet weak var timelineCollectionView: UICollectionView!
+    
     @IBOutlet weak var storeMenuView: UIView!
+    
+    @IBOutlet weak var storeMenuLabel: UILabel!
+    
+    @IBOutlet weak var storeMenuName1: UILabel!
+    @IBOutlet weak var storeMenuName2: UILabel!
+    @IBOutlet weak var storeMenuName3: UILabel!
+    
+    @IBOutlet weak var storeMenuPrice1: UILabel!
+    @IBOutlet weak var storeMenuPrice2: UILabel!
+    @IBOutlet weak var storeMenuPrice3: UILabel!
+    
     @IBOutlet weak var storeInfoView: UIView!
+    
+    @IBOutlet weak var storeInfoLabel: UILabel!
+    
+    @IBOutlet weak var storeInfoName1: UILabel!
+    @IBOutlet weak var storeInfoName2: UILabel!
+    @IBOutlet weak var storeInfoName3: UILabel!
+    
+    @IBOutlet weak var storeInfoPrice1: UILabel!
+    @IBOutlet weak var storeInfoPrice2: UILabel!
+    @IBOutlet weak var storeInfoPrice3: UILabel!
+    
+    
+    @IBOutlet weak var fundingBtn: UIButton!
+    @IBOutlet weak var cheerBtn: UIButton!
     
     var timelineList: [Timeline] = []
     
@@ -32,6 +58,23 @@ class StoreDetailVC : UIViewController{
         self.navigationController?.popViewController(animated: false)
     }
     
+    @IBAction func fundingBtnAction(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Funding", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "FundingInputVC")
+        self.navigationController!.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func cheerBtnAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Store", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "StoreCheerVC")
+        self.navigationController!.pushViewController(vc, animated: true)
+    }
+    
+    
+    @IBAction func unwindToThis(_ segue: UIStoryboardSegue) {
+    
+    }
+        
 }
 
 // MARK: Lifecycle
@@ -47,12 +90,16 @@ extension StoreDetailVC{
         timelineCollectionView.dataSource = self
 
         timelineCollectionView.reloadData()
-        timelineCollectionView.backgroundColor = .black
+
+//        timelineCollectionView.shadowOpacity = 10
+//        timelineCollectionView.backgroundColor = UIColor(white: 0.0, alpha: 0.08)
         
 	}
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.backgroundColor = .clear
     }
 }
@@ -63,6 +110,7 @@ extension StoreDetailVC{
 		setupLabel()
         setupStoreMenuView()
         setupStoreInfoView()
+        setBtn()
 	}
     
     private func setBackBtn() {
@@ -113,10 +161,44 @@ extension StoreDetailVC{
 
     
     func setupStoreMenuView() {
+
+        storeMenuView.layer.shadowColor = UIColor(white: 0.0, alpha: 0.08).cgColor
+        storeMenuView.layer.shadowOpacity = 0.1
         
+        setupText(label: storeMenuLabel, fontName: "SpoqaHanSans-Bold", size: 16.0, color: .black)
+        setupText(label: storeMenuName1, fontName: "SpoqaHanSans-Regular", size: 16.0, color: .black)
+        setupText(label: storeMenuName2, fontName: "SpoqaHanSans-Regular", size: 16.0, color: .black)
+        setupText(label: storeMenuName3, fontName: "SpoqaHanSans-Regular", size: 16.0, color: .black)
+        setupText(label: storeMenuPrice1, fontName: "SpoqaHanSans-Regular", size: 16.0, color: .black)
+        setupText(label: storeMenuPrice2, fontName: "SpoqaHanSans-Regular", size: 16.0, color: .black)
+        setupText(label: storeMenuPrice3, fontName: "SpoqaHanSans-Regular", size: 16.0, color: .black)
     }
     func setupStoreInfoView(){
+
+        storeInfoView.layer.shadowColor = UIColor(white: 0.0, alpha: 0.08).cgColor
+        storeInfoView.layer.shadowOpacity = 0.1
         
+        setupText(label: storeInfoLabel, fontName: "SpoqaHanSans-Bold", size: 16.0, color: .black)
+        setupText(label: storeInfoName1, fontName: "SpoqaHanSans-Regular", size: 16.0, color: .black)
+        setupText(label: storeInfoName2, fontName: "SpoqaHanSans-Regular", size: 16.0, color: .black)
+        setupText(label: storeInfoName3, fontName: "SpoqaHanSans-Regular", size: 16.0, color: .black)
+        setupText(label: storeInfoPrice1, fontName: "SpoqaHanSans-Regular", size: 16.0, color: .black)
+        setupText(label: storeInfoPrice2, fontName: "SpoqaHanSans-Regular", size: 16.0, color: .black)
+        setupText(label: storeInfoPrice3, fontName: "SpoqaHanSans-Regular", size: 16.0, color: .black)
+    }
+    
+    func setBtn() {
+        fundingBtn.backgroundColor = .darkNavy
+        fundingBtn.cornerRadius = 8
+        fundingBtn.shadowColorExtension = UIColor(white: 0.0, alpha: 0.24)
+        fundingBtn.shadowOpacity = 10
+        fundingBtn.titleLabel?.textColor = .white
+        fundingBtn.titleLabel?.font =  UIFont(name: "SpoqaHanSans-Regular", size: 16)
+        
+        cheerBtn.backgroundColor = .darkNavy
+        cheerBtn.cornerRadius = 8
+        cheerBtn.shadowColorExtension = UIColor(white: 0.0, alpha: 0.24)
+        cheerBtn.shadowOpacity = 10
     }
     
 }
@@ -137,7 +219,12 @@ extension StoreDetailVC: UICollectionViewDelegate, UICollectionViewDataSource{
         cell.arrowImage?.image = timeline.arrowImage
         cell.userName?.text = timeline.userName
         cell.elapsedTime?.text = timeline.elapsedTime
-        cell.backgroundColor = .white
+        
+//        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.layer.shadowColor = UIColor(white: 0.0, alpha: 0.08).cgColor
+
+        cell.layer.shadowOpacity = 0.1
+        
         return cell
     }
 }
