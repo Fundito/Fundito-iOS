@@ -9,111 +9,126 @@
 import UIKit
 
 class SecondPopUpView: UIView {
-
+    
+    
+    @IBOutlet weak var customTabView: CustomTabView!
     @IBOutlet weak var topReceiptImage: UIImageView!
+    @IBOutlet weak var tab1CollectionView: UICollectionView!
+//    @IBOutlet weak var tab2CollectionView: UICollectionView!
     
-
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        print("SecondPopUpViewInit")
+//        customTabView?.delegate = SecondPopUpView as CustomTabViewDelegate
+//        customTabView?.delegate = self as CustomTabViewDelegate
+//        initView()
+    }
+    
     func viewInit(){
-//        setupCustomTabBar()
-//        setupCollectioView()
-        self.addSubview(customTabBarCollectionView)
+        customTabView?.delegate = self as CustomTabViewDelegate
+        tab1CollectionView.dataSource = self
+//        tab1CollectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        tab1CollectionView.delegate = self
+        tab1CollectionView.register(TabCollectionViewCell.self, forCellWithReuseIdentifier: "TabCollectionViewCell")
+        
+//        tab2CollectionView.dataSource = self
+//        tab2CollectionView.collectionViewLayout = UICollectionViewFlowLayout(
+//        tab2CollectionView.delegate = self
+        
+//        tab2CollectionView.alpha = 0.0
+        
     }
     
-    
-    var customTabBarCollectionView: UICollectionView = {
-        let collectionViewLayout = UICollectionViewFlowLayout()
-        collectionViewLayout.scrollDirection = .horizontal
-        let collectionView = UICollectionView(frame: CGRect(x: 300, y: 300, width: 500, height: 60), collectionViewLayout: collectionViewLayout)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        return collectionView
-    }()
-    var indicatorView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .black
-        return view
-    }()
-    var customTabBar: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    func setupCollectioView(){
-        customTabBarCollectionView.delegate = self
-        customTabBarCollectionView.dataSource = self
-        customTabBarCollectionView.backgroundColor = .white
-        customTabBarCollectionView.showsHorizontalScrollIndicator = false
-        customTabBarCollectionView.isScrollEnabled = false
-    }
-    
-    var indicatorViewLeadingConstraint:NSLayoutConstraint! // ---- *
-    func setupCustomTabBar(){
-        setupCollectioView()
-        self.addSubview(customTabBar)
-        customTabBar.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        customTabBar.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        customTabBar.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor).isActive = true // ---- *
-        customTabBar.heightAnchor.constraint(equalToConstant: 60).isActive = true
-
-        customTabBar.addSubview(customTabBarCollectionView)
-        customTabBarCollectionView.leadingAnchor.constraint(equalTo: customTabBar.leadingAnchor).isActive = true
-        customTabBarCollectionView.trailingAnchor.constraint(equalTo: customTabBar.trailingAnchor).isActive = true
-        customTabBarCollectionView.topAnchor.constraint(equalTo: customTabBar.topAnchor).isActive = true
-        customTabBarCollectionView.heightAnchor.constraint(equalToConstant: 55).isActive = true
-
-        customTabBar.addSubview(indicatorView)
-        indicatorView.widthAnchor.constraint(equalToConstant: self.frame.width/4).isActive = true // ---- *
-        indicatorView.heightAnchor.constraint(equalToConstant: 5).isActive = true
-        indicatorViewLeadingConstraint = indicatorView.leadingAnchor.constraint(equalTo: customTabBar.leadingAnchor)
-        indicatorViewLeadingConstraint.isActive = true
-        indicatorView.bottomAnchor.constraint(equalTo: customTabBar.bottomAnchor).isActive = true
-    }
-
 }
 
-extension SecondPopUpView: UICollectionViewDelegate, UICollectionViewDataSource {
+// TabCollectionViewCell
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:  CustomMenuBarCell.reusableIdentifier, for: indexPath) as! CustomMenuBarCell
-//        if indexPath.row == 0 {
-//            cell.label.textColor = .black
-//            collectionView.selectItem(at: indexPath, animated: false, scrollPosition: [])
-//        }
-        return cell
-    }
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
-
-    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: self.frame.width / 4 , height: 55)
+extension SecondPopUpView {
+    
+//    func viewInit(){
+//        customTabView?.delegate = self as CustomTabViewDelegate
+//        tab1CollectionView.delegate = self
+//        tab1CollectionView.dataSource = self
 //    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-//    } // ---- 1
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 0
-//    } // ---- 2
-//    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:  CustomMenuBarCell.reusableIdentifier, for: indexPath) as! CustomMenuBarCell
-//        cell.label.textColor = .black
-//        indicatorViewLeadingConstraint.constant = (self.frame.width / 4) * CGFloat((indexPath.row))
-//        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-//            self.customTabBar.layoutIfNeeded()
-//        }, completion: nil)
+}
+
+extension SecondPopUpView:  CustomTabViewDelegate {
+    func onTabSelected(pos: Int) {
+//        print(customTabView.curIndex)
+//        print(pos)
+        if pos == 0 {
+            print("tab1")
+            self.tab1CollectionView.alpha = 1.0
+//            self.tab2CollectionView.alpha = 0.0
+        } else {
+            print("tab2")
+            self.tab1CollectionView.alpha = 0.0
+//            self.tab2CollectionView.alpha = 1.0
+        }
+    }
+}
+
+//extension SecondPopUpView: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: 375, height: 70)
 //    }
 //
-//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:  CustomMenuBarCell.reusableIdentifier, for: indexPath) as! CustomMenuBarCell
-//        cell.label.textColor = .lightGray
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
 //    }
+//}
 
+extension SecondPopUpView: UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 16
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+//        if true { //첫번째 탭 클릭했을때
+//            let cell
+//
+//            return cell
+//        } else { //두번째 탭 클릭
+//
+//        }
+//
+        
+        //------------------
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TabCollectionViewCell", for: indexPath) as! TabCollectionViewCell
+//        cell.frame.size = CGSize(width: 375, height: 70)
+        cell.backgroundColor = .white
+
+        return cell
+    }
+    
 }
 
+extension SecondPopUpView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
 
+           return CGSize(width: 375 , height: 70)
+       }
+
+       public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
+
+        return UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 0)
+
+       }
+}
+    
+
+/**
+
+ func collectionView(_ collectionView: UICollectionView, cellForRowAt indexPath: IndexPath) -> UICollectionView {
+         let cell = collectionView.dequeueReusableCell(withIdentifier: "TabCollectionViewCell") as! TabCollectionViewCell
+         cell.backgroundColor = .white
+ //        cell.textLabel?.text = "\(indexPath.row)"
+         return cell
+ }         */
 

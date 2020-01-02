@@ -12,7 +12,7 @@ protocol CustomTabViewDelegate : class{
 	func onTabSelected(pos: Int)
 }
 
-@IBDesignable
+//@IBDesignable
 class CustomTabView : UIView{
 	
 	weak var delegate: CustomTabViewDelegate?
@@ -108,6 +108,7 @@ class CustomTabView : UIView{
 	
 	@objc private func tab1Tapped(){
 		delegate?.onTabSelected(pos: 0)
+        print("tab1Tapped")
 		UIView.animate(withDuration: 0.25, animations:{[unowned self] in
 			self.indicatorWidthConstraint.constant = self.frame.width/3 * 2
 			self.layoutIfNeeded()
@@ -127,6 +128,7 @@ class CustomTabView : UIView{
 	}
 	@objc private func tab2Tapped(){
 		delegate?.onTabSelected(pos: 1)
+        print("tab2Tapped")
 		UIView.animate(withDuration: 0.25, animations:{[unowned self] in
 			self.indicatorWidthConstraint.constant = self.frame.width/3 * 2
 			self.layoutIfNeeded()

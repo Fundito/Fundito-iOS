@@ -8,8 +8,11 @@
 
 import UIKit
 
+// searchTextField ketboard
 class HomeVC: UIViewController {
     
+    @IBOutlet weak var backBtn: UIBarButtonItem!
+    @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var welcomeLabel: UILabel!
     
@@ -22,50 +25,66 @@ class HomeVC: UIViewController {
     @IBOutlet weak var leftDaysLabel: UILabel!
     @IBOutlet weak var leftDays: UILabel!
     @IBOutlet weak var timeLineLabel: UILabel!
+    @IBOutlet weak var fundingProgressView: FundingProgressView!
+
+    @IBOutlet weak var timelineCollectionView: UICollectionView!
     
 }
-
 
 // MARK: Lifecycle
 extension HomeVC{
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
+        self.navigationController?.isNavigationBarHidden = true
+        //self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
     }
 }
+
 // MARK: Initialization
 extension HomeVC{
     private func initView(){
-        setupTextField( textField: searchTextField)
+        setNavigation()
+        setupTextField(textField: searchTextField)
         setupLabel()
         setupImageView(image: storeImage)
         setupView(view: connectedView)
+        setupProgressVIew(view: fundingProgressView)
+        setupConllectionView()
+    }
+    
+    private func setNavigation(){
         
+        backBtn.image = UIImage(named: "backarrowNavyIcon")
+        backBtn.tintColor = UIColor.darkNavy
     }
     
     private func setupTextField( textField: UITextField){
+
+        // searchView 에 색깔 넣어서 radius 구현
+        // tip : 섀도우와 cornerRadius는 동시에 코드로 둥글게 불가 !
+        searchView.frame.size.height = 37
+        searchView.backgroundColor = UIColor.init(displayP3Red: 235.0/255.0, green: 236.0/255.0, blue: 237.0/255.0, alpha: 1)
+        searchView.cornerRadius = 19
         
-        // radius 안먹음
-        textField.cornerRadius = 19
+        // textField.cornerRadius = 19
+        textField.clipsToBounds = false
         
         // Textfield 높이
         textField.frame.size.height = 37
         
         // Textfield 배경색
-        textField.backgroundColor = UIColor.init(displayP3Red: 235.0/255.0, green: 236.0/255.0, blue: 237.0/255.0, alpha: 1)
+        textField.backgroundColor = .clear
         // TextField border
         textField.borderStyle = .none
         textField.borderColor = UIColor.init(displayP3Red: 235.0/255.0, green: 236.0/255.0, blue: 237.0/255.0, alpha: 1)
         
         
         // placeholder 글씨체
-//        let attributes = [
-//            NSAttributedString.Key.foregroundColor: UIColor.greyish,
-//            NSAttributedString.Key.font : UIFont(name: "SpoqaHanSans-Regular", size: 16)! // Note the !
-//        ]
-//
-//        textField.attributedPlaceholder = NSAttributedString(string: textField.text ?? "", attributes:attributes)
-        
         textField.attributedPlaceholder = .init(string: textField.placeholder ?? "", attributes: [
             .font: UIFont(name: "SpoqaHanSans-Regular", size: 16.0)!,
             .foregroundColor: UIColor.greyish
@@ -121,7 +140,40 @@ extension HomeVC{
         view.shadowOpacity = 18
         // rgba 0,0,0, 0.08
         view.shadowColorExtension = UIColor(displayP3Red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.08)
-//        self.view.backgroundColor = UIColor(patternImage: (UIImage(named: "homeBgrImg") ?? nil)!)
+        
+        setupViewTapGesture()
+    }
+    
+    func setupProgressVIew(view: FundingProgressView){
+        view.progress = 25
+        view.backgroundColor = .clear
+    }
+    
+    private func setupConllectionView(){
+        timelineCollectionView.delegate = self
+        timelineCollectionView.dataSource = self
+
+        timelineCollectionView.backgroundColor = .clear
+        timelineCollectionView.borderColor = .peachyPink
+        timelineCollectionView.cornerRadius = 8
+        timelineCollectionView.borderWidth = 1
+        timelineCollectionView.shadowColorExtension = .init(white: 0.0, alpha: 0.08)
+        timelineCollectionView.shadowOpacity = 10
+        
+    }
+    
+    
+    func setupViewTapGesture(){
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(HomeVC.goStoreDetailVC(_:)))
+        self.connectedView.addGestureRecognizer(gesture)
+    }
+    
+    @objc func goStoreDetailVC(_ sender:UIGestureRecognizer) {
+        
+        let storyboard = UIStoryboard(name: "Store", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "StoreDetailVC")
+        self.navigationController!.pushViewController(vc, animated: true)
     }
     
     func setupText( label: UILabel, fontName: String, size: CGFloat, color: UIColor) {
@@ -132,3 +184,36 @@ extension HomeVC{
     }
 }
 
+
+extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource{
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TimelineCollectionViewCell", for: indexPath) as! TimelineCollectionViewCell
+
+        return cell
+    }
+}
+
+extension HomeVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = timelineCollectionView.bounds.width
+        let height = timelineCollectionView.bounds.height
+        return CGSize(width: width, height: height)
+    }
+}
