@@ -48,17 +48,12 @@
 		333ACFC623BE7A1300B8D54E /* MyFundingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333ACFC523BE7A1300B8D54E /* MyFundingProgress.swift */; };
 		333ACFC823BE7CAE00B8D54E /* MyFundingDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333ACFC723BE7CAE00B8D54E /* MyFundingDone.swift */; };
 		333ACFCA23BE7D6100B8D54E /* Tab2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333ACFC923BE7D6100B8D54E /* Tab2CollectionViewCell.swift */; };
-		33876D1123B76A540095B532 /* Funding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33876D1023B76A540095B532 /* Funding.storyboard */; };
 		33876D1323B7C20E0095B532 /* FirstPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876D1223B7C20E0095B532 /* FirstPopUpView.swift */; };
 		33876D1523B895330095B532 /* SecondPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876D1423B895330095B532 /* SecondPopUpView.swift */; };
 		33876D1723B8CE800095B532 /* StorePopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876D1623B8CE800095B532 /* StorePopUpView.swift */; };
 		33876D1923B8D21E0095B532 /* StorePopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876D1823B8D21E0095B532 /* StorePopUpTableViewCell.swift */; };
 		33876D1B23B91BAE0095B532 /* FudingPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33876D1A23B91BAE0095B532 /* FudingPVC.swift */; };
-		338EF0FD23BC4215000CA6F1 /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338EF0FC23BC4215000CA6F1 /* Store.storyboard */; };
 		338EF0FF23BCBE15000CA6F1 /* TimelineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338EF0FE23BCBE15000CA6F1 /* TimelineCollectionViewCell.swift */; };
-		3397E13723BA90A300D864F2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3397E13623BA90A300D864F2 /* Home.storyboard */; };
-		3397E13923BAABB400D864F2 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3397E13823BAABB400D864F2 /* Feed.storyboard */; };
-		3397E13B23BAAD9300D864F2 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3397E13A23BAAD9300D864F2 /* More.storyboard */; };
 		3397E13D23BAB1DA00D864F2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3397E13C23BAB1DA00D864F2 /* MainTabBarController.swift */; };
 		3397E13F23BB62B300D864F2 /* FundingProgressPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3397E13E23BB62B300D864F2 /* FundingProgressPasswordVC.swift */; };
 		3397E14323BB678C00D864F2 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3397E14223BB678C00D864F2 /* PasswordTextField.swift */; };
@@ -72,7 +67,12 @@
 		33D3C4CC23B4179B00E8AA3F /* FirstPopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4CB23B4179B00E8AA3F /* FirstPopUpTableViewCell.swift */; };
 		33D3C4F023B4E3F100E8AA3F /* CustomMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4EF23B4E3F100E8AA3F /* CustomMenuBar.swift */; };
 		33D3C4F223B4E47200E8AA3F /* CustomMenuBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4F123B4E47200E8AA3F /* CustomMenuBarCell.swift */; };
-		33D3C4F423B4F27400E8AA3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D3C4F323B4F27400E8AA3F /* Main.storyboard */; };
+		33F540D423BE85BF0061D463 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F540CB23BE85BF0061D463 /* More.storyboard */; };
+		33F540D523BE85BF0061D463 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F540CC23BE85BF0061D463 /* Home.storyboard */; };
+		33F540D623BE85BF0061D463 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F540CD23BE85BF0061D463 /* Feed.storyboard */; };
+		33F540D823BE85BF0061D463 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F540D123BE85BF0061D463 /* Main.storyboard */; };
+		33F540D923BE85BF0061D463 /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F540D223BE85BF0061D463 /* Store.storyboard */; };
+		33F540DA23BE85BF0061D463 /* Funding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F540D323BE85BF0061D463 /* Funding.storyboard */; };
 		34722BFC0C63ED6C46530684 /* Pods_Fundito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6B01B082E99B67F1F8EF7C /* Pods_Fundito.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,7 +86,6 @@
 		2D3C9E5023AF58B700339F9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MyFundingStatus.storyboard; sourceTree = "<group>"; };
 		2D3C9E5223AF58B800339F9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D3C9E5523AF58B800339F9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2D3C9E5723AF58B800339F9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D3C9E6923AF5E0700339F9D /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		2D3C9E6C23AF5F3400339F9D /* NotiUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiUtil.swift; sourceTree = "<group>"; };
 		2D3C9E6F23AF640200339F9D /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
@@ -120,17 +119,12 @@
 		333ACFC523BE7A1300B8D54E /* MyFundingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundingProgress.swift; sourceTree = "<group>"; };
 		333ACFC723BE7CAE00B8D54E /* MyFundingDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundingDone.swift; sourceTree = "<group>"; };
 		333ACFC923BE7D6100B8D54E /* Tab2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab2CollectionViewCell.swift; sourceTree = "<group>"; };
-		33876D1023B76A540095B532 /* Funding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Funding.storyboard; sourceTree = "<group>"; };
 		33876D1223B7C20E0095B532 /* FirstPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPopUpView.swift; sourceTree = "<group>"; };
 		33876D1423B895330095B532 /* SecondPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPopUpView.swift; sourceTree = "<group>"; };
 		33876D1623B8CE800095B532 /* StorePopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePopUpView.swift; sourceTree = "<group>"; };
 		33876D1823B8D21E0095B532 /* StorePopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePopUpTableViewCell.swift; sourceTree = "<group>"; };
 		33876D1A23B91BAE0095B532 /* FudingPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FudingPVC.swift; sourceTree = "<group>"; };
-		338EF0FC23BC4215000CA6F1 /* Store.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
 		338EF0FE23BCBE15000CA6F1 /* TimelineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCollectionViewCell.swift; sourceTree = "<group>"; };
-		3397E13623BA90A300D864F2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		3397E13823BAABB400D864F2 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
-		3397E13A23BAAD9300D864F2 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		3397E13C23BAB1DA00D864F2 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		3397E13E23BB62B300D864F2 /* FundingProgressPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundingProgressPasswordVC.swift; sourceTree = "<group>"; };
 		3397E14223BB678C00D864F2 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
@@ -144,7 +138,12 @@
 		33D3C4CB23B4179B00E8AA3F /* FirstPopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPopUpTableViewCell.swift; sourceTree = "<group>"; };
 		33D3C4EF23B4E3F100E8AA3F /* CustomMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuBar.swift; sourceTree = "<group>"; };
 		33D3C4F123B4E47200E8AA3F /* CustomMenuBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuBarCell.swift; sourceTree = "<group>"; };
-		33D3C4F323B4F27400E8AA3F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		33F540CB23BE85BF0061D463 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		33F540CC23BE85BF0061D463 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		33F540CD23BE85BF0061D463 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		33F540D123BE85BF0061D463 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		33F540D223BE85BF0061D463 /* Store.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
+		33F540D323BE85BF0061D463 /* Funding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Funding.storyboard; sourceTree = "<group>"; };
 		AF6B01B082E99B67F1F8EF7C /* Pods_Fundito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fundito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8BC83A124863AE2CEBDFE9 /* Pods-Fundito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fundito.debug.xcconfig"; path = "Target Support Files/Pods-Fundito/Pods-Fundito.debug.xcconfig"; sourceTree = "<group>"; };
 		DD250BF35ACC6CC6F6851B03 /* Pods-Fundito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fundito.release.xcconfig"; path = "Target Support Files/Pods-Fundito/Pods-Fundito.release.xcconfig"; sourceTree = "<group>"; };
@@ -205,9 +204,9 @@
 				2D3C9E6E23AF5F3500339F9D /* EXKit */,
 				2D3C9E6823AF5E0000339F9D /* Common */,
 				2D3C9E5F23AF5A3900339F9D /* Application */,
-				2D3C9E6023AF5A3C00339F9D /* Presentation */,
+				2D3C9E6023AF5A3C00339F9D /* ViewController */,
 				2D3C9E5E23AF5A3800339F9D /* Data */,
-				2D3C9E5723AF58B800339F9D /* Info.plist */,
+				333ACFCB23BE844300B8D54E /* Storyboard */,
 			);
 			path = Fundito;
 			sourceTree = "<group>";
@@ -243,7 +242,7 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		2D3C9E6023AF5A3C00339F9D /* Presentation */ = {
+		2D3C9E6023AF5A3C00339F9D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				2D3C9E6223AF5A5400339F9D /* Splash */,
@@ -255,7 +254,7 @@
 				2DA1B36523B6216A00A26447 /* Funding */,
 				2D3C9E6123AF5A5100339F9D /* Main */,
 			);
-			path = Presentation;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		2D3C9E6123AF5A5100339F9D /* Main */ = {
@@ -266,7 +265,6 @@
 				33D3C4C623B3EF9600E8AA3F /* MyFundingStatus */,
 				2DA1B38323B6233C00A26447 /* More */,
 				2D3C9E4D23AF58B700339F9D /* MainVC.swift */,
-				33D3C4F323B4F27400E8AA3F /* Main.storyboard */,
 				3397E13C23BAB1DA00D864F2 /* MainTabBarController.swift */,
 			);
 			path = Main;
@@ -345,7 +343,6 @@
 				2DA1B37D23B622EE00A26447 /* FundingProgressVC.swift */,
 				3397E13E23BB62B300D864F2 /* FundingProgressPasswordVC.swift */,
 				2DA1B37F23B6230000A26447 /* FundingCompleteVC.swift */,
-				33876D1023B76A540095B532 /* Funding.storyboard */,
 				33876D1A23B91BAE0095B532 /* FudingPVC.swift */,
 				3397E14223BB678C00D864F2 /* PasswordTextField.swift */,
 			);
@@ -373,7 +370,6 @@
 			children = (
 				2DA1B37323B6222B00A26447 /* StoreDetailVC.swift */,
 				2DA1B37523B6224200A26447 /* StoreCheerVC.swift */,
-				338EF0FC23BC4215000CA6F1 /* Store.storyboard */,
 				333ACFC323BE4C1300B8D54E /* storeCollectionViewCell.swift */,
 			);
 			path = Store;
@@ -392,7 +388,6 @@
 			children = (
 				2DA1B38823B6235900A26447 /* FeedFriendDetailVC.swift */,
 				2DA1B38A23B6236100A26447 /* FeedFriendListVC.swift */,
-				3397E13823BAABB400D864F2 /* Feed.storyboard */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -401,7 +396,6 @@
 			isa = PBXGroup;
 			children = (
 				2DA1B38623B6234D00A26447 /* HomeVC.swift */,
-				3397E13623BA90A300D864F2 /* Home.storyboard */,
 				338EF0FE23BCBE15000CA6F1 /* TimelineCollectionViewCell.swift */,
 			);
 			path = Home;
@@ -411,9 +405,22 @@
 			isa = PBXGroup;
 			children = (
 				2DA1B38423B6234900A26447 /* MoreVC.swift */,
-				3397E13A23BAAD9300D864F2 /* More.storyboard */,
 			);
 			path = More;
+			sourceTree = "<group>";
+		};
+		333ACFCB23BE844300B8D54E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2D3C9E4F23AF58B700339F9D /* MyFundingStatus.storyboard */,
+				33F540CD23BE85BF0061D463 /* Feed.storyboard */,
+				33F540D323BE85BF0061D463 /* Funding.storyboard */,
+				33F540CC23BE85BF0061D463 /* Home.storyboard */,
+				33F540D123BE85BF0061D463 /* Main.storyboard */,
+				33F540CB23BE85BF0061D463 /* More.storyboard */,
+				33F540D223BE85BF0061D463 /* Store.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		33D21CAA23B6260E00158454 /* Font */ = {
@@ -441,7 +448,6 @@
 				3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */,
 				33D3C4EF23B4E3F100E8AA3F /* CustomMenuBar.swift */,
 				33D3C4F123B4E47200E8AA3F /* CustomMenuBarCell.swift */,
-				2D3C9E4F23AF58B700339F9D /* MyFundingStatus.storyboard */,
 			);
 			path = MyFundingStatus;
 			sourceTree = "<group>";
@@ -517,19 +523,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D3C9E5623AF58B800339F9D /* LaunchScreen.storyboard in Resources */,
-				3397E13723BA90A300D864F2 /* Home.storyboard in Resources */,
-				3397E13923BAABB400D864F2 /* Feed.storyboard in Resources */,
+				33F540D423BE85BF0061D463 /* More.storyboard in Resources */,
 				33D21CB223B6260E00158454 /* Spoqa Han Sans Thin.ttf in Resources */,
-				33D3C4F423B4F27400E8AA3F /* Main.storyboard in Resources */,
 				33D21CAF23B6260E00158454 /* Spoqa Han Sans Regular.ttf in Resources */,
-				3397E13B23BAAD9300D864F2 /* More.storyboard in Resources */,
 				2D3C9E7923AF670100339F9D /* Localizable.strings in Resources */,
 				33D21CB123B6260E00158454 /* Spoqa Han Sans Light.ttf in Resources */,
 				2D3C9E5323AF58B800339F9D /* Assets.xcassets in Resources */,
 				2D3C9E5123AF58B700339F9D /* MyFundingStatus.storyboard in Resources */,
-				33876D1123B76A540095B532 /* Funding.storyboard in Resources */,
-				338EF0FD23BC4215000CA6F1 /* Store.storyboard in Resources */,
+				33F540D923BE85BF0061D463 /* Store.storyboard in Resources */,
+				33F540DA23BE85BF0061D463 /* Funding.storyboard in Resources */,
+				33F540D623BE85BF0061D463 /* Feed.storyboard in Resources */,
 				33D21CB023B6260E00158454 /* Spoqa Han Sans Bold.ttf in Resources */,
+				33F540D823BE85BF0061D463 /* Main.storyboard in Resources */,
+				33F540D523BE85BF0061D463 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
