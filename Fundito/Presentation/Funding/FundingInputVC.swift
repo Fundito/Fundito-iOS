@@ -13,14 +13,16 @@ class FundingInputVC : UIViewController{
     @IBOutlet weak var backBtn: UIBarButtonItem!
     @IBOutlet weak var inputCompleteBtn: UIButton!
     @IBOutlet weak var progressBar: UIImageView!
-    @IBOutlet weak var inputMoney: UILabel!
+    @IBOutlet weak var inputMoney: UITextField!
     @IBOutlet weak var inputMoneyUnit: UILabel!
     @IBOutlet weak var inputUnderLine: UIView!
     @IBOutlet weak var inputExplanation: UILabel!
     
+    // 금액 충전이 필요할 때 보여지는 labels
     @IBOutlet weak var userCardInfo: UILabel!
     @IBOutlet weak var autoChargeMoney: UILabel!
-
+    
+    var funditoMoney: Int = 3000
     
     /**
     1) 잔액 받아와서  inputExplanation 조립 ( setinputLabel 안에)
@@ -28,18 +30,27 @@ class FundingInputVC : UIViewController{
     3) 입력되는 값에 따라 (밑에 자의 움직임에 따라) inputMoney.text가 변경되어야 함
      */
     
-    
     @IBAction func backBtnAction(_ sender: UIBarButtonItem) {
         self.navigationController?.popViewController(animated: false)
     }
-    
     
     /**
      버튼 클릭 시
     4) 입력한 돈이 잔액보다 많으면 inputExplanation 을 hidden, 다른 레이블 두 개를 보이게
      */
     @IBAction func completeBtnAction(_ sender: UIButton) {
-
+//
+//        var textfieldInt: Int? = Int(inputMoney.text!)
+//        
+//        guard let textfieldInt: Int = Int(inputMoney.text) {
+//            
+//        } else {
+//            //다시 텍스트 필드에 입력하도록
+//        }
+//        if( funditoMoney < textfieldInt! ){
+//            
+//        }
+        
         if (inputExplanation.isHidden == true){
             
             guard let vc = storyboard?.instantiateViewController(withIdentifier: "FundingProgressVC") as? FundingProgressVC else {
@@ -48,13 +59,9 @@ class FundingInputVC : UIViewController{
             
             vc.modalTransitionStyle = .flipHorizontal
             vc.modalPresentationStyle = .currentContext
-            
-            
-//            self.definesPresentationContext = true
-            
-//            self.performSegue(withIdentifier: "FundingProgressVC", sender: nil)
+        
             self.present(vc, animated: false, completion: nil)
-            print("view transition")
+//            print("view transition")
         } else {
             
 //            // 여기에 입력과 잔액 비교 코드 들어가야 함
@@ -73,6 +80,7 @@ class FundingInputVC : UIViewController{
         }
     }
     
+    // 나중에 store로 이동하는 걸로 바꾸기
     @IBAction func unwindToThis(_ segue: UIStoryboardSegue) {}
     
 }
@@ -81,10 +89,13 @@ class FundingInputVC : UIViewController{
 extension FundingInputVC{
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        inputMoney.delegate = self
         self.initView()
-        
 	}
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.inputMoney.becomeFirstResponder()
+    }
 }
 
 // MARK: Initialization
@@ -93,6 +104,7 @@ extension FundingInputVC{
 		setNavigation()
         setBackBtn()
         setLabel()
+        setTextField()
         setLine(inputUnderLine)
         setCompleteBtn(inputCompleteBtn)
 	}
@@ -106,7 +118,6 @@ extension FundingInputVC{
             .font: UIFont(name: "SpoqaHanSans-Regular", size: 16.0)!,
             .foregroundColor: UIColor(red: 0.0 / 255.0, green: 0.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
         ]
-        
     }
     
     func setBackBtn() {
@@ -115,11 +126,6 @@ extension FundingInputVC{
     }
     
     func setLabel() {
-        inputMoney.attributedText = NSMutableAttributedString(string: inputMoney.text ?? "", attributes: [
-            .font: UIFont(name: "SpoqaHanSans-Regular", size: 32.0)!,
-            .foregroundColor: UIColor.pinkishGrey
-        ])
-        
         inputMoneyUnit.attributedText = NSMutableAttributedString(string: inputMoneyUnit.text ?? "", attributes: [
             .font: UIFont(name: "SpoqaHanSans-Regular", size: 32.0)!,
             .foregroundColor: UIColor.black
@@ -151,6 +157,20 @@ extension FundingInputVC{
         
     }
     
+    func setTextField(){
+
+//        inputMoney.becomeFirstResponder()
+        inputMoney.borderColor = .clear
+        inputMoney.borderStyle = .none
+        inputMoney.backgroundColor = .clear
+        inputMoney.frame.size = .init(width: 160.0, height: 47.0)
+        inputMoney.attributedPlaceholder = NSMutableAttributedString(string: inputMoney.text ?? "", attributes: [
+            .font: UIFont(name: "SpoqaHanSans-Regular", size: 32.0)!,
+            .foregroundColor: UIColor.pinkishGrey
+        ])
+//        inputMoney.attributedText =
+    }
+    
     func setLine(_ line: UIView){
         //        line.tintColor = .pinkishGrey
         line.borderWidth = 0.5
@@ -168,4 +188,17 @@ extension FundingInputVC{
     }
     
     
+}
+
+extension FundingInputVC: UITextFieldDelegate{
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.inputMoney.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        self.inputMoney.resignFirstResponder()
+        //            self.dismiss(animated: true, completion: nil)
+        return true
+    }
 }

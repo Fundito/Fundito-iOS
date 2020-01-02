@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable
+//@IBDesignable
 class FundingProgressView : UIView{
 	
 	let circleCount = 25

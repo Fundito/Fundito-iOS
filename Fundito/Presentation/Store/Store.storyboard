@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nqn-7w-UQv">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Store DetailVC-->
+        <scene sceneID="VKL-U0-2vE">
+            <objects>
+                <viewController storyboardIdentifier="StoreDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nqn-7w-UQv" customClass="StoreDetailVC" customModule="Fundito" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4EW-GF-uVn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U71-xh-2Tw">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezm-6G-uM1">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1141"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UTr-kZ-10B">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="148"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="유나네 감자탕" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mg3-8c-7gG">
+                                                <rect key="frame" x="16" y="160" width="138" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="남은기간  16일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDO-ad-IO5">
+                                                <rect key="frame" x="16" y="204" width="100" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2019.12.31 15:00 마감" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYl-Uc-48M">
+                                                <rect key="frame" x="132" y="209" width="127" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="목표금액 83%  달성 중" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45i-5G-GHX">
+                                                <rect key="frame" x="16" y="236" width="151" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="목표금액 49,993,600" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phS-PA-Fh7">
+                                                <rect key="frame" x="183" y="242" width="109" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MDI-kW-lcH" customClass="FundingProgressView" customModule="Fundito" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="270" width="335" height="13"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKR-nr-gwK">
+                                                <rect key="frame" x="339" y="306" width="19" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="informationIcon"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="지금 투자 하면  175 % 환급!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sd-nk-efX">
+                                                <rect key="frame" x="16" y="305" width="190" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="restaurantGraphImg" translatesAutoresizingMaskIntoConstraints="NO" id="JK6-Mn-ZfF">
+                                                <rect key="frame" x="16" y="349" width="343" height="116"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="타임라인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxs-WY-wnB">
+                                                <rect key="frame" x="16" y="480" width="63" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="W2A-Ht-0iM">
+                                                <rect key="frame" x="16" y="520" width="343" height="196"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dED-0g-Tsz">
+                                                    <size key="itemSize" width="343" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="storeTimelineCollectionViewCell" reuseIdentifier="storeTimelineCollectionViewCell" id="86A-Xi-7S9" customClass="storeTimelineCollectionViewCell" customModule="Fundito" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hZ6-Ij-4YD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKS-7p-wcY">
+                                                                    <rect key="frame" x="11" y="10" width="81" height="21"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2h8-gp-oOn">
+                                                                    <rect key="frame" x="103" y="10" width="10" height="19"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckA-cM-HHk">
+                                                                    <rect key="frame" x="126" y="9" width="42" height="22"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcZ-qB-ogS">
+                                                                    <rect key="frame" x="297" y="16" width="30" height="18"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="343" height="50"/>
+                                                        <connections>
+                                                            <outlet property="arrowImage" destination="2h8-gp-oOn" id="anG-KL-ExY"/>
+                                                            <outlet property="elapsedTime" destination="jcZ-qB-ogS" id="eO2-mz-9ms"/>
+                                                            <outlet property="fundingMoney" destination="DKS-7p-wcY" id="53x-xK-ca8"/>
+                                                            <outlet property="userName" destination="ckA-cM-HHk" id="cHQ-PO-g4c"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h81-MG-eQe">
+                                                <rect key="frame" x="16" y="726" width="343" height="168"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j84-aI-2lJ">
+                                                <rect key="frame" x="16" y="916" width="343" height="168"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1141" id="fP5-dQ-UfS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ezm-6G-uM1" firstAttribute="width" secondItem="U71-xh-2Tw" secondAttribute="width" id="TXC-8f-cm7"/>
+                                    <constraint firstItem="ezm-6G-uM1" firstAttribute="leading" secondItem="U71-xh-2Tw" secondAttribute="leading" id="TwG-ha-Sk8"/>
+                                    <constraint firstAttribute="trailing" secondItem="ezm-6G-uM1" secondAttribute="trailing" id="YTp-R7-sbU"/>
+                                    <constraint firstAttribute="bottom" secondItem="ezm-6G-uM1" secondAttribute="bottom" id="eko-FL-J4a"/>
+                                    <constraint firstItem="ezm-6G-uM1" firstAttribute="top" secondItem="U71-xh-2Tw" secondAttribute="top" id="fBu-WH-Ecf"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="U71-xh-2Tw" firstAttribute="top" secondItem="mJ0-bU-EUa" secondAttribute="top" id="LyD-iz-500"/>
+                            <constraint firstItem="mJ0-bU-EUa" firstAttribute="trailing" secondItem="U71-xh-2Tw" secondAttribute="trailing" id="d9h-Ty-9aH"/>
+                            <constraint firstItem="U71-xh-2Tw" firstAttribute="bottom" secondItem="mJ0-bU-EUa" secondAttribute="bottom" id="e5Y-SK-wp8"/>
+                            <constraint firstItem="U71-xh-2Tw" firstAttribute="leading" secondItem="mJ0-bU-EUa" secondAttribute="leading" id="wvu-15-zaq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mJ0-bU-EUa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kk8-4Z-sp0">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="backarrowNavyIcon" id="ubS-3b-h47">
+                            <connections>
+                                <action selector="backBtnAction:" destination="nqn-7w-UQv" id="zUX-zW-eIk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backBtn" destination="ubS-3b-h47" id="E9T-eQ-INT"/>
+                        <outlet property="dueDate" destination="zYl-Uc-48M" id="qtE-0D-qBJ"/>
+                        <outlet property="fundingProgressView" destination="MDI-kW-lcH" id="k42-Hv-eHn"/>
+                        <outlet property="goalMoney" destination="phS-PA-Fh7" id="xE3-2j-jNZ"/>
+                        <outlet property="goalMoneyRate" destination="45i-5G-GHX" id="NKX-g9-WX2"/>
+                        <outlet property="infomationBtn" destination="iKR-nr-gwK" id="pNg-Jd-oVQ"/>
+                        <outlet property="leftDays" destination="aDO-ad-IO5" id="ZPQ-No-Szy"/>
+                        <outlet property="returnRate" destination="JK6-Mn-ZfF" id="A4o-Uc-t0q"/>
+                        <outlet property="returnRateLabel" destination="2Sd-nk-efX" id="yCL-4z-RvU"/>
+                        <outlet property="storeImage" destination="UTr-kZ-10B" id="4Xx-ig-2en"/>
+                        <outlet property="storeInfoView" destination="j84-aI-2lJ" id="41v-Ci-UYd"/>
+                        <outlet property="storeMenuView" destination="h81-MG-eQe" id="94m-jk-xbR"/>
+                        <outlet property="storeName" destination="mg3-8c-7gG" id="Gmi-Ch-l4f"/>
+                        <outlet property="timelineCollectionView" destination="W2A-Ht-0iM" id="M3l-uW-hTm"/>
+                        <outlet property="timelineLabel" destination="zxs-WY-wnB" id="xf5-hI-P72"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGR-Zx-Bga" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.6" y="42.857142857142861"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backarrowNavyIcon" width="24" height="24"/>
+        <image name="informationIcon" width="19" height="19"/>
+        <image name="photo" catalog="system" width="64" height="46"/>
+        <image name="restaurantGraphImg" width="343.33334350585938" height="116.66666412353516"/>
+    </resources>
+</document>

@@ -1,19 +1,19 @@
 {
   "images" : [
     {
-      "filename" : "progressbarEngImg.png",
       "idiom" : "universal",
+      "filename" : "restaurantGraphImg.png",
       "scale" : "1x"
     },
     {
+      "filename" : "restaurantGraphImg@2x.png",
       "idiom" : "universal",
-      "filename" : "progressbarEngImg@2x.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "progressbarEngImg@3x.png"
+      "idiom" : "universal",
+      "filename" : "restaurantGraphImg@3x.png"
     }
   ],
   "info" : {
