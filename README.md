@@ -195,4 +195,11 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 }
 </pre>
 
+## MVC foldering
+* M : Fundito/Data/Model
+* V : Fundito/Storyboard 
+* C : Fundito/ViewController
+
+## 팀원
+* 김혜지
 
