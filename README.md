@@ -1,7 +1,7 @@
 # Fundito-iOS
 SOPT 25기 펀디토 iOS 저장소
-*  나만의 맛집에 투자하는 외식업 크라우드 펀딩 서비스, 펀디토
-> 
+>  나만의 맛집에 투자하는 외식업 크라우드 펀딩 서비스, 펀디토
+
 
 ## 서비스 work flow
 <img src="./Image/Workflow/workflow.png" witdh="700" height="992">
@@ -180,6 +180,7 @@ class PasswordTextField: UITextField {
 
 * 해결 방법
 > 1.Fundito/Common/View/CustomTabView.siwft 에 커스텀 탭바 구현
+
 > 2.선택되는 탭에 따라, 하나의 CollectionView에서 다른 cell이 나오도록 함
 
 <pre>
