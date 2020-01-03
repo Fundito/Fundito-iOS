@@ -42,7 +42,7 @@ SOPT 25기 펀디토 iOS 저장소
 
 ### 피드
 <p>
-  <img src="./Image/Feed/FeedFriendsListVC.png" width="177" height="310.1">
+  <img src="./Image/Feed/FeedFriendsListVC.png" width="177" height="310.1">{: .center}
 </p>
 
 ## 개발 환경 
@@ -65,7 +65,7 @@ SOPT 25기 펀디토 iOS 저장소
 | 홈 |       o       |                 |
 | 가게상세정보 |       o       |                 |
 | 펀딩 |       o       |                 |
-| 피드(친구) |       x       |                 |
+| 피드(친구) |       o       |                 |
 | 현황 |       o       |                 |
 
 ### 부가 기능
