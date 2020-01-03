@@ -10,17 +10,17 @@ SOPT 25기 펀디토 iOS 저장소
 
 ### 홈
 <p>
-  <img src="./Image/Home/HomeVC.png" width="177" height="310.1">
-  <img src="./Image/Home/HomeNotificationVC.png" width="177" height="310.1">
+  <img src="./Image/Main/Home/HomeVC.png" width="177" height="310.1">
+  <img src="./Image/Main/Home/HomeNotificationVC.png" width="177" height="310.1">
 </p>
 
 ### 내투자현황
 <p>
-  <img src="./Image/MyFundingStatus/MyFundingStatusVC.png" width="177" height="310.1">
-  <img src="./Image/MyFundingStatus/FirstPopUpView.png" width="177" height="310.1">
-  <img src="./Image/MyFundingStatus/SecondPopUpView.png" width="177" height="310.1">
-  <img src="./Image/MyFundingStatus/SecondPopUpView(2).png" width="177" height="310.1">
-  <img src="./Image/MyFundingStatus/StorePopUpView.png" width="177" height="310.1">
+  <img src="./Image/Main/MyFundingStatus/MyFundingStatusVC.png" width="177" height="310.1">
+  <img src="./Image/Main/MyFundingStatus/FirstPopUpView.png" width="177" height="310.1">
+  <img src="./Image/Main/MyFundingStatus/SecondPopUpView.png" width="177" height="310.1">
+  <img src="./Image/Main/MyFundingStatus/SecondPopUpView(2).png" width="177" height="310.1">
+  <img src="./Image/Main/MyFundingStatus/StorePopUpView.png" width="177" height="310.1">
 </p>
 
 ### 펀딩
