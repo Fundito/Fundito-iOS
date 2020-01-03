@@ -73,7 +73,7 @@ SOPT 25기 펀디토 iOS 저장소
 
 ## 문제점과 해결 방법 report (코드 첨부할 것)
 
-1. 문제 1
+<h5> 문제 1 </h5>
 > 밑에서 올라오는 중첩된 뷰 구현 필요
 * 해결 방법 
 > 1. VC에 UIView 추가
@@ -108,7 +108,7 @@ func setupGestureRecognizer() {
 </pre>
 
 
-2. 문제 2
+<h5> 문제 2 </h5>
 > 펀딩 - 6자리 비밀번호 입력 텍스트 필드 구현
 * 해결 방법
 > 1. 여섯 개의 텍스트 필드, 여섯 개의 뷰 생성. 
@@ -163,9 +163,11 @@ class PasswordTextField: UITextField {
         }
 </pre>
 
-> 3. 내투자현황 - 두 번째 팝업 창에서 탭이 중간에 위치하고, 탭의 선택 여부에 따라 다른 뷰가 보여야 함
-> * Fundito/Common/View/CustomTabView.siwft 에 커스텀 탭바 구현
-> * 선택되는 탭에 따라, 하나의 CollectionView에서 다른 cell이 나오도록 함
+<h5> 문제 3 </h5>
+> 내투자현황 - 두 번째 팝업 창에서 탭이 중간에 위치하고, 탭의 선택 여부에 따라 다른 뷰가 보여야 함
+* 해결 방법
+> 1.Fundito/Common/View/CustomTabView.siwft 에 커스텀 탭바 구현
+> 2.선택되는 탭에 따라, 하나의 CollectionView에서 다른 cell이 나오도록 함
 <pre>
 func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (customTabView.curIndex == 0){ //첫번째 탭 클릭했을때 customTabView.curIndex == 1
