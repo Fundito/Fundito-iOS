@@ -22,6 +22,11 @@ class StoreCheerVC : UIViewController{
     @IBOutlet weak var cheerBtn: UIButton!
 
     var paramStoreName: String?
+    
+    @IBAction func cancelBtnAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: false)
+    }
+    
 }
 
 // MARK: Lifecycle
@@ -61,11 +66,8 @@ extension StoreCheerVC{
     
     private func setLabel(){
         
-
-//        
         cheerLabel2.numberOfLines = 5
         cheerLabel2.lineBreakMode = .byWordWrapping
-//        cheerLabel2.addLineSpacing(space: 2.0)
         
         cheerPointLabel.numberOfLines = 4
         
