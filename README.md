@@ -4,7 +4,7 @@ SOPT 25기 펀디토 iOS 저장소
 
 
 ## 서비스 work flow
-<img src="./Image/Workflow/workflow.png" witdh="700" height="992">
+<img src="./Image/Workflow/workflow.png" witdh="800" height="1134">
 
 ## 실행 화면 스크린 캡처
 
@@ -38,6 +38,11 @@ SOPT 25기 펀디토 iOS 저장소
   <img src="./Image/Funding/FundingProgressVC.png" width="177" height="310.1">  
   <img src="./Image/Funding/FundingProgressVC(2).png" width="177" height="310.1">  
   <img src="./Image/Funding/FundingCompleteVC.png" width="177" height="310.1">
+</p>
+
+### 피드
+<p>
+  <img src="./Image/Feed/FeedFriendsListVC.png" width="177" height="310.1">
 </p>
 
 ## 개발 환경 
