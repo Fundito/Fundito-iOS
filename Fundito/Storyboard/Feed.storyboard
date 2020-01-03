@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6ms-7o-2Q9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--피드-->
+        <scene sceneID="ZEZ-sm-HYh">
+            <objects>
+                <viewController storyboardIdentifier="FeedVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6ms-7o-2Q9" customClass="FeedFriendListVC" customModule="Fundito" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fuo-nu-6NZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyJ-Ze-cNZ">
+                                <rect key="frame" x="186" y="438" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1a-8N-Eix" customClass="FundingProgressView" customModule="Fundito" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="419.5" width="331" height="18"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hY8-fe-5th" customClass="CustomTabView" customModule="Fundito" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="119" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Q1a-8N-Eix" firstAttribute="centerX" secondItem="tCQ-a7-NeH" secondAttribute="centerX" id="0Qz-IH-MKd"/>
+                            <constraint firstItem="hY8-fe-5th" firstAttribute="width" secondItem="fuo-nu-6NZ" secondAttribute="width" id="Alf-Q6-6ef"/>
+                            <constraint firstItem="Q1a-8N-Eix" firstAttribute="width" secondItem="fuo-nu-6NZ" secondAttribute="width" multiplier="0.8" id="C79-Np-wSj"/>
+                            <constraint firstItem="hY8-fe-5th" firstAttribute="centerX" secondItem="tCQ-a7-NeH" secondAttribute="centerX" id="UA4-BO-k0Z"/>
+                            <constraint firstItem="Q1a-8N-Eix" firstAttribute="centerY" secondItem="tCQ-a7-NeH" secondAttribute="centerY" id="gd6-6a-ocC"/>
+                            <constraint firstItem="hY8-fe-5th" firstAttribute="top" secondItem="tCQ-a7-NeH" secondAttribute="top" constant="75" id="pt3-a8-kYa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tCQ-a7-NeH"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="피드" image="feedTabIconInactive" selectedImage="feedTabIconActive" id="Asi-gd-CtU"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9WB-hb-uUo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-532" y="72"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="feedTabIconActive" width="24" height="24"/>
+        <image name="feedTabIconInactive" width="24" height="24"/>
+    </resources>
+</document>
