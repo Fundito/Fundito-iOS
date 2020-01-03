@@ -4,14 +4,29 @@ SOPT 25기 펀디토 iOS 저장소
 > 
 
 ## 서비스 work flow
-<img src="./image/workflow.png">
+<img src="./Image/Workflow/workflow.png">
 
 ## 실행 화면 스크린 캡처
 
+### 홈
+<p>
+  <img src="./Image/Home/HomeVC.png" width="177" height="310.1">
+  <img src="./Image/Home/HomeNotificationVC.png" width="177" height="310.1">
+</p>
+
+### 내투자현황
+<p>
+  <img src="./Image/MyFundingStatus/MyFundingStatusVC.png" width="177" height="310.1">
+  <img src="./Image/MyFundingStatus/FirstPopUpView.png" width="177" height="310.1">
+  <img src="./Image/MyFundingStatus/SecondPopUpView.png" width="177" height="310.1">
+  <img src="./Image/MyFundingStatus/SecondPopUpView(2).png" width="177" height="310.1">
+  <img src="./Image/MyFundingStatus/StorePopUpView.png" width="177" height="310.1">
+</p>
+
 ### 펀딩
 <p>
-<img src="./image/FundingInputVC.png" width="177" height="310.1">
-<img src="./image/FundingProgressVC.png" width="177" height="310.1">
+<img src="./Image/Funding/FundingInputVC.png" width="177" height="310.1">
+<img src="./image/Funding/FundingProgressVC.png" width="177" height="310.1">
 </p>
 
 ### 현황
