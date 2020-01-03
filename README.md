@@ -74,10 +74,14 @@ SOPT 25기 펀디토 iOS 저장소
 ## 문제점과 해결 방법 report (코드 첨부할 것)
 
 <h5> 문제 1 </h5>
+
 > 밑에서 올라오는 중첩된 뷰 구현 필요
+
 * 해결 방법 
+
 > 1. VC에 UIView 추가
 > 2. VC Class에 Outlet 으로 추가, extension으로 view를 설정해줄 함수(setupPopUpView) 정의
+
 <pre>
 @IBOutlet var firstPopUpView: FirstPopUpView!
 // view의 크기와 위치를 설정
@@ -87,7 +91,9 @@ func setupPopUpView() {
         firstPopUpView.viewInit() // view의 클래스를 생성하여 필요한 초기 설정을 하는 함수
 }
 </pre>
+
 > 3. 함수를 정의하여 view에 panGestureRecognizer를 추가하여 사용자가 끌어올릴 수 있도록 함
+
 <pre>
 func setupGestureRecognizer() {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
@@ -109,6 +115,7 @@ func setupGestureRecognizer() {
 
 
 <h5> 문제 2 </h5>
+
 > 펀딩 - 6자리 비밀번호 입력 텍스트 필드 구현
 * 해결 방법
 > 1. 여섯 개의 텍스트 필드, 여섯 개의 뷰 생성. 
