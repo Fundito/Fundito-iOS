@@ -4,7 +4,7 @@ SOPT 25기 펀디토 iOS 저장소
 > 
 
 ## 서비스 work flow
-<img src="./Image/Workflow/workflow.png">
+<img src="./Image/Workflow/workflow.png" witdh="100%" height="100%">
 
 ## 실행 화면 스크린 캡처
 
@@ -36,11 +36,9 @@ SOPT 25기 펀디토 iOS 저장소
   <img src="./Image/Funding/FundingInputVC(2).png" width="177" height="310.1">
   <img src="./Image/Funding/FundingInputVC(3).png" width="177" height="310.1">
   <img src="./Image/Funding/FundingProgressVC.png" width="177" height="310.1">  
-  <img src="./image/Funding/FundingProgressVC(2).png" width="177" height="310.1">  
-  <img src="./image/Funding/FundingCompleteVC.png" width="177" height="310.1">
+  <img src="./Image/Funding/FundingProgressVC(2).png" width="177" height="310.1">  
+  <img src="./Image/Funding/FundingCompleteVC.png" width="177" height="310.1">
 </p>
-
-
 
 ## 개발 환경 
 
@@ -59,12 +57,11 @@ SOPT 25기 펀디토 iOS 저장소
 ### 핵심 기능
 |              기능             |     개발여부    |       비고       | 
 |:----------------------------:|:-------------:|:--------------: |
-| 홈 - 와이파이 정보 얻어오기 |       x       |                 |
-| 홈 - 등록된 주변 가게 보여주기 |       x       |                 |
-| 가게상세정보 |       x       |                 |
-| 펀딩 |       △       |                 |
+| 홈 |       o       |                 |
+| 가게상세정보 |       o       |                 |
+| 펀딩 |       o       |                 |
 | 피드(친구) |       x       |                 |
-| 현황 |       △       |                 | 거의 완료
+| 현황 |       o       |                 |
 
 ### 부가 기능
 |              기능             |     개발여부    |       비고       | 
