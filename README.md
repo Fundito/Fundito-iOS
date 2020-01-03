@@ -202,4 +202,4 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 
 ## 팀원
 * 김혜지
-
+* (Helper) 문명주
