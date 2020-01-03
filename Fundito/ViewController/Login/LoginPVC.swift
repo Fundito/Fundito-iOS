@@ -1,5 +1,5 @@
 //
-//  FundingPVC.swift
+//  LoginPVC.swift
 //  Fundito
 //
 //  Created by kimhyeji on 12/30/19.
@@ -12,13 +12,13 @@
 
 import UIKit
 
-class FundingPVC: UIPageViewController {
+class LoginPVC: UIPageViewController {
 
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.FundingViewController("Input"),
-            self.FundingViewController("Progress"),
-            self.FundingViewController("Complete")]
+        return [self.LoginViewController("Guide1"),
+            self.LoginViewController("Guide2"),
+            self.LoginViewController("Guide3")]
     }()
     
     override func viewDidLoad() {
@@ -35,16 +35,16 @@ class FundingPVC: UIPageViewController {
         
     }
     
-    private func FundingViewController(_ step: String) -> UIViewController {
-        print("Funding\(step)VC")
-        return UIStoryboard(name: "Funding", bundle: nil) .
-            instantiateViewController(withIdentifier: "Funding\(step)VC")
+    private func LoginViewController(_ step: String) -> UIViewController {
+        //print("Login\(step)VC")
+        return UIStoryboard(name: "Login", bundle: nil) .
+            instantiateViewController(withIdentifier: "Login\(step)VC")
         
     }
 
 }
 
-extension FundingPVC: UIPageViewControllerDataSource {
+extension LoginPVC: UIPageViewControllerDataSource {
  
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         

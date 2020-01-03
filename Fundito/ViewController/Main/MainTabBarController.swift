@@ -19,7 +19,7 @@ class MainTabBarController: UITabBarController {
     }
     
 }
-// 시작할 때 Home을 클릭 상태로 인식하도록 해야함
+
 
 extension MainTabBarController: UITabBarControllerDelegate{
     
@@ -37,26 +37,9 @@ extension MainTabBarController: UITabBarControllerDelegate{
         return true
     }
     
+    // 탭바 클릭 시에 이벤트 주고 싶을 때 사용하는 func
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         
-//        let tabIndex = tabBarController.selectedIndex
-        
-//        let selectedTitle = tabBar.selectedItem?.title
-//        var image = selectedTitle ?? ""
-//        image += "TabIconActive"
-//        print(image)
-//
-//        print(tabBar.selectedItem?.title ?? "nil")
-//        print(tabBarController.selectedIndex)
-        
-//        switch (tabIndex) {
-//        case 0: tabBar.selectedItem?.selectedImage = UIImage(named: "homeTabIconActive")
-//        case 1: tabBar.selectedItem?.selectedImage = UIImage(named: "feedTabIconActive")
-//        case 2: tabBar.selectedItem?.selectedImage = UIImage(named: "myfundTabIconActive")
-//        case 3: tabBar.selectedItem?.selectedImage = UIImage(named: "moreTabIconActive")
-//        default:
-//            print("default")
-//        }
     
     }
 }
