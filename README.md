@@ -163,4 +163,19 @@ class PasswordTextField: UITextField {
         }
 </pre>
 
+> 3. 내투자현황 - 두 번째 팝업 창에서 탭이 중간에 위치하고, 탭의 선택 여부에 따라 다른 뷰가 보여야 함
+> * Fundito/Common/View/CustomTabView.siwft 에 커스텀 탭바 구현
+> * 선택되는 탭에 따라, 하나의 CollectionView에서 다른 cell이 나오도록 함
+<pre>
+func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if (customTabView.curIndex == 0){ //첫번째 탭 클릭했을때 customTabView.curIndex == 1
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TabCollectionViewCell", for: indexPath) as! TabCollectionViewCell
+            return cell
+        } else { //두번째 탭 클릭 customTabView.curIndex == 0
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Tab2CollectionViewCell", for: indexPath) as! Tab2CollectionViewCell
+            return cell
+        }
+}
+</pre>
+
 
