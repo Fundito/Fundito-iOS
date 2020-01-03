@@ -11,6 +11,7 @@ import UIKit
 class StoreDetailVC : UIViewController{
 	
     @IBOutlet weak var backBtn: UIBarButtonItem!
+    
     @IBOutlet weak var storeImage: UIImageView!
     @IBOutlet weak var storeName: UILabel!
     @IBOutlet weak var leftDays: UILabel!
@@ -82,17 +83,13 @@ extension StoreDetailVC{
 	override func viewDidLoad() {
 		super.viewDidLoad()
         
+        initView()
         setTimelineData()
-        
-        
-		initView()
+
         timelineCollectionView.delegate = self
         timelineCollectionView.dataSource = self
 
         timelineCollectionView.reloadData()
-
-//        timelineCollectionView.shadowOpacity = 10
-//        timelineCollectionView.backgroundColor = UIColor(white: 0.0, alpha: 0.08)
         
 	}
     
@@ -112,6 +109,7 @@ extension StoreDetailVC{
         setupStoreInfoView()
         setBtn()
 	}
+    
     
     private func setBackBtn() {
         backBtn.image = UIImage(named: "backarrowNavyIcon")
@@ -219,24 +217,20 @@ extension StoreDetailVC: UICollectionViewDelegate, UICollectionViewDataSource{
         cell.arrowImage?.image = timeline.arrowImage
         cell.userName?.text = timeline.userName
         cell.elapsedTime?.text = timeline.elapsedTime
-        
-//        cell.contentView.la
-        
+//        
 //        cell.contentView.layer.cornerRadius = 2.0
 //        cell.contentView.layer.borderWidth = 1.0
 //        cell.contentView.layer.borderColor = UIColor.clear.cgColor
 //        cell.contentView.layer.masksToBounds = true
 //
-//
-//        cell.contentView.layer.shadowColor = UIColor.black.cgColor
-//        cell.contentView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-//        cell.contentView.layer.shadowRadius = 2.0
-//        cell.contentView.layer.shadowOpacity = 0.5
-//        cell.contentView.layer.masksToBounds = false
-        
-//        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        cell.layer.shadowColor = UIColor(white: 0.0, alpha: 0.08).cgColor
-//        cell.layer.shadowOpacity = 0.1
+//        cell.layer.backgroundColor = UIColor.white.cgColor
+//        cell.layer.shadowColor = UIColor.gray.cgColor
+//        cell.layer.shadowOffset = CGSize(width: 0, height: 2.0)//CGSizeMake(0, 2.0);
+//        cell.layer.shadowRadius = 2.0
+//        cell.layer.shadowOpacity = 1.0
+//        cell.layer.masksToBounds = false
+//        cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
+//        
         
         return cell
     }
@@ -258,8 +252,7 @@ extension StoreDetailVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = 343
         let height = 40
-//        let width = timelineCollectionView.bounds.width
-//        let height = timelineCollectionView.bounds.height
+
         return CGSize(width: width, height: height)
     }
 }
