@@ -12,6 +12,8 @@ import UIKit
 class HomeVC: UIViewController {
     
     @IBOutlet weak var backBtn: UIBarButtonItem!
+    
+    @IBOutlet weak var noticeBtn: UIButton!
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var welcomeLabel: UILabel!
@@ -28,6 +30,11 @@ class HomeVC: UIViewController {
     @IBOutlet weak var fundingProgressView: FundingProgressView!
 
     @IBOutlet weak var timelineCollectionView: UICollectionView!
+
+    @IBAction func noticeBtnAction(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "HomeNotificationVC") as! HomeNotificationVC
+        self.navigationController!.pushViewController(vc, animated: true)
+    }
     
 }
 
@@ -37,7 +44,7 @@ extension HomeVC{
         super.viewDidLoad()
         initView()
         self.navigationController?.isNavigationBarHidden = true
-        //self.navigationController?.setNavigationBarHidden(true, animated: true)
+        searchTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -215,5 +222,21 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
         let width = timelineCollectionView.bounds.width
         let height = timelineCollectionView.bounds.height
         return CGSize(width: width, height: height)
+    }
+}
+
+
+extension HomeVC: UITextFieldDelegate{
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.searchTextField.resignFirstResponder()
+//        self.searchTextField.becomeFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        self.searchTextField.resignFirstResponder()
+        //            self.dismiss(animated: true, completion: nil)
+        return true
     }
 }
