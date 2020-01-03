@@ -73,7 +73,7 @@ SOPT 25기 펀디토 iOS 저장소
 
 ## 문제점과 해결 방법 report (코드 첨부할 것)
 
-<h5> 문제 1 </h5>
+<h3> 문제 1 </h3>
 
 > 밑에서 올라오는 중첩된 뷰 구현 필요
 
@@ -114,13 +114,16 @@ func setupGestureRecognizer() {
 </pre>
 
 
-<h5> 문제 2 </h5>
+<h3> 문제 2 </h3>
 
 > 펀딩 - 6자리 비밀번호 입력 텍스트 필드 구현
+
 * 해결 방법
+
 > 1. 여섯 개의 텍스트 필드, 여섯 개의 뷰 생성. 
 > * 텍스트 필드와 입력 값은 안보이게, 입력 전 상태에서 뷰는 하얀색 빈 동그라미로 설정
 > * 텍스트 필드에 하나의 숫자가 입력되면, 바로 다음 텍스트 필드로 넘어가게 함
+
 <pre>
 func textFieldDidChangeSelection(_ textField: UITextField) {
         guard textFieldDidEditing else {
@@ -146,6 +149,7 @@ func textFieldDidChangeSelection(_ textField: UITextField) {
 
 > 2. 입력한 값을 지우면 그 전 텍스트 필드로 넘어가야 함 
 > * NotificationCenter
+
 <pre>
 NotificationCenter.default.addObserver(self, selector: #selector(handleDeleted), name: .init("deletePressed"), object: nil)
 </pre>
@@ -170,11 +174,14 @@ class PasswordTextField: UITextField {
         }
 </pre>
 
-<h5> 문제 3 </h5>
+<h3> 문제 3 </h3>
+
 > 내투자현황 - 두 번째 팝업 창에서 탭이 중간에 위치하고, 탭의 선택 여부에 따라 다른 뷰가 보여야 함
+
 * 해결 방법
 > 1.Fundito/Common/View/CustomTabView.siwft 에 커스텀 탭바 구현
 > 2.선택되는 탭에 따라, 하나의 CollectionView에서 다른 cell이 나오도록 함
+
 <pre>
 func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (customTabView.curIndex == 0){ //첫번째 탭 클릭했을때 customTabView.curIndex == 1
