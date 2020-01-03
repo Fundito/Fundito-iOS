@@ -82,13 +82,11 @@ extension SecondPopUpView: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if (customTabView.curIndex == 0){ //첫번째 탭 클릭했을때 customTabView.curIndex == 1
-            print("tab111")
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TabCollectionViewCell", for: indexPath) as! TabCollectionViewCell
             return cell
             
            
         } else { //두번째 탭 클릭 customTabView.curIndex == 0
-            print("tab222")
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Tab2CollectionViewCell", for: indexPath) as! Tab2CollectionViewCell
             return cell
         }
