@@ -22,6 +22,23 @@ extension UILabel{
 	func removeShadowFromText(){
 		self.layer.shouldRasterize=false
 	}
+    
+    func setupText(text: String, fontName: String, size: CGFloat, color: UIColor) {
+        self.attributedText = NSMutableAttributedString(string: text , attributes: [
+          .font: UIFont(name: fontName, size: size)!,
+          .foregroundColor: color
+        ])
+    }
+    
+    func addLineSpacing(space: CGFloat){
+        let attrString = NSMutableAttributedString(string: self.text!)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = space
+        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
+        self.attributedText = attrString
+    }
+  
+    
 }
 extension UIButton{
 	@IBInspectable

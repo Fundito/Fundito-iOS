@@ -179,7 +179,9 @@ extension HomeVC{
     @objc func goStoreDetailVC(_ sender:UIGestureRecognizer) {
         
         let storyboard = UIStoryboard(name: "Store", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "StoreDetailVC")
+        let vc = storyboard.instantiateViewController(withIdentifier: "StoreDetailVC") as! StoreDetailVC
+        
+        vc.paramStoreName = self.storeName?.text
         self.navigationController!.pushViewController(vc, animated: true)
     }
     
