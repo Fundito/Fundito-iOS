@@ -101,7 +101,7 @@
                                             <constraint firstAttribute="height" constant="45" id="oeb-3y-SQ3"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="유나네 감자탕" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzH-Xx-8kK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="이태리 식당" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzH-Xx-8kK">
                                         <rect key="frame" x="74" y="35" width="92.666666666666686" height="20.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.333333333333329" id="nDn-DC-Hxk"/>

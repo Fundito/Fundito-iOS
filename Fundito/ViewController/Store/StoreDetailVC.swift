@@ -54,6 +54,7 @@ class StoreDetailVC : UIViewController{
     @IBOutlet weak var cheerBtn: UIButton!
     
     var timelineList: [Timeline] = []
+    var paramStoreName: String?
     
     @IBAction func backBtnAction(_ sender: UIBarButtonItem) {
         self.navigationController?.popViewController(animated: false)
@@ -67,7 +68,8 @@ class StoreDetailVC : UIViewController{
     
     @IBAction func cheerBtnAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Store", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "StoreCheerVC")
+        let vc = storyboard.instantiateViewController(withIdentifier: "StoreCheerVC") as! StoreCheerVC
+        vc.paramStoreName = self.storeName?.text ?? "음식점"
         self.navigationController!.pushViewController(vc, animated: true)
     }
     
@@ -82,7 +84,6 @@ class StoreDetailVC : UIViewController{
 extension StoreDetailVC{
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        
         initView()
         setTimelineData()
 
@@ -119,6 +120,7 @@ extension StoreDetailVC{
     private func setupLabel() {
         
         setupText(label: storeName, fontName: "SpoqaHanSans-Bold", size: 24.0, color: .black)
+        storeName?.text = paramStoreName
         setupText(label: leftDays, fontName: "SpoqaHanSans-Bold", size: 16.0, color: .black)
         setupText(label: dueDate, fontName: "SpoqaHanSans-Regular", size: 12.0, color: .charcoalGrey)
 
@@ -130,8 +132,6 @@ extension StoreDetailVC{
         attributedString.addAttribute(.font, value: UIFont(name: "SpoqaHanSans-Bold", size: 16.0)!, range: NSRange(location: 4, length: 6))
 
         goalMoneyRate.attributedText = attributedString
-
-//        setupText(label: goalMoneyRate, fontName: "SpoqaHanSans-Regular", size: 16.0, color: .black)
 
         setupText(label: goalMoney, fontName: "SpoqaHanSans-Regular", size: 12.0, color: .charcoalGrey)
 
@@ -146,7 +146,6 @@ extension StoreDetailVC{
 
         returnRateLabel.attributedText = attributedString2
 
-//        setupText(label: returnRateLabel, fontName: String, size: CGFloat, color: UIColor)
         setupText(label: timelineLabel, fontName: "SpoqaHanSans-Bold", size: 16.0, color: .black)
     }
 
@@ -161,7 +160,7 @@ extension StoreDetailVC{
     func setupStoreMenuView() {
 
         storeMenuView.layer.shadowColor = UIColor(white: 0.0, alpha: 0.08).cgColor
-        storeMenuView.layer.shadowOpacity = 0.1
+        storeMenuView.layer.shadowOpacity = 10
         
         setupText(label: storeMenuLabel, fontName: "SpoqaHanSans-Bold", size: 16.0, color: .black)
         setupText(label: storeMenuName1, fontName: "SpoqaHanSans-Regular", size: 16.0, color: .black)
@@ -174,7 +173,7 @@ extension StoreDetailVC{
     func setupStoreInfoView(){
 
         storeInfoView.layer.shadowColor = UIColor(white: 0.0, alpha: 0.08).cgColor
-        storeInfoView.layer.shadowOpacity = 0.1
+        storeInfoView.layer.shadowOpacity = 10
         
         setupText(label: storeInfoLabel, fontName: "SpoqaHanSans-Bold", size: 16.0, color: .black)
         setupText(label: storeInfoName1, fontName: "SpoqaHanSans-Regular", size: 16.0, color: .black)
@@ -217,20 +216,32 @@ extension StoreDetailVC: UICollectionViewDelegate, UICollectionViewDataSource{
         cell.arrowImage?.image = timeline.arrowImage
         cell.userName?.text = timeline.userName
         cell.elapsedTime?.text = timeline.elapsedTime
-//        
+        
+        cell.layer.borderWidth = 1.0
+        cell.layer.borderColor = UIColor(displayP3Red: 0.0, green: 0.0, blue: 0.0, alpha: 0.08).cgColor
+//
+//        cell.layer.backgroundColor = UIColor.white.cgColor
+//        cell.layer.cornerRadius = 1.0
+//        cell.layer.borderWidth = 1.0
+//        cell.layer.shadowColor = UIColor.black.cgColor
+//        cell.layer.shadowOffset = CGSize(width: 1, height: 1)
+//        cell.layer.shadowRadius = 5.0
+//        cell.layer.shadowOpacity = 1
+//        cell.layer.masksToBounds = false //<-
+        
 //        cell.contentView.layer.cornerRadius = 2.0
 //        cell.contentView.layer.borderWidth = 1.0
 //        cell.contentView.layer.borderColor = UIColor.clear.cgColor
 //        cell.contentView.layer.masksToBounds = true
 //
-//        cell.layer.backgroundColor = UIColor.white.cgColor
-//        cell.layer.shadowColor = UIColor.gray.cgColor
+////        cell.layer.backgroundColor = UIColor.white.cgColor
+//        cell.layer.shadowColor = UIColor.black.cgColor
 //        cell.layer.shadowOffset = CGSize(width: 0, height: 2.0)//CGSizeMake(0, 2.0);
 //        cell.layer.shadowRadius = 2.0
 //        cell.layer.shadowOpacity = 1.0
 //        cell.layer.masksToBounds = false
 //        cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
-//        
+//
         
         return cell
     }
@@ -261,10 +272,10 @@ extension StoreDetailVC: UICollectionViewDelegateFlowLayout {
 extension StoreDetailVC {
     func setTimelineData() {
         
-        let timeline1 = Timeline(money: "1000원 투자", imageName: "uparrowImg", userName: "개똥이", elapsedName: "1분전")
-        let timeline2 = Timeline(money: "1000원 투자", imageName: "uparrowImg", userName: "개똥이", elapsedName: "1분전")
-        let timeline3 = Timeline(money: "1000원 투자", imageName: "uparrowImg", userName: "개똥이", elapsedName: "1분전")
-        let timeline4 = Timeline(money: "1000원 투자", imageName: "uparrowImg", userName: "개똥이", elapsedName: "1분전")
+        let timeline1 = Timeline(money: "1000원 투자", imageName: "uparrowImg", userName: "천주윤", elapsedName: "13분전")
+        let timeline2 = Timeline(money: "1500원 투자", imageName: "uparrowImg", userName: "백예은", elapsedName: "1시간전")
+        let timeline3 = Timeline(money: "3000원 투자", imageName: "uparrowImg", userName: "조수민", elapsedName: "13시간전")
+        let timeline4 = Timeline(money: "1000원 투자", imageName: "uparrowImg", userName: "송황호", elapsedName: "24시간전")
     
         // 생성한 timelineList 배열에 Timeline 모델들을 저장합니다.
         timelineList = [timeline1, timeline2, timeline3, timeline4]

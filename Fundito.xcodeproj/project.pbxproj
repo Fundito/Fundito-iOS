@@ -31,7 +31,6 @@
 		2DA1B37423B6222B00A26447 /* StoreDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B37323B6222B00A26447 /* StoreDetailVC.swift */; };
 		2DA1B37623B6224200A26447 /* StoreCheerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B37523B6224200A26447 /* StoreCheerVC.swift */; };
 		2DA1B37823B622A400A26447 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B37723B622A400A26447 /* SearchVC.swift */; };
-		2DA1B37A23B622CB00A26447 /* FundingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B37923B622CB00A26447 /* FundingVC.swift */; };
 		2DA1B37C23B622DC00A26447 /* FundingInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B37B23B622DC00A26447 /* FundingInputVC.swift */; };
 		2DA1B37E23B622EE00A26447 /* FundingProgressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B37D23B622EE00A26447 /* FundingProgressVC.swift */; };
 		2DA1B38023B6230000A26447 /* FundingCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B37F23B6230000A26447 /* FundingCompleteVC.swift */; };
@@ -42,7 +41,6 @@
 		2DC29ED323B786CA00671303 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC29ED223B786CA00671303 /* View.swift */; };
 		3335C07B23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07A23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift */; };
 		3335C07D23B53AA20065FE62 /* TabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07C23B53AA20065FE62 /* TabCollectionViewCell.swift */; };
-		3335C07F23B5A9770065FE62 /* MyFundingStatusVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */; };
 		333ACFC223BE465D00B8D54E /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333ACFC123BE465D00B8D54E /* Timeline.swift */; };
 		333ACFC423BE4C1300B8D54E /* storeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333ACFC323BE4C1300B8D54E /* storeCollectionViewCell.swift */; };
 		333ACFC623BE7A1300B8D54E /* MyFundingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333ACFC523BE7A1300B8D54E /* MyFundingProgress.swift */; };
@@ -65,8 +63,6 @@
 		33D21CB423B62B3F00158454 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D21CB323B62B3F00158454 /* Font.swift */; };
 		33D3C4C823B3EFEE00E8AA3F /* MyFundingStatusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4C723B3EFEE00E8AA3F /* MyFundingStatusVC.swift */; };
 		33D3C4CC23B4179B00E8AA3F /* FirstPopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4CB23B4179B00E8AA3F /* FirstPopUpTableViewCell.swift */; };
-		33D3C4F023B4E3F100E8AA3F /* CustomMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4EF23B4E3F100E8AA3F /* CustomMenuBar.swift */; };
-		33D3C4F223B4E47200E8AA3F /* CustomMenuBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C4F123B4E47200E8AA3F /* CustomMenuBarCell.swift */; };
 		33EBD96B23BEB5AB00A8C9DD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33EBD96A23BEB5AB00A8C9DD /* Login.storyboard */; };
 		33EBD96D23BEBA4500A8C9DD /* LoginGuide2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EBD96C23BEBA4500A8C9DD /* LoginGuide2VC.swift */; };
 		33EBD96F23BEBA6100A8C9DD /* LoginGuide3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EBD96E23BEBA6100A8C9DD /* LoginGuide3VC.swift */; };
@@ -106,7 +102,6 @@
 		2DA1B37323B6222B00A26447 /* StoreDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailVC.swift; sourceTree = "<group>"; };
 		2DA1B37523B6224200A26447 /* StoreCheerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCheerVC.swift; sourceTree = "<group>"; };
 		2DA1B37723B622A400A26447 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
-		2DA1B37923B622CB00A26447 /* FundingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundingVC.swift; sourceTree = "<group>"; };
 		2DA1B37B23B622DC00A26447 /* FundingInputVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundingInputVC.swift; sourceTree = "<group>"; };
 		2DA1B37D23B622EE00A26447 /* FundingProgressVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundingProgressVC.swift; sourceTree = "<group>"; };
 		2DA1B37F23B6230000A26447 /* FundingCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundingCompleteVC.swift; sourceTree = "<group>"; };
@@ -117,7 +112,6 @@
 		2DC29ED223B786CA00671303 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		3335C07A23B4FFDD0065FE62 /* NSObject + reusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + reusableIdentifier.swift"; sourceTree = "<group>"; };
 		3335C07C23B53AA20065FE62 /* TabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCollectionViewCell.swift; sourceTree = "<group>"; };
-		3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFundingStatusVC3.swift; sourceTree = "<group>"; };
 		333ACFC123BE465D00B8D54E /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		333ACFC323BE4C1300B8D54E /* storeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeCollectionViewCell.swift; sourceTree = "<group>"; };
 		333ACFC523BE7A1300B8D54E /* MyFundingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundingProgress.swift; sourceTree = "<group>"; };
@@ -140,8 +134,6 @@
 		33D21CB323B62B3F00158454 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		33D3C4C723B3EFEE00E8AA3F /* MyFundingStatusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundingStatusVC.swift; sourceTree = "<group>"; };
 		33D3C4CB23B4179B00E8AA3F /* FirstPopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPopUpTableViewCell.swift; sourceTree = "<group>"; };
-		33D3C4EF23B4E3F100E8AA3F /* CustomMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuBar.swift; sourceTree = "<group>"; };
-		33D3C4F123B4E47200E8AA3F /* CustomMenuBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuBarCell.swift; sourceTree = "<group>"; };
 		33EBD96A23BEB5AB00A8C9DD /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		33EBD96C23BEBA4500A8C9DD /* LoginGuide2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginGuide2VC.swift; sourceTree = "<group>"; };
 		33EBD96E23BEBA6100A8C9DD /* LoginGuide3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginGuide3VC.swift; sourceTree = "<group>"; };
@@ -346,7 +338,6 @@
 		2DA1B36523B6216A00A26447 /* Funding */ = {
 			isa = PBXGroup;
 			children = (
-				2DA1B37923B622CB00A26447 /* FundingVC.swift */,
 				2DA1B37B23B622DC00A26447 /* FundingInputVC.swift */,
 				2DA1B37D23B622EE00A26447 /* FundingProgressVC.swift */,
 				3397E13E23BB62B300D864F2 /* FundingProgressPasswordVC.swift */,
@@ -457,9 +448,6 @@
 				333ACFC923BE7D6100B8D54E /* Tab2CollectionViewCell.swift */,
 				33876D1623B8CE800095B532 /* StorePopUpView.swift */,
 				33876D1823B8D21E0095B532 /* StorePopUpTableViewCell.swift */,
-				3335C07E23B5A9770065FE62 /* MyFundingStatusVC3.swift */,
-				33D3C4EF23B4E3F100E8AA3F /* CustomMenuBar.swift */,
-				33D3C4F123B4E47200E8AA3F /* CustomMenuBarCell.swift */,
 			);
 			path = MyFundingStatus;
 			sourceTree = "<group>";
@@ -623,7 +611,6 @@
 				333ACFC823BE7CAE00B8D54E /* MyFundingDone.swift in Sources */,
 				2DA1B37623B6224200A26447 /* StoreCheerVC.swift in Sources */,
 				2D3C9E4E23AF58B700339F9D /* MainVC.swift in Sources */,
-				33D3C4F023B4E3F100E8AA3F /* CustomMenuBar.swift in Sources */,
 				2D3C9E7D23AF67B500339F9D /* String.swift in Sources */,
 				33876D1B23B91BAE0095B532 /* LoginPVC.swift in Sources */,
 				2DA1B37423B6222B00A26447 /* StoreDetailVC.swift in Sources */,
@@ -645,7 +632,6 @@
 				33D21CA923B625D000158454 /* Color.swift in Sources */,
 				3335C07D23B53AA20065FE62 /* TabCollectionViewCell.swift in Sources */,
 				2D3C9E4A23AF58B700339F9D /* AppDelegate.swift in Sources */,
-				3335C07F23B5A9770065FE62 /* MyFundingStatusVC3.swift in Sources */,
 				33EBD96F23BEBA6100A8C9DD /* LoginGuide3VC.swift in Sources */,
 				33876D1323B7C20E0095B532 /* FirstPopUpView.swift in Sources */,
 				33876D1723B8CE800095B532 /* StorePopUpView.swift in Sources */,
@@ -667,11 +653,9 @@
 				2D250E5A23BC21C8001A01E2 /* FundingProgressView.swift in Sources */,
 				2DA1B38923B6235900A26447 /* FeedFriendDetailVC.swift in Sources */,
 				333ACFC423BE4C1300B8D54E /* storeCollectionViewCell.swift in Sources */,
-				2DA1B37A23B622CB00A26447 /* FundingVC.swift in Sources */,
 				33EBD96D23BEBA4500A8C9DD /* LoginGuide2VC.swift in Sources */,
 				33D21CB423B62B3F00158454 /* Font.swift in Sources */,
 				2DA1B37E23B622EE00A26447 /* FundingProgressVC.swift in Sources */,
-				33D3C4F223B4E47200E8AA3F /* CustomMenuBarCell.swift in Sources */,
 				2D3C9E7B23AF67A600339F9D /* Str.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
