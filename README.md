@@ -23,18 +23,23 @@ SOPT 25기 펀디토 iOS 저장소
   <img src="./Image/Main/MyFundingStatus/StorePopUpView.png" width="177" height="310.1">
 </p>
 
-### 펀딩
+### 상점
 <p>
-<img src="./Image/Funding/FundingInputVC.png" width="177" height="310.1">
-<img src="./image/Funding/FundingProgressVC.png" width="177" height="310.1">
+  <img src="./Image/Store/StoreDetailVC.png" width="177" height="310.1">
+  <img src="./Image/Store/StoreDetailVC(2).png" width="177" height="310.1">
+  <img src="./Image/Store/StoreCheerVC.png" width="177" height="310.1">
 </p>
 
-### 현황
+### 펀딩
 <p>
-  <img src="./image/MyFundingStatusVC.png" width="177" height="310.1">
-  <img src="./image/FirstPopUpView.png" width="177" height="310.1">
-  <img src="./image/StorePopUpView.png" width="177" height="310.1">
+  <img src="./Image/Funding/FundingInputVC.png" width="177" height="310.1">
+  <img src="./Image/Funding/FundingInputVC(2).png" width="177" height="310.1">
+  <img src="./Image/Funding/FundingInputVC(3).png" width="177" height="310.1">
+  <img src="./Image/Funding/FundingProgressVC.png" width="177" height="310.1">  
+  <img src="./image/Funding/FundingProgressVC(2).png" width="177" height="310.1">  
+  <img src="./image/Funding/FundingCompleteVC.png" width="177" height="310.1">
 </p>
+
 
 
 ## 개발 환경 
