@@ -112,8 +112,8 @@ func setupGestureRecognizer() {
 > 펀딩 - 6자리 비밀번호 입력 텍스트 필드 구현
 * 해결 방법
 > 1. 여섯 개의 텍스트 필드, 여섯 개의 뷰 생성. 
-> 텍스트 필드와 입력 값은 안보이게, 입력 전 상태에서 뷰는 하얀색 빈 동그라미로 설정
-> 텍스트 필드에 하나의 숫자가 입력되면, 바로 다음 텍스트 필드로 넘어가게 함
+> * 텍스트 필드와 입력 값은 안보이게, 입력 전 상태에서 뷰는 하얀색 빈 동그라미로 설정
+> * 텍스트 필드에 하나의 숫자가 입력되면, 바로 다음 텍스트 필드로 넘어가게 함
 <pre>
 func textFieldDidChangeSelection(_ textField: UITextField) {
         guard textFieldDidEditing else {
@@ -138,7 +138,7 @@ func textFieldDidChangeSelection(_ textField: UITextField) {
 </pre>
 
 > 2. 입력한 값을 지우면 그 전 텍스트 필드로 넘어가야 함 
-> NotificationCenter
+> * NotificationCenter
 <pre>
 NotificationCenter.default.addObserver(self, selector: #selector(handleDeleted), name: .init("deletePressed"), object: nil)
 </pre>
